@@ -1,0 +1,19 @@
+{
+  "name": "e-commerce-atis-internship",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "server-json": "json-server --watch db/db.json"
+  },
+  "devDependencies": {
+    "vite": "^6.0.5"
+  },
+  "dependencies": {
+    "@glidejs/glide": "^3.7.1",
+    "json-server": "^1.0.0-beta.3"
+  }
+}
