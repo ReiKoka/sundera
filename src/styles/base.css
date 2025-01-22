@@ -136,6 +136,10 @@ img.card {
   border-radius: var(--radius-medium);
 }
 
+.header .nav ul .nav-item a.focus-visible {
+  outline: none;
+}
+
 .header .buttons {
   display: flex;
   gap: 1rem;

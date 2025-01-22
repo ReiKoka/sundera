@@ -3,7 +3,7 @@
 import Glide from "@glidejs/glide";
 
 import { switchTheme } from "./js/switchTheme.js";
-import { getFeaturedProducts } from "./services/getFeaturedProducts.js";
+import { getProducts } from "./services/getProducts.js";
 import { renderProducts } from "./js/renderProducts.js";
 
 const config = {
@@ -17,7 +17,7 @@ new Glide(".glide", config).mount();
 switchTheme();
 
 const init = async () => {
-  const featuredProducts = await getFeaturedProducts();
+  const featuredProducts = await getProducts(true);
   renderProducts(featuredProducts);
 };
 
