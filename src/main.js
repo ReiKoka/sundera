@@ -5,6 +5,7 @@ import Glide from "@glidejs/glide";
 import { switchTheme } from "./js/switchTheme.js";
 import { getProducts } from "./services/getProducts.js";
 import { renderProducts } from "./js/renderProducts.js";
+import { initProducts } from "./js/initProducts.js";
 
 const config = {
   type: "slider",
@@ -16,9 +17,8 @@ const config = {
 new Glide(".glide", config).mount();
 switchTheme();
 
-const init = async () => {
-  const featuredProducts = await getProducts(true);
-  renderProducts(featuredProducts);
+const init = () => {
+  initProducts(true);
 };
 
 init();

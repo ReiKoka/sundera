@@ -1,7 +1,7 @@
 "use strict";
 
 import StarRating from "@romua1d/star-rating-js";
-import { formatCurrency } from "../utils/helpers";
+import { formatCurrency } from "./utils/helpers";
 
 export const renderProducts = (products) => {
   const productsContainer = document.querySelector(
@@ -11,12 +11,11 @@ export const renderProducts = (products) => {
   products.forEach((product) => {
     const productCard = document.createElement("div");
     productCard.classList.add("product-card");
-
     const formattedPrice = formatCurrency(product?.price);
     const [mainPrice, fractionalPrice] = formattedPrice.split(".");
 
     productCard.innerHTML = `
-      <div class="img-container">
+      <div class="img-container" data-id="${product.id}">
         <img src="${product?.image}" alt="${product?.title}" />
       </div>
       <div class="product-info">
@@ -47,7 +46,7 @@ export const renderProducts = (products) => {
       currentRating: Math.round(avg),
       starsColor: "#0084ff",
       disabled: true,
-      message: avg.toFixed(2),
+      message: avg.toFixed,
     };
 
     const StarRatingInstance = new StarRating(starRating, options);

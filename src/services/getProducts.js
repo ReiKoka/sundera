@@ -1,4 +1,6 @@
-import { URL } from "../utils/constants";
+"use strict";
+
+import { URL } from "../js/utils/constants.js";
 
 export const getProducts = async (featured) => {
   try {

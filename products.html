@@ -3,15 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/logo.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap"
       rel="stylesheet"
     />
-    <link rel="icon" href="/logo.svg" />
-    <link rel="stylesheet" href="src/style.css" />
-    <script type="module" src="/src/main.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/@romua1d/star-rating-js@latest/build/index.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/styles/products.css" />
+    <script type="module" src="src/js/products.js"></script>
     <title>Products</title>
   </head>
 
@@ -80,5 +84,12 @@
         </a>
       </div>
     </header>
+
+    <main class="main">
+      <section class="featured-products">
+        <h1>All Products</h1>
+        <div class="featured-products-container"></div>
+      </section>
+    </main>
   </body>
 </html>
