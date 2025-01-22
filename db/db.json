@@ -2,13 +2,15 @@
   "products": [
     {
       "id": "1",
-      "title": "Ideus coffee cup",
-      "company": "Ideus",
+      "title": "Kuber Industries Insulated coffee cup",
+      "company": "Kuber Industries",
       "description": "Insulated coffee cup for hot or cold coffee. May also be used for tea and other hot drinks",
       "featured": true,
       "category": "drinkware",
-      "image": "https://m.media-amazon.com/images/I/617auP4LA+L._AC_UF894,1000_QL80_.jpg",
+      "image": "https://shop.globalbees.com/cdn/shop/products/41s2NkzjbgL_514dae57-9738-4a80-89d0-4f9e5fdd8aa8.jpg?v=1689017385",
       "price": 15,
+      "quantity": 2000,
+      "soldAllTime": 150,
       "shipping": false,
       "colors": ["#425A42", "#000000"]
     },
@@ -21,6 +23,8 @@
       "category": "drinkware",
       "image": "https://images.unsplash.com/photo-1517559421643-54bc2e32021c?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "price": 20,
+      "quantity": 500,
+      "soldAllTime": 320,
       "shipping": true,
       "colors": ["#000000", "#FFFFFF", "#B7B8BC"]
     },
@@ -33,6 +37,8 @@
       "category": "fitness",
       "image": "https://www.telegraph.co.uk/content/dam/recommended/2024/10/21/TELEMMGLPICT000398749438_17295104275400_trans_NvBQzQNjv4BqqVzuuqpFlyLIwiB6NTmJwfSVWeZ_vEN7c6bHu2jJnT8.jpeg?impolicy=OG-Standard",
       "price": 30,
+      "quantity": 300,
+      "soldAllTime": 120,
       "shipping": true,
       "colors": ["#412835", "#FFE0DC"]
     },
@@ -45,6 +51,8 @@
       "category": "fitness",
       "image": "https://cdn.shopify.com/s/files/1/0574/1215/7598/t/16/assets/acf.Adjustable-Dumbbells---Detail-Shots---60-Edit.jpg?v=1696537028",
       "price": 150,
+      "quantity": 100,
+      "soldAllTime": 85,
       "shipping": true,
       "colors": ["#000000", "#FF0000"]
     },
@@ -57,6 +65,8 @@
       "category": "electronics",
       "image": "https://cdn.shopify.com/s/files/1/0501/7678/6607/files/Mask_group_20.png?v=1727702170",
       "price": 70,
+      "quantity": 200,
+      "soldAllTime": 170,
       "shipping": true,
       "colors": ["#FFFFFF", "#000000", "#BDD1ED"]
     },
@@ -69,6 +79,8 @@
       "category": "electronics",
       "image": "https://images.unsplash.com/photo-1576243345690-4e4b79b63288?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "price": 50,
+      "quantity": 1000,
+      "soldAllTime": 600,
       "shipping": false,
       "colors": ["#007BFF", "#FFC107"]
     },
@@ -81,6 +93,8 @@
       "category": "bags",
       "image": "https://images.unsplash.com/photo-1667411424594-672f7a3df708?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "price": 40,
+      "quantity": 800,
+      "soldAllTime": 520,
       "shipping": true,
       "colors": ["#343A40", "#6C757D"]
     },
@@ -93,6 +107,8 @@
       "category": "bags",
       "image": "https://images.unsplash.com/photo-1473188588951-666fce8e7c68?q=80&w=1874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "price": 100,
+      "quantity": 150,
+      "soldAllTime": 95,
       "shipping": false,
       "colors": ["#8B4513", "#A0522D"]
     },
@@ -105,6 +121,8 @@
       "category": "home",
       "image": "https://images.unsplash.com/photo-1517991104123-1d56a6e81ed9?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "price": 25,
+      "quantity": 400,
+      "soldAllTime": 290,
       "shipping": true,
       "colors": ["#E0E0E0", "#FFFFFF"]
     },
@@ -117,6 +135,8 @@
       "category": "home",
       "image": "https://images.unsplash.com/photo-1525973779373-015bdf68e579?q=80&w=1973&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "price": 60,
+      "quantity": 50,
+      "soldAllTime": 35,
       "shipping": false,
       "colors": ["#F0F8FF", "#FAEBD7"]
     }
@@ -124,7 +144,7 @@
   "reviews": [
     {
       "id": "1",
-      "rating": 3,
+      "rating": 2,
       "comment": "Review 1 for product id 1",
       "productId": "1"
     },

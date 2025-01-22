@@ -1,5 +1,10 @@
-import { switchTheme } from "./js/switchTheme.js";
+"use strict";
+
 import Glide from "@glidejs/glide";
+
+import { switchTheme } from "./js/switchTheme.js";
+import { getFeaturedProducts } from "./services/getFeaturedProducts.js";
+import { renderProducts } from "./js/renderProducts.js";
 
 const config = {
   type: "slider",
@@ -10,3 +15,10 @@ const config = {
 
 new Glide(".glide", config).mount();
 switchTheme();
+
+const init = async () => {
+  const featuredProducts = await getFeaturedProducts();
+  renderProducts(featuredProducts);
+};
+
+init();
