@@ -1,7 +1,7 @@
 "use strict";
 
 import StarRating from "@romua1d/star-rating-js";
-import { formatCurrency } from "./utils/helpers";
+import { formatCurrency, getProductIdAndPassToUrl } from "./utils/helpers";
 
 export const renderProducts = (products) => {
   const productsContainer = document.querySelector(
@@ -40,15 +40,15 @@ export const renderProducts = (products) => {
       ratingsArr && ratingsArr.length > 0
         ? ratingsArr.reduce((acc, curr) => acc + curr, 0) / ratingsArr.length
         : 0;
-    console.log(avg);
 
     const options = {
       currentRating: Math.round(avg),
-      starsColor: "#0084ff",
+      starsColor: "#000000",
       disabled: true,
-      message: avg.toFixed,
+      message: avg.toFixed(2),
     };
 
     const StarRatingInstance = new StarRating(starRating, options);
   });
+  getProductIdAndPassToUrl();
 };

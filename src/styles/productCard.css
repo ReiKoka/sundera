@@ -34,12 +34,20 @@
 
 .featured-products-container .product-card .img-container {
   width: 100%;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: var(--radius-small);
 }
 
 .featured-products-container img {
   object-fit: cover;
   aspect-ratio: 4 / 3;
   border-radius: var(--radius-small);
+  transition: transform 0.3s ease-out;
+}
+
+.featured-products-container .img-container:hover img {
+  transform: scale(1.05);
 }
 
 .featured-products-container .product-card .product-info {

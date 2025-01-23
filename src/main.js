@@ -3,9 +3,7 @@
 import Glide from "@glidejs/glide";
 
 import { switchTheme } from "./js/switchTheme.js";
-import { getProducts } from "./services/getProducts.js";
-import { renderProducts } from "./js/renderProducts.js";
-import { initProducts } from "./js/initProducts.js";
+import { initProducts } from "./js/utils/helpers.js";
 
 const config = {
   type: "slider",
