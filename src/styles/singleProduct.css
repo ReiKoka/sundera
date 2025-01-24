@@ -7,10 +7,6 @@
   grid-template-columns: 2fr 2fr 1fr;
 }
 
-.product-container .img-container {
-  height: 400px;
-}
-
 .product-container .img-container img {
   height: 100%;
 }
@@ -23,6 +19,12 @@
 }
 
 .product-container .img-container .img {
+  border-radius: var(--radius-small);
+}
+
+.product-container .details-container {
+  border: 1px solid hsl(var(--muted));
+  padding: 1rem;
   border-radius: var(--radius-small);
 }
 
@@ -81,17 +83,25 @@
   height: 30px;
   border-radius: 50%;
   border: 2px solid hsl(var(--muted));
+  cursor: pointer;
 }
 
-.product-container .details-container .colors-buttons .btn:hover {
+.product-container .details-container .colors-buttons .btn.focused {
   box-shadow: hsl(var(--primary)) 0px 1px 4px,
     hsl(var(--primary)) 0px 0px 0px 3px;
+  transition: all 0.3s;
+}
+
+.product-container .details-container .colors-buttons .btn:active {
+  transform: scale(0.98);
 }
 
 .product-container .checkout-container {
   border: 1px solid hsl(var(--muted));
   padding: 1rem;
   border-radius: var(--radius-small);
+  display: flex;
+  flex-direction: column;
 }
 
 .product-container .checkout-container .title {
@@ -102,7 +112,7 @@
 
 .product-container .checkout-container .checkout-p {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   font-size: 0.9rem;
   font-weight: 500;
@@ -143,17 +153,24 @@
   stroke: hsl(var(--foreground));
 }
 
-.product-container .checkout-container .checkout-p .quantity-controls {
+.product-container .checkout-container .quantity {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.product-container .checkout-container .quantity .quantity-controls {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  justify-content: flex-end;
 }
 
 .product-container
   .checkout-container
-  .checkout-p
-  div:last-child
-  > .quantity-button {
+  .quantity
+  .quantity-controls
+  .quantity-button {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -180,4 +197,55 @@
   width: 24px;
   height: 24px;
   stroke: hsl(var(--foreground));
+}
+
+.checkout-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.product-container .checkout-container .primary-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  padding: 0.75rem;
+  background-color: transparent;
+  border: none;
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  border-radius: var(--radius-small);
+  transition: all 0.3s ease-out;
+  cursor: pointer;
+}
+
+.product-container .checkout-container .primary-button.buy-now {
+  color: hsl(var(--foreground));
+  border: 1px solid hsl(var(--muted-foreground));
+}
+
+.product-container .checkout-container .primary-button.add-to-cart {
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  border: 1px solid hsl(var(--primary));
+}
+
+.product-container .checkout-container .primary-button:hover {
+}
+
+.product-container .checkout-container .primary-button:active {
+  transform: scale(0.9);
+}
+
+.product-container .checkout-container .primary-button svg {
+  width: 18px;
+  height: 18px;
+  stroke-width: 2px;
+  stroke: hsl(var(--foreground));
+}
+
+.product-container .checkout-container .primary-button.add-to-cart svg {
+  stroke: hsl(var(--primary-foreground));
 }
