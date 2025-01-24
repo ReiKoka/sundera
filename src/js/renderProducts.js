@@ -1,7 +1,7 @@
 "use strict";
 
-import StarRating from "@romua1d/star-rating-js";
 import { formatCurrency, getProductIdAndPassToUrl } from "./utils/helpers";
+import { renderStars } from "./renderStars";
 
 export const renderProducts = (products) => {
   const productsContainer = document.querySelector(
@@ -33,22 +33,7 @@ export const renderProducts = (products) => {
       </div>
   `;
     productsContainer.appendChild(productCard);
-    const starRating = productCard.querySelector(".star-rating-container");
-
-    const ratingsArr = product?.reviews?.map((review) => review.rating);
-    const avg =
-      ratingsArr && ratingsArr.length > 0
-        ? ratingsArr.reduce((acc, curr) => acc + curr, 0) / ratingsArr.length
-        : 0;
-
-    const options = {
-      currentRating: Math.round(avg),
-      starsColor: "#000000",
-      disabled: true,
-      message: avg.toFixed(2),
-    };
-
-    const StarRatingInstance = new StarRating(starRating, options);
+    renderStars(productCard, product);
   });
   getProductIdAndPassToUrl();
 };

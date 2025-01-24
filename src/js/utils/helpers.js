@@ -36,6 +36,7 @@ export const initSingleProduct = async () => {
   renderSingleProduct(product);
 };
 
+// Get location data
 export const getLocationData = async () => {
   try {
     const locationData = await getLocation();
@@ -75,4 +76,11 @@ export const updateQuantity = () => {
     })
   );
   updateDisplay();
+};
+
+// Calculate review average
+export const calculateAverage = (ratingsArr) => {
+  return ratingsArr && ratingsArr.length > 0
+    ? ratingsArr.reduce((acc, curr) => acc + curr, 0) / ratingsArr.length
+    : 0;
 };

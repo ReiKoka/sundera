@@ -1,12 +1,14 @@
 "use strict";
 
 import {
+  calculateAverage,
   calculateShipping,
   formatCurrency,
   location,
   updateQuantity,
 } from "./utils/helpers.js";
 import { renderModal } from "./renderModal.js";
+import { renderStars } from "./renderStars.js";
 
 export const renderSingleProduct = (product) => {
   const productContainer = document.querySelector(".product-container");
@@ -17,6 +19,7 @@ export const renderSingleProduct = (product) => {
     : formatCurrency(calculateShipping(product.price));
   const [mainShipping, fractionalShipping] = formattedShipping.split(".");
   let quantityNumber = 1;
+  const ratingsArr = product?.reviews?.map((review) => review.rating);
 
   productContainer.innerHTML = `
     <div class="img-container">
@@ -27,6 +30,14 @@ export const renderSingleProduct = (product) => {
       <div class="title-company">
         <h2 class="title">${product.title}</h2>
         <h3 class="company">${product.company}</h3>
+      </div>
+      <div class="reviews">
+        <div class="star-rating-container"></div>
+        <div class="star-rating-average">${calculateAverage(ratingsArr)}</div>
+        <div class="reviews-total">${product.reviews.length} reviews | ${
+    product.soldAllTime
+  } sold</div>
+
       </div>
 
       <p class="price"><span>${mainPrice}</span>.<span>${fractionalPrice}</span></p>
@@ -154,5 +165,6 @@ export const renderSingleProduct = (product) => {
     }
   });
 
+  renderStars(productContainer, product);
   updateQuantity();
 };

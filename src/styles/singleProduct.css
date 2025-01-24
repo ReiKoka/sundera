@@ -1,5 +1,6 @@
 @import url(base.css);
 @import url(modal.css);
+@import url(stars.css);
 
 .product-container {
   display: grid;
@@ -41,6 +42,24 @@
   background-color: hsl(var(--muted));
   color: hsl(var(--muted-foreground));
   border-radius: var(--radius-small);
+}
+
+.product-container .details-container .reviews {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.product-container .details-container .reviews .star-rating-average {
+  font-weight: 500;
+  color: hsl(var(--foreground));
+}
+
+.product-container .details-container .reviews .reviews-total {
+  font-weight: 300;
+  font-size: 0.9rem;
+  color: hsl(var(--foreground));
+  margin-left: auto;
 }
 
 .product-container .details-container .price {
@@ -216,6 +235,7 @@
   border: none;
   font-family: var(--font-primary);
   font-size: 1rem;
+  font-weight: 600;
   border-radius: var(--radius-small);
   transition: all 0.3s ease-out;
   cursor: pointer;
@@ -230,9 +250,6 @@
   background-color: hsl(var(--primary));
   color: hsl(var(--primary-foreground));
   border: 1px solid hsl(var(--primary));
-}
-
-.product-container .checkout-container .primary-button:hover {
 }
 
 .product-container .checkout-container .primary-button:active {

@@ -1,0 +1,50 @@
+@import url(base.css);
+
+/* Default styles which are used in the product cards, in the featured products section on home page and all products page */
+.star-rating-container {
+  align-self: center;
+}
+
+.stars-rating {
+  position: relative;
+  width: fit-content;
+}
+
+.stars-rating--info-panel {
+  background-color: hsl(var(--muted));
+  color: hsl(var(--foreground));
+  font-family: var(--font-primary);
+  position: absolute;
+  top: 50%;
+  left: 110%;
+  transform: translateY(-50%) scaleX(0);
+  transform-origin: left;
+  transition: all 0.3s ease-out;
+}
+
+.star-rating-container:hover .stars-rating--info-panel {
+  transform: translateY(-50%) scaleX(1);
+}
+
+.stars-rating--info-panel:after {
+  border: 4.3px solid transparent;
+  border-right-color: hsl(var(--muted));
+}
+
+.icon-star {
+  color: hsl(var(--foreground));
+}
+
+.dark .icon-star {
+  color: hsl(var(--primary));
+}
+
+/* Styles for specific product page */
+
+.product-container .details-container .star-rating-container {
+  align-self: flex-start;
+}
+
+.product-container .details-container .stars-rating .stars-rating--info-panel {
+  display: none;
+}
