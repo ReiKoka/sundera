@@ -279,7 +279,7 @@
 
 .product-container .reviews-container .title-and-rating {
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
   margin-bottom: 1.5rem;
 }
 
@@ -298,11 +298,12 @@
   color: hsl(var(--foreground));
 }
 
-.product-container .reviews-container .rating .rating-total {
-  font-weight: 300;
-  font-size: 0.9rem;
+.product-container .reviews-container .reviews-total {
+  font-weight: 500;
   color: hsl(var(--foreground));
   margin-left: auto;
+  line-height: 32px;
+
 }
 
 .product-container .reviews-container .comments-container {

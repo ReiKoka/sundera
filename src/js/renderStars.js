@@ -4,7 +4,6 @@ import StarRating from "@romua1d/star-rating-js";
 import { calculateAverage } from "./utils/helpers";
 
 export const renderStars = (container, productOrReview) => {
-  console.log(container);
   const starRating = container.querySelector(".star-rating-container");
 
   let avgOrReview;

@@ -1,6 +1,6 @@
 "use strict";
 
-export const renderReview = (review) => {
+export const renderSingleReview = (review) => {
   const html = `
     <div class="review">
       <div class="icon-name-parent">
