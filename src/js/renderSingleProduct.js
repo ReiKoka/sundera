@@ -9,6 +9,7 @@ import {
 } from "./utils/helpers.js";
 import { renderModal } from "./renderModal.js";
 import { renderStars } from "./renderStars.js";
+import { renderReview } from "./renderReview.js";
 
 export const renderSingleProduct = (product) => {
   const productContainer = document.querySelector(".product-container");
@@ -31,13 +32,14 @@ export const renderSingleProduct = (product) => {
         <h2 class="title">${product.title}</h2>
         <h3 class="company">${product.company}</h3>
       </div>
-      <div class="reviews">
+      <div class="rating">
         <div class="star-rating-container"></div>
-        <div class="star-rating-average">${calculateAverage(ratingsArr)}</div>
-        <div class="reviews-total">${product.reviews.length} reviews | ${
+        <div class="star-rating-average">${calculateAverage(ratingsArr).toFixed(
+          2
+        )}</div>
+        <div class="rating-total">${product.reviews.length} reviews | ${
     product.soldAllTime
   } sold</div>
-
       </div>
 
       <p class="price"><span>${mainPrice}</span>.<span>${fractionalPrice}</span></p>
@@ -134,7 +136,28 @@ export const renderSingleProduct = (product) => {
     <div class="modal" id="modal">
       ${renderModal("Deliver To")}
     </div>
+  </div>
 
+  <div class="reviews-container">
+    <div class="title-and-rating">
+      <h2 class="title">Reviews</h2>
+      <div class="rating">
+        <div class="star-rating-container"></div>
+        <div class="star-rating-average">${calculateAverage(ratingsArr).toFixed(
+          2
+        )}
+        </div>
+        <div class="rating-total">${product.reviews.length} reviews | ${
+    product.soldAllTime
+  } sold
+        </div>
+      </div>
+    </div>
+
+    <div class="comments-container">
+      ${product.reviews.map((review) => renderReview(review)).join("")}
+    </div>
+  </div
   `;
 
   // Select Colour Buttons
@@ -165,6 +188,16 @@ export const renderSingleProduct = (product) => {
     }
   });
 
+  const reviewsContainer = document.querySelector(".reviews-container");
   renderStars(productContainer, product);
+  renderStars(reviewsContainer, product);
+
+  const commentsContainer = document.querySelector(".comments-container");
+  product.reviews.forEach((review, index) => {
+    const reviewElement = commentsContainer.querySelectorAll(".review")[index];
+    const ratingsContainer = reviewElement.querySelector(".ratings-comments");
+    renderStars(ratingsContainer, review);
+  });
+
   updateQuantity();
 };

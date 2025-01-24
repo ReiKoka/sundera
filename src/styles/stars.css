@@ -39,12 +39,24 @@
   color: hsl(var(--primary));
 }
 
-/* Styles for specific product page */
+/* Styles for specific product details area in singleProduct page */
 
 .product-container .details-container .star-rating-container {
   align-self: flex-start;
 }
 
 .product-container .details-container .stars-rating .stars-rating--info-panel {
+  display: none;
+}
+
+/* Styles for the review section */
+
+.product-container .reviews-container .comments-container
+
+.product-container .reviews-container  .rating .stars-rating {
+  padding: 0;
+}
+
+.product-container .reviews-container .stars-rating .stars-rating--info-panel {
   display: none;
 }

@@ -3,17 +3,26 @@
 import StarRating from "@romua1d/star-rating-js";
 import { calculateAverage } from "./utils/helpers";
 
-export const renderStars = (container, product) => {
+export const renderStars = (container, productOrReview) => {
+  console.log(container);
   const starRating = container.querySelector(".star-rating-container");
 
-  const ratingsArr = product?.reviews?.map((review) => review.rating);
-  const avg = calculateAverage(ratingsArr);
+  let avgOrReview;
+
+  if (Array.isArray(productOrReview?.reviews)) {
+    const ratingsArr = productOrReview.reviews.map((review) => review.rating);
+    avgOrReview = calculateAverage(ratingsArr);
+  } else if (typeof productOrReview?.rating === "number") {
+    avgOrReview = productOrReview.rating;
+  } else {
+    console.error("Invalid product or review format.");
+    return;
+  }
 
   const options = {
-    currentRating: Math.round(avg),
-    starsColor: "#000000",
+    currentRating: Math.round(avgOrReview),
     disabled: true,
-    message: avg.toFixed(2),
+    message: avgOrReview.toFixed(2),
   };
 
   const StarRatingInstance = new StarRating(starRating, options);
