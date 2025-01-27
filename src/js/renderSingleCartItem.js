@@ -1,10 +1,15 @@
 import { formatCurrency } from "./utils/helpers";
 
 export const renderSingleCartItem = (cartItem) => {
-  const formattedPrice = formatCurrency(
-    cartItem.quantity * cartItem.product.price
-  );
-  const [mainPrice, fractionalPrice] = formattedPrice.split(".");
+  //prettier-ignore
+  const formattedTotalPerProductPrice = formatCurrency(cartItem.quantity * cartItem.product.price);
+  const formattedPerItemPrice = formatCurrency(cartItem.product.price);
+
+  //prettier-ignore
+  const [mainPrice, fractionalPrice] = formattedTotalPerProductPrice.split(".");
+  //prettier-ignore
+  const [secondaryPrice, secondaryFractionalPrice] =formattedPerItemPrice.split(".");
+
   const html = `
     <div class='cart-item' data-product-id="${cartItem.product.id}">
       <div class="cart-item-img-container">
@@ -35,6 +40,8 @@ export const renderSingleCartItem = (cartItem) => {
 
       <div class="price-container">
           <p class="price"><span>${mainPrice}</span>.<span>${fractionalPrice}</span>
+          <p class="price-per-item">
+            (<span>${secondaryPrice}</span>.<span>${secondaryFractionalPrice}</span> per item)
       </div>
     </div>
   `;

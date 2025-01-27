@@ -123,8 +123,10 @@
 
 .cart .filled-cart .cart-items .cart-item .price-container {
   display: flex;
-  align-items: center;
-  justify-content: flex-end;
+  align-items: flex-end;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .cart .filled-cart .cart-items .cart-item .price-container .price {
@@ -141,6 +143,21 @@
   .price
   span:last-child {
   font-size: 0.8rem;
+}
+
+.cart .filled-cart .cart-items .cart-item .price-container .price-per-item {
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+.cart
+  .filled-cart
+  .cart-items
+  .cart-item
+  .price-container
+  .price-per-item
+  span:last-child {
+  font-size: 0.7rem;
 }
 
 .cart
