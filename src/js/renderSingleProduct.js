@@ -14,6 +14,7 @@ import { renderImage } from "./singleProduct/renderImage.js";
 export const renderSingleProduct = (product) => {
   const productContainer = document.querySelector(".product-container");
   let selectedQuantity = 1;
+  let selectedColor = product.colors[0].color;
 
   function updateSelectedQuantity(change) {
     selectedQuantity = Math.max(1, selectedQuantity + change);
@@ -27,11 +28,14 @@ export const renderSingleProduct = (product) => {
     ${renderReviews(product)}
   `;
 
-  // const stockDisplayElement = document.querySelector(".stock-display");
-  // console.log(stockDisplayElement)
-
   const colorButtons = document.querySelectorAll(".colors-buttons .btn");
-  setupColorButtons(colorButtons, product);
+
+  const handleColorSelect = (color) => {
+    selectedColor = color;
+    return selectedColor;
+  };
+
+  setupColorButtons(colorButtons, product, handleColorSelect);
 
   const deliverToButton = document.querySelector("#modalBtn");
   const modal = document.querySelector("#modal");
@@ -60,5 +64,5 @@ export const renderSingleProduct = (product) => {
   });
 
   updateQuantityHandler(updateSelectedQuantity);
-  addProductHandler([product], () => selectedQuantity);
+  addProductHandler([product], () => selectedQuantity, () => selectedColor);
 };

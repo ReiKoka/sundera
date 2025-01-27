@@ -83,7 +83,7 @@ export const calculateAverage = (ratingsArr) => {
 };
 
 // Setup Color Buttons
-export const setupColorButtons = (buttons, product) => {
+export const setupColorButtons = (buttons, product, onColorSelect) => {
   const stockDisplayElement = document.querySelector(".stock-display");
 
   buttons.forEach((button, i) => {
@@ -94,13 +94,15 @@ export const setupColorButtons = (buttons, product) => {
       button.classList.add("focused");
 
       const selectedColor = product.colors[i];
+      onColorSelect(selectedColor.color);
+      console.log(selectedColor);
       stockDisplayElement.textContent = `${selectedColor.inStock} available`;
     });
   });
 };
 
 // Add product to cart handler
-export const addProductHandler = (products, getQuantity) => {
+export const addProductHandler = (products, getQuantity, getColor) => {
   const addToCartBtns = document.querySelectorAll(".add-to-cart");
   const notyf = new Notyf({
     position: { x: "center", y: "top" },
@@ -109,7 +111,8 @@ export const addProductHandler = (products, getQuantity) => {
   if (addToCartBtns.length === 1) {
     addToCartBtns[0].addEventListener("click", () => {
       const quantitySelected = getQuantity() || 1;
-      addToCart(products[0], quantitySelected);
+      const colorSelected = getColor();
+      addToCart(products[0], quantitySelected, colorSelected);
       notyf.success(
         `${quantitySelected} ${products[0].title} added successfully!`
       );
@@ -129,7 +132,7 @@ export const addProductHandler = (products, getQuantity) => {
       );
 
       if (selectedProduct) {
-        addToCart(selectedProduct, 1);
+        addToCart(selectedProduct, 1, selectedProduct.colors[0].color);
         notyf.success(`1 ${selectedProduct.title} added successfully!`);
         updateCartItemsCount();
       }
