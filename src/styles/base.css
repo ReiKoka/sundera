@@ -206,6 +206,20 @@ img.card {
   transform: scale(0.9);
 }
 
+.cart-items-number {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 0.9rem;
+  line-height: 20px;
+}
+
 .main {
   padding-inline: min(1rem, 5%);
   padding-block: min(1.5rem, 5%);
@@ -213,4 +227,3 @@ img.card {
   flex-direction: column;
   gap: 1.5rem;
 }
-

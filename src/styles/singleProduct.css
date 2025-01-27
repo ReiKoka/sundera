@@ -303,7 +303,6 @@
   color: hsl(var(--foreground));
   margin-left: auto;
   line-height: 32px;
-
 }
 
 .product-container .reviews-container .comments-container {
@@ -339,13 +338,14 @@
   font-size: 0.9rem;
   color: hsl(var(--foreground));
   font-weight: 300;
-  text-align: center;
+  /* text-align: center; */
   line-height: 40px;
 }
 
 .product-container .reviews-container .comments-container .ratings-comments {
   display: flex;
   align-items: center;
+  gap: 3rem;
   justify-content: space-between;
 }
 
