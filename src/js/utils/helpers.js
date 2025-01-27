@@ -5,21 +5,31 @@ import { renderProducts } from "./../renderProducts";
 import { getProductById } from "./../../services/getProductById";
 import { renderSingleProduct } from "../renderSingleProduct";
 import { getLocation } from "../../services/getLocation";
-import { addToCart } from "../cartState";
+import { addToCart, getCart } from "../cartState";
 import { Notyf } from "notyf";
 
-export const formatCurrency = (value) => {
-  return new Intl.NumberFormat("en-US", {
-    style: "currency",
-    currency: "USD",
-  }).format(value);
+// Update CartItems Count
+export const updateCartItemsCount = () => {
+  const cartItemsNumber = document.querySelector(".cart-items-number");
+  if (cartItemsNumber) {
+    cartItemsNumber.textContent = getCartItemsNumber();
+  }
 };
 
+// Init All Products
 export const initProducts = async (featured) => {
   const featuredProducts = await getProducts(featured);
   renderProducts(featuredProducts);
 };
 
+// Init Single Product
+export const initSingleProduct = async () => {
+  const product = await getProductById();
+  document.title = product.title;
+  renderSingleProduct(product);
+};
+
+// Get Product ID and Pass it to URL
 export const getProductIdAndPassToUrl = () => {
   const products = document.querySelectorAll(".img-container");
   products.forEach((product) => {
@@ -32,10 +42,19 @@ export const getProductIdAndPassToUrl = () => {
   });
 };
 
-export const initSingleProduct = async () => {
-  const product = await getProductById();
-  document.title = product.title;
-  renderSingleProduct(product);
+// Get Cart Items Number
+export const getCartItemsNumber = () => {
+  return getCart()
+    .map((item) => item.quantity)
+    .reduce((acc, curr) => acc + curr, 0);
+};
+
+// Format currency to $x.yy
+export const formatCurrency = (value) => {
+  return new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+  }).format(value);
 };
 
 // Get location data
@@ -48,8 +67,10 @@ export const getLocationData = async () => {
   }
 };
 
+// Export location variable
 export const location = await getLocationData();
 
+// Calculate Shipping function
 export const calculateShipping = (value) => {
   return value * 0.1;
 };
@@ -61,13 +82,19 @@ export const calculateAverage = (ratingsArr) => {
     : 0;
 };
 
+// Setup Color Buttons
 export const setupColorButtons = (buttons, product) => {
+  const stockDisplayElement = document.querySelector(".stock-display");
+
   buttons.forEach((button, i) => {
-    button.style.backgroundColor = product.colors[i];
+    button.style.backgroundColor = product.colors[i].color;
 
     button.addEventListener("click", () => {
       buttons.forEach((btn) => btn.classList.remove("focused"));
       button.classList.add("focused");
+
+      const selectedColor = product.colors[i];
+      stockDisplayElement.textContent = `${selectedColor.inStock} available`;
     });
   });
 };
@@ -83,8 +110,12 @@ export const addProductHandler = (products, getQuantity) => {
     addToCartBtns[0].addEventListener("click", () => {
       const quantitySelected = getQuantity() || 1;
       addToCart(products[0], quantitySelected);
-      notyf.success("Item added successfully!");
+      notyf.success(
+        `${quantitySelected} ${products[0].title} added successfully!`
+      );
+      updateCartItemsCount();
     });
+
     return;
   }
 
@@ -99,12 +130,14 @@ export const addProductHandler = (products, getQuantity) => {
 
       if (selectedProduct) {
         addToCart(selectedProduct, 1);
+        notyf.success(`1 ${selectedProduct.title} added successfully!`);
+        updateCartItemsCount();
       }
     });
   });
 };
 
-// Update Quantity
+// Update Quantity Buttons
 export const updateQuantityHandler = (updateQuantity) => {
   const addOrRemoveButtons = document.querySelectorAll(".quantity-button");
   const quantityDisplay = document.querySelector(".quantity-display");

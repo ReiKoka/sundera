@@ -1,7 +1,12 @@
 "use strict";
 
 import { renderModal } from "../renderModal";
-import { calculateShipping, formatCurrency, location } from "../utils/helpers";
+import {
+  calculateShipping,
+  formatCurrency,
+  location,
+  setupColorButtons,
+} from "../utils/helpers";
 
 export const renderCheckout = (product) => {
   const formattedShipping = product.freeShipping
@@ -61,9 +66,9 @@ export const renderCheckout = (product) => {
           </div>
           <div class="total-quantity">
             ${
-              product?.inStock > 0
-                ? `<span>${product?.inStock} available</span>`
-                : `<span>Out of stock</span>`
+              product?.colors[0].inStock > 0
+                ? `<span class="stock-display">${product?.colors[0].inStock} available</span>`
+                : `<span class="stock-display">Out of stock</span>`
             }
           </div>
         </div>

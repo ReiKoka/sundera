@@ -1,13 +1,14 @@
 "use strict";
 
-export const getCart = () => {
-  return JSON.parse(localStorage.getItem("cart")) || [];
+import { renderCartItems } from "./renderCartItems";
+import { updateCartItemsCount } from "./utils/helpers";
+import { switchTheme } from "./switchTheme";
+
+switchTheme();
+
+const init = () => {
+  updateCartItemsCount();
+  renderCartItems();
 };
 
-export const setCart = (cart) => {
-  localStorage.setItem("cart", JSON.stringify(cart));
-};
-
-
-
-
+init();

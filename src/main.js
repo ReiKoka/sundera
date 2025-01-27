@@ -3,7 +3,7 @@
 import Glide from "@glidejs/glide";
 
 import { switchTheme } from "./js/switchTheme.js";
-import { initProducts } from "./js/utils/helpers.js";
+import { initProducts, updateCartItemsCount } from "./js/utils/helpers.js";
 
 const config = {
   type: "slider",
@@ -17,6 +17,7 @@ switchTheme();
 
 const init = () => {
   initProducts(true);
+  updateCartItemsCount();
 };
 
 init();

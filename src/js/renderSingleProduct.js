@@ -27,16 +27,17 @@ export const renderSingleProduct = (product) => {
     ${renderReviews(product)}
   `;
 
-  const colorButtons = productContainer.querySelectorAll(
-    ".colors-buttons .btn"
-  );
+  // const stockDisplayElement = document.querySelector(".stock-display");
+  // console.log(stockDisplayElement)
+
+  const colorButtons = document.querySelectorAll(".colors-buttons .btn");
+  setupColorButtons(colorButtons, product);
+
   const deliverToButton = document.querySelector("#modalBtn");
   const modal = document.querySelector("#modal");
   const modalBox = document.querySelector(".modal-box");
   const reviewsContainer = document.querySelector(".reviews-container");
   const commentsContainer = document.querySelector(".comments-container");
-
-  setupColorButtons(colorButtons, product);
 
   // Modal Controls to select shipping country and close modal
   deliverToButton.addEventListener("click", () => {
