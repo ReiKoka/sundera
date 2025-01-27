@@ -25,3 +25,16 @@ export const addToCart = (product, quantity = 1, color) => {
 
   console.log(cart);
 };
+
+export const removeItemFromCard = (id) => {
+  let cart = getCart();
+  const filteredCart = cart.filter(
+    (item) => Number(item.product.id) !== Number(id)
+  );
+  setCart(filteredCart);
+  console.log(cart);
+};
+
+export const clearCart = () => {
+  setCart([]);
+};

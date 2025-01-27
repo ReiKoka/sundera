@@ -148,6 +148,7 @@
 .cart .filled-cart .cart-items .cart-item .price-container .price-per-item {
   font-weight: 300;
   font-size: 1rem;
+  color: hsl(var(--foreground));
 }
 
 .cart
@@ -203,4 +204,14 @@
   flex: 1;
   border-radius: var(--radius-medium);
   padding: 1rem;
+  background-color: hsl(var(--muted));
+  height: fit-content;
+}
+
+.cart .filled-cart .checkout-summary .checkout-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: center;
+  padding-bottom: 2rem;
+  color: hsl(var(--foreground));
 }

@@ -8,14 +8,14 @@ export const renderCartItems = () => {
 
   const cartItemsContainer = document.createElement("div");
   const cartParentContainer = document.querySelector(".cart");
-  !allCartItems
+  !allCartItems.length
     ? cartItemsContainer.classList.add("empty-cart")
     : cartItemsContainer.classList.add("filled-cart");
 
-  cartItemsContainer.innerHTML = !allCartItems
+  cartItemsContainer.innerHTML = !allCartItems.length
     ? `
       <div class="img-container"><img src="public/empty-cart.svg" alt="empty-cart-illustration" class="img"/></div>
-      <h3 class="cart-empty-info">Your Sendora cart is empty! </h3>
+      <h3 class="cart-empty-info">Your Sundera cart is empty! </h3>
       <a href="../../products.html" class="cta-button">Go to products</a>
     `
     : `
@@ -25,7 +25,8 @@ export const renderCartItems = () => {
           .join("")}
       </div>
       <div class="checkout-summary">
-          
+          <h1 class="checkout-title">Summary</h1>
+          <p className="price-line subtotal">${1}</p>
       </div>
     `;
 
