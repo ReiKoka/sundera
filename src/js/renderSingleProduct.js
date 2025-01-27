@@ -13,8 +13,9 @@ import { renderImage } from "./singleProduct/renderImage.js";
 
 export const renderSingleProduct = (product) => {
   const productContainer = document.querySelector(".product-container");
-  let selectedQuantity = 1;
   let selectedColor = product.colors[0].color;
+  
+  let selectedQuantity = 1;
 
   function updateSelectedQuantity(change) {
     selectedQuantity = Math.max(1, selectedQuantity + change);

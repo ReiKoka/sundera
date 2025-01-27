@@ -88,6 +88,67 @@
   margin-bottom: 1rem;
 }
 
+.cart .filled-cart .cart-items .cart-item .cart-item-info .cart-item-color {
+  display: inline-block;
+  width: 0.9rem;
+  height: 0.9rem;
+  border-radius: 50%;
+}
+
+.cart .filled-cart .cart-items .cart-item .quantity {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-block: 0.25rem;
+}
+
+.cart .filled-cart .cart-items .cart-item .quantity .quantity-controls {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart
+  .filled-cart
+  .cart-items
+  .cart-item
+  .quantity
+  .quantity-controls
+  .quantity-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.cart
+  .filled-cart
+  .cart-items
+  .cart-item
+  .quantity
+  .quantity-controls
+  .quantity-button:active {
+  transform: scale(0.9);
+}
+
+.cart
+  .filled-cart
+  .cart-items
+  .cart-item
+  .quantity
+  .quantity-controls
+  .quantity-button
+  svg {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  stroke: hsl(var(--foreground));
+}
+
 .cart .filled-cart .checkout-summary {
   flex: 1;
   border-radius: var(--radius-medium);
