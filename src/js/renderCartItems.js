@@ -1,6 +1,6 @@
 import { getCart, setCart } from "./cartState";
 import { renderSingleCartItem } from "./renderSingleCartItem";
-import { updateCartItemsCount } from "./utils/helpers";
+import { formatCurrency, updateCartItemsCount } from "./utils/helpers";
 
 export const renderCartItems = () => {
   const allCartItems = getCart();
@@ -24,7 +24,9 @@ export const renderCartItems = () => {
           .map((cartItem) => renderSingleCartItem(cartItem))
           .join("")}
       </div>
-      <div class="checkout-summary"></div>
+      <div class="checkout-summary">
+          
+      </div>
     `;
 
   cartParentContainer.appendChild(cartItemsContainer);
@@ -55,6 +57,18 @@ export const renderCartItems = () => {
       const quantityDisplay = cartItemEl.querySelector(".quantity-display");
       quantityDisplay.textContent = cartItem.quantity;
       updateCartItemsCount();
+
+      const formattedPrice = formatCurrency(
+        cartItem.quantity * cartItem.product.price
+      );
+      const [mainPrice, fractionalPrice] = formattedPrice.split(".");
+
+      const priceContainer = cartItemEl.querySelector(
+        ".price-container .price"
+      );
+
+      priceContainer.innerHTML = "";
+      priceContainer.innerHTML = `<span>${mainPrice}</span>.<span>${fractionalPrice}</span>`;
     });
   }
 };

@@ -75,6 +75,7 @@
   display: flex;
   flex-direction: column;
   padding-block: 0.25rem;
+  color: hsl(var(--foreground));
 }
 
 .cart .filled-cart .cart-items .cart-item .cart-item-info .cart-item-title {
@@ -116,6 +117,38 @@
   .cart-item
   .quantity
   .quantity-controls
+  .quantity-display {
+  color: hsl(var(--foreground));
+}
+
+.cart .filled-cart .cart-items .cart-item .price-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.cart .filled-cart .cart-items .cart-item .price-container .price {
+  font-weight: 500;
+  font-size: 1.1rem;
+  color: hsl(var(--foreground));
+}
+
+.cart
+  .filled-cart
+  .cart-items
+  .cart-item
+  .price-container
+  .price
+  span:last-child {
+  font-size: 0.8rem;
+}
+
+.cart
+  .filled-cart
+  .cart-items
+  .cart-item
+  .quantity
+  .quantity-controls
   .quantity-button {
   display: flex;
   align-items: center;
@@ -144,8 +177,8 @@
   .quantity-button
   svg {
   display: inline-block;
-  width: 24px;
-  height: 24px;
+  width: 30px;
+  height: 30px;
   stroke: hsl(var(--foreground));
 }
 

@@ -1,4 +1,10 @@
+import { formatCurrency } from "./utils/helpers";
+
 export const renderSingleCartItem = (cartItem) => {
+  const formattedPrice = formatCurrency(
+    cartItem.quantity * cartItem.product.price
+  );
+  const [mainPrice, fractionalPrice] = formattedPrice.split(".");
   const html = `
     <div class='cart-item' data-product-id="${cartItem.product.id}">
       <div class="cart-item-img-container">
@@ -12,21 +18,24 @@ export const renderSingleCartItem = (cartItem) => {
       </div>
 
       <div class="quantity">
-          <div class="quantity-controls">
-            <button class="quantity-button quantity-remove">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M15 12H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-              </svg>
-            </button>
-            <p class="quantity-display">${cartItem.quantity}</p>
-            <button class="quantity-button quantity-add">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-              </svg>
-            </button>
-          </div>
-          
+        <div class="quantity-controls">
+          <button class="quantity-button quantity-remove">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 12H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+            </svg>
+          </button>
+          <p class="quantity-display">${cartItem.quantity}</p>
+          <button class="quantity-button quantity-add">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+            </svg>
+          </button>
         </div>
+      </div>
+
+      <div class="price-container">
+          <p class="price"><span>${mainPrice}</span>.<span>${fractionalPrice}</span>
+      </div>
     </div>
   `;
 
