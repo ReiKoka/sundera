@@ -10,7 +10,6 @@
       "image": "https://www.yeti.com/on/demandware.static/-/Sites-siteCatalog_Yeti_US/default/dw858ffac3/200380-Category-Header-Tumblers-Social-1200x6300.jpg",
       "price": 15,
       "soldAllTime": 150,
-      "freeShipping": false,
       "colors": [
         { "color": "#425A42", "inStock": 1000 },
         { "color": "#000000", "inStock": 500 }
@@ -26,7 +25,6 @@
       "image": "https://images.unsplash.com/photo-1517559421643-54bc2e32021c?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "price": 20,
       "soldAllTime": 320,
-      "freeShipping": true,
       "colors": [
         { "color": "#000000", "inStock": 200 },
         { "color": "#FFFFFF", "inStock": 200 },
@@ -43,7 +41,6 @@
       "image": "https://www.telegraph.co.uk/content/dam/recommended/2024/10/21/TELEMMGLPICT000398749438_17295104275400_trans_NvBQzQNjv4BqqVzuuqpFlyLIwiB6NTmJwfSVWeZ_vEN7c6bHu2jJnT8.jpeg?impolicy=OG-Standard",
       "price": 30,
       "soldAllTime": 120,
-      "freeShipping": true,
       "colors": [
         { "color": "#412835", "inStock": 150 },
         { "color": "#FFE0DC", "inStock": 150 }
@@ -59,7 +56,6 @@
       "image": "https://cdn.shopify.com/s/files/1/0574/1215/7598/t/16/assets/acf.Adjustable-Dumbbells---Detail-Shots---60-Edit.jpg?v=1696537028",
       "price": 150,
       "soldAllTime": 85,
-      "freeShipping": true,
       "colors": [
         { "color": "#000000", "inStock": 50 },
         { "color": "#FF0000", "inStock": 50 }
@@ -75,7 +71,6 @@
       "image": "https://cdn.shopify.com/s/files/1/0501/7678/6607/files/Mask_group_20.png?v=1727702170",
       "price": 200,
       "soldAllTime": 170,
-      "freeShipping": true,
       "colors": [
         { "color": "#FFFFFF", "inStock": 100 },
         { "color": "#000000", "inStock": 100 },
@@ -92,7 +87,6 @@
       "image": "https://images.unsplash.com/photo-1576243345690-4e4b79b63288?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "price": 50,
       "soldAllTime": 600,
-      "freeShipping": false,
       "colors": [
         { "color": "#007BFF", "inStock": 200 },
         { "color": "#FFC107", "inStock": 200 }
@@ -109,7 +103,6 @@
       "price": 40,
 
       "soldAllTime": 520,
-      "freeShipping": true,
       "colors": [
         { "color": "#343A40", "inStock": 600 },
         { "color": "#6C757D", "inStock": 200 }
@@ -126,7 +119,6 @@
       "price": 100,
 
       "soldAllTime": 95,
-      "freeShipping": false,
       "colors": [
         { "color": "#8B4513", "inStock": 75 },
         { "color": "#A0522D", "inStock": 75 },
@@ -143,7 +135,6 @@
       "image": "https://images.unsplash.com/photo-1517991104123-1d56a6e81ed9?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "price": 25,
       "soldAllTime": 290,
-      "freeShipping": true,
       "colors": [
         { "color": "#E0E0E0", "inStock": 200 },
         { "color": "#FFFFFF", "inStock": 200 }
@@ -159,7 +150,6 @@
       "image": "https://images.unsplash.com/photo-1525973779373-015bdf68e579?q=80&w=1973&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "price": 60,
       "soldAllTime": 35,
-      "freeShipping": false,
       "colors": [
         { "color": "#F0F8FF", "inStock": 50 },
         { "color": "#FAEBD7", "inStock": 25 }

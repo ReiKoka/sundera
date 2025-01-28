@@ -57,6 +57,13 @@ export const formatCurrency = (value) => {
   }).format(value);
 };
 
+// Returns an obj with main and fractional. Purely for styling purposes. Made this into a function to be reused everywhere
+export const formatAndSplitPrice = (price) => {
+  const formattedPrice = formatCurrency(price);
+  const [main, fraction] = formattedPrice.split(".");
+  return { main, fraction };
+};
+
 // Get location data
 export const getLocationData = async () => {
   try {
@@ -160,5 +167,3 @@ export const updateQuantityHandler = (updateQuantity) => {
     })
   );
 };
-
-

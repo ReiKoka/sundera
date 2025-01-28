@@ -1,14 +1,14 @@
-import { formatCurrency } from "./utils/helpers";
+import { formatAndSplitPrice, formatCurrency } from "./utils/helpers";
 
 export const renderSingleCartItem = (cartItem) => {
   //prettier-ignore
-  const formattedTotalPerProductPrice = formatCurrency(cartItem.quantity * cartItem.product.price);
-  const formattedPerItemPrice = formatCurrency(cartItem.product.price);
+  const formattedTotalPerProductPrice = formatAndSplitPrice(cartItem.quantity * cartItem.product.price);
+  const formattedPerItemPrice = formatAndSplitPrice(cartItem.product.price);
 
-  //prettier-ignore
-  const [mainPrice, fractionalPrice] = formattedTotalPerProductPrice.split(".");
-  //prettier-ignore
-  const [secondaryPrice, secondaryFractionalPrice] =formattedPerItemPrice.split(".");
+  const { main: mainPrice, fraction: fractionalPrice } =
+    formattedTotalPerProductPrice;
+  const { main: secondaryPrice, fraction: secondaryFractionalPrice } =
+    formattedPerItemPrice;
 
   const html = `
     <div class='cart-item' data-product-id="${cartItem.product.id}">

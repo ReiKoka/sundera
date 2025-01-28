@@ -1,11 +1,51 @@
 import { getCart, setCart } from "./cartState";
 import { renderSingleCartItem } from "./renderSingleCartItem";
-import { formatCurrency, updateCartItemsCount } from "./utils/helpers";
+import {
+  formatAndSplitPrice,
+  formatCurrency,
+  updateCartItemsCount,
+} from "./utils/helpers";
 
 export const renderCartItems = () => {
   const allCartItems = getCart();
   console.log(allCartItems);
 
+  // Subtotal
+  const calculateSubtotal = (arr) => {
+    return arr
+      ?.map((item) => item.product.price * item.quantity)
+      ?.reduce((acc, curr) => acc + curr, 0);
+  };
+  let formattedSubtotalPrice = formatAndSplitPrice(
+    calculateSubtotal(allCartItems)
+  );
+  let { main: subtotalMainPrice, fraction: subtotalFractionalPrice } =
+    formattedSubtotalPrice;
+
+  // Shipping
+  const calculateShipping = (arr) => {
+    if (calculateSubtotal(arr) < 30) return calculateSubtotal(arr) * 0.2;
+
+    // prettier-ignore
+    if (calculateSubtotal(arr) >= 30 && calculateSubtotal(arr) < 70) return calculateSubtotal(arr) * 0.1;
+
+    // prettier-ignore
+    if (calculateSubtotal(arr) >= 70 && calculateSubtotal(arr) < 120) return calculateSubtotal(arr) * 0.05;
+
+    if (calculateSubtotal(arr) >= 120) return 0.0;
+  };
+  let formattedShipping = formatAndSplitPrice(calculateShipping(allCartItems));
+  let { main: shippingMainPrice, fraction: shippingFractionalPrice } =
+    formattedShipping;
+
+  // Total
+  const calculateTotal = (arr) => {
+    return calculateSubtotal(arr) + calculateShipping(arr);
+  };
+  let formattedTotal = formatAndSplitPrice(calculateTotal(allCartItems));
+  let { main: totalMainPrice, fraction: totalFractionalPrice } = formattedTotal;
+
+  // Populating the html
   const cartItemsContainer = document.createElement("div");
   const cartParentContainer = document.querySelector(".cart");
   !allCartItems.length
@@ -25,8 +65,28 @@ export const renderCartItems = () => {
           .join("")}
       </div>
       <div class="checkout-summary">
-          <h1 class="checkout-title">Summary</h1>
-          <p className="price-line subtotal">${1}</p>
+        <h1 class="checkout-title">Summary</h1>
+        <div class="price-line subtotal">
+          <p>Subtotal: </p>
+          <p class="subtotal-value">
+            <span>${subtotalMainPrice}</span>.<span>${subtotalFractionalPrice}</span>
+          </p>
+        </div>
+
+        <div class="price-line shipping">
+          <p>Shipping: </p>
+          <p class="shipping-value">
+            <span>${shippingMainPrice}</span>.<span>${shippingFractionalPrice}</span>
+          </p>
+        </div>
+
+
+        <div class="price-line total">
+          <p>Total: </p>
+          <p class="total-value">
+            <span>${totalMainPrice}</span>.<span>${totalFractionalPrice}</span>
+          </p>
+        </div>
       </div>
     `;
 
@@ -59,17 +119,40 @@ export const renderCartItems = () => {
       quantityDisplay.textContent = cartItem.quantity;
       updateCartItemsCount();
 
-      const formattedPrice = formatCurrency(
-        cartItem.quantity * cartItem.product.price
-      );
-      const [mainPrice, fractionalPrice] = formattedPrice.split(".");
-
-      const priceContainer = cartItemEl.querySelector(
+      //prettier-ignore
+      const formattedItemPrice = formatAndSplitPrice(cartItem.quantity * cartItem.product.price);
+      const { main: mainPrice, fraction: fractionalPrice } = formattedItemPrice;
+      const productPriceContainer = cartItemEl.querySelector(
         ".price-container .price"
       );
+      productPriceContainer.innerHTML = "";
+      productPriceContainer.innerHTML = `<span>${mainPrice}</span>.<span>${fractionalPrice}</span>`;
 
-      priceContainer.innerHTML = "";
-      priceContainer.innerHTML = `<span>${mainPrice}</span>.<span>${fractionalPrice}</span>`;
+      // Subtotal
+      formattedSubtotalPrice = formatAndSplitPrice(
+        calculateSubtotal(getCart())
+      );
+      subtotalMainPrice = formattedSubtotalPrice.main;
+      subtotalFractionalPrice = formattedSubtotalPrice.fraction;
+
+      const subtotalPriceContainer = document.querySelector(".subtotal-value");
+      subtotalPriceContainer.innerHTML = `<span>${subtotalMainPrice}</span>.<span>${subtotalFractionalPrice}</span>`;
+
+      // Shipping
+      formattedShipping = formatAndSplitPrice(calculateShipping(getCart()));
+      shippingMainPrice = formattedShipping.main;
+      shippingFractionalPrice = formattedShipping.fraction;
+
+      const shippingPriceContainer = document.querySelector(".shipping-value");
+      shippingPriceContainer.innerHTML = `<span>${shippingMainPrice}</span>.<span>${shippingFractionalPrice}</span>`;
+
+      // Total
+      formattedTotal = formatAndSplitPrice(calculateTotal(getCart()));
+      totalMainPrice = formattedTotal.main;
+      totalFractionalPrice = formattedTotal.fraction;
+
+      const totalPriceContainer = document.querySelector(".total-value");
+      totalPriceContainer.innerHTML = `<span>${totalMainPrice}</span>.<span>${totalFractionalPrice}</span>`;
     });
   }
 };

@@ -206,6 +206,7 @@
   padding: 1rem;
   background-color: hsl(var(--muted));
   height: fit-content;
+  position: relative;
 }
 
 .cart .filled-cart .checkout-summary .checkout-title {
@@ -215,3 +216,28 @@
   padding-bottom: 2rem;
   color: hsl(var(--foreground));
 }
+
+.cart .filled-cart .checkout-summary .price-line {
+  display: flex;
+  padding-block: 1rem;
+  justify-content: space-between;
+  border-bottom: 1px solid hsl(var(--border));
+  color: hsl(var(--foreground));
+}
+
+.subtotal-value span:last-child,
+.shipping-value span:last-child {
+  font-size: 0.7rem;
+}
+
+.cart .filled-cart .checkout-summary .price-line.total {
+  margin-top: 2rem;
+  font-weight: 500;
+  font-size: 1.1rem;
+  border-bottom: none;
+}
+
+.total-value span:last-child {
+  font-size: 0.8rem;
+}
+
