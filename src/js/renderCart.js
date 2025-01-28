@@ -110,62 +110,86 @@ export const renderCart = () => {
 
     cartItems.addEventListener("click", (e) => {
       const button = e.target.closest(".quantity-button");
-      if (!button) return;
-
-      const cartItemEl = button.closest(".cart-item");
-      const productId = cartItemEl.dataset.productId;
-      const isAddButton = button.classList.contains("quantity-add");
-      const isRemoveButton = button.classList.contains("quantity-remove");
-
       const cart = getCart();
-      const cartItem = cart.find((item) => item.product.id === productId);
 
-      if (cartItem) {
-        if (isAddButton) cartItem.quantity++;
-        if (isRemoveButton)
-          cartItem.quantity = Math.max(1, cartItem.quantity - 1);
+      if (button) {
+        // Handle quantity buttons
+        const cartItemEl = button.closest(".cart-item");
+        const productId = cartItemEl.dataset.productId;
+        const isAddButton = button.classList.contains("quantity-add");
+        const isRemoveButton = button.classList.contains("quantity-remove");
+
+        const cartItem = cart.find((item) => item.product.id === productId);
+
+        if (cartItem) {
+          if (isAddButton) cartItem.quantity++;
+          if (isRemoveButton)
+            cartItem.quantity = Math.max(1, cartItem.quantity - 1);
+        }
+
+        setCart(cart);
+
+        const quantityDisplay = cartItemEl.querySelector(".quantity-display");
+        quantityDisplay.textContent = cartItem.quantity;
+        updateCartItemsCount();
+
+        // Item Price
+        const formattedItemPrice = formatAndSplitPrice(
+          cartItem.quantity * cartItem.product.price
+        );
+        const { main: mainPrice, fraction: fractionalPrice } =
+          formattedItemPrice;
+        const productPriceContainer = cartItemEl.querySelector(
+          ".price-container .price"
+        );
+        productPriceContainer.innerHTML = "";
+        productPriceContainer.innerHTML = `<span>${mainPrice}</span>.<span>${fractionalPrice}</span>`;
+
+        // Subtotal Price
+        formattedSubtotalPrice = formatAndSplitPrice(
+          calculateSubtotal(getCart())
+        );
+        subtotalMainPrice = formattedSubtotalPrice.main;
+        subtotalFractionalPrice = formattedSubtotalPrice.fraction;
+
+        const subtotalPriceContainer =
+          document.querySelector(".subtotal-value");
+        subtotalPriceContainer.innerHTML = `<span>${subtotalMainPrice}</span>.<span>${subtotalFractionalPrice}</span>`;
+
+        // Shipping Price
+        formattedShipping = formatAndSplitPrice(calculateShipping(getCart()));
+        shippingMainPrice = formattedShipping.main;
+        shippingFractionalPrice = formattedShipping.fraction;
+
+        const shippingPriceContainer =
+          document.querySelector(".shipping-value");
+        shippingPriceContainer.innerHTML = `<span>${shippingMainPrice}</span>.<span>${shippingFractionalPrice}</span>`;
+
+        // Total Price
+        formattedTotal = formatAndSplitPrice(calculateTotal(getCart()));
+        totalMainPrice = formattedTotal.main;
+        totalFractionalPrice = formattedTotal.fraction;
+
+        const totalPriceContainer = document.querySelector(".total-value");
+        totalPriceContainer.innerHTML = `<span>${totalMainPrice}</span>.<span>${totalFractionalPrice}</span>`;
       }
 
-      setCart(cart);
+      const removeButton = e.target.closest(".remove-item");
 
-      const quantityDisplay = cartItemEl.querySelector(".quantity-display");
-      quantityDisplay.textContent = cartItem.quantity;
-      updateCartItemsCount();
+      // Handle Remove Button
+      if (removeButton) {
+        const cartItemEl = removeButton.closest(".cart-item");
+        const productId = cartItemEl.dataset.productId;
+        const productColor = cartItemEl.dataset.productColor;
 
-      //prettier-ignore
-      const formattedItemPrice = formatAndSplitPrice(cartItem.quantity * cartItem.product.price);
-      const { main: mainPrice, fraction: fractionalPrice } = formattedItemPrice;
-      const productPriceContainer = cartItemEl.querySelector(
-        ".price-container .price"
-      );
-      productPriceContainer.innerHTML = "";
-      productPriceContainer.innerHTML = `<span>${mainPrice}</span>.<span>${fractionalPrice}</span>`;
-
-      // Subtotal
-      formattedSubtotalPrice = formatAndSplitPrice(
-        calculateSubtotal(getCart())
-      );
-      subtotalMainPrice = formattedSubtotalPrice.main;
-      subtotalFractionalPrice = formattedSubtotalPrice.fraction;
-
-      const subtotalPriceContainer = document.querySelector(".subtotal-value");
-      subtotalPriceContainer.innerHTML = `<span>${subtotalMainPrice}</span>.<span>${subtotalFractionalPrice}</span>`;
-
-      // Shipping
-      formattedShipping = formatAndSplitPrice(calculateShipping(getCart()));
-      shippingMainPrice = formattedShipping.main;
-      shippingFractionalPrice = formattedShipping.fraction;
-
-      const shippingPriceContainer = document.querySelector(".shipping-value");
-      shippingPriceContainer.innerHTML = `<span>${shippingMainPrice}</span>.<span>${shippingFractionalPrice}</span>`;
-
-      // Total
-      formattedTotal = formatAndSplitPrice(calculateTotal(getCart()));
-      totalMainPrice = formattedTotal.main;
-      totalFractionalPrice = formattedTotal.fraction;
-
-      const totalPriceContainer = document.querySelector(".total-value");
-      totalPriceContainer.innerHTML = `<span>${totalMainPrice}</span>.<span>${totalFractionalPrice}</span>`;
+        const updatedCart = cart.filter(
+          (item) =>
+            !(item.product.id === productId && item.color === productColor)
+        );
+        setCart(updatedCart);
+        cartItemEl.remove();
+        updateCartItemsCount();
+      }
     });
   }
 

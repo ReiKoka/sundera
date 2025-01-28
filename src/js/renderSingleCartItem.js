@@ -18,7 +18,7 @@ export const renderSingleCartItem = (cartItem) => {
   // </div>
 
   const html = `
-    <div class='cart-item' data-product-id="${cartItem.product.id}">
+    <div class='cart-item' data-product-id="${cartItem.product.id}" data-product-color="${cartItem.color}">
 
       <div class="cart-item-img-container">
         <img src="${cartItem.product.image}" alt="${cartItem.product.title}" class="img" />
