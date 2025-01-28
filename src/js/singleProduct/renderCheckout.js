@@ -1,6 +1,5 @@
 "use strict";
 
-import { renderModal } from "../renderModal";
 import { formatAndSplitPrice } from "../utils/helpers";
 
 export const renderCheckout = (product) => {

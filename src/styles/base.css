@@ -113,6 +113,10 @@ img.card {
   font-family: var(--font-primary);
 }
 
+.header .nav .nav-item:focus-visible {
+  outline: none;
+}
+
 .header .nav ul .nav-item a {
   text-decoration: none;
   color: hsl(var(--foreground));
@@ -136,7 +140,7 @@ img.card {
   border-radius: var(--radius-medium);
 }
 
-.header .nav ul .nav-item a.focus-visible {
+.header .nav ul .nav-item a:focus-visible {
   outline: none;
 }
 

@@ -1,6 +1,6 @@
 "use strict";
 
-import { renderCartItems } from "./renderCartItems";
+import { renderCart } from "./renderCart";
 import { updateCartItemsCount } from "./utils/helpers";
 import { switchTheme } from "./switchTheme";
 
@@ -8,7 +8,7 @@ switchTheme();
 
 const init = () => {
   updateCartItemsCount();
-  renderCartItems();
+  renderCart();
 };
 
 init();

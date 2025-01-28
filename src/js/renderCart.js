@@ -1,14 +1,14 @@
-import { getCart, setCart } from "./cartState";
+import { Notyf } from "notyf";
+import { clearCart, getCart, setCart } from "./cartState";
 import { renderSingleCartItem } from "./renderSingleCartItem";
-import {
-  formatAndSplitPrice,
-  formatCurrency,
-  updateCartItemsCount,
-} from "./utils/helpers";
+import { formatAndSplitPrice, updateCartItemsCount } from "./utils/helpers";
 
-export const renderCartItems = () => {
+export const renderCart = () => {
   const allCartItems = getCart();
   console.log(allCartItems);
+  const notyf = new Notyf({
+    position: { x: "center", y: "top" },
+  });
 
   // Subtotal
   const calculateSubtotal = (arr) => {
@@ -166,6 +166,22 @@ export const renderCartItems = () => {
 
       const totalPriceContainer = document.querySelector(".total-value");
       totalPriceContainer.innerHTML = `<span>${totalMainPrice}</span>.<span>${totalFractionalPrice}</span>`;
+    });
+  }
+
+  const clearCartBtn = document.querySelector(".secondary-btn");
+
+  if (clearCartBtn) {
+    clearCartBtn.addEventListener("click", () => {
+      clearCart();
+      notyf.success("Cart cleared");
+      const cartParentContainer = document.querySelector(".cart");
+      while (cartParentContainer.firstChild) {
+        cartParentContainer.removeChild(cartParentContainer.firstChild);
+      }
+
+      renderCart();
+      updateCartItemsCount();
     });
   }
 };
