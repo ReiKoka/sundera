@@ -1,17 +1,23 @@
-import { formatAndSplitPrice, formatCurrency } from "./utils/helpers";
+import { formatAndSplitPrice } from "./utils/helpers";
 
 export const renderSingleCartItem = (cartItem) => {
-  //prettier-ignore
   const formattedTotalPerProductPrice = formatAndSplitPrice(cartItem.quantity * cartItem.product.price);
   const formattedPerItemPrice = formatAndSplitPrice(cartItem.product.price);
 
-  const { main: mainPrice, fraction: fractionalPrice } =
-    formattedTotalPerProductPrice;
-  const { main: secondaryPrice, fraction: secondaryFractionalPrice } =
-    formattedPerItemPrice;
+  const { main: mainPrice, fraction: fractionalPrice } = formattedTotalPerProductPrice;
+  const { main: secondaryPrice, fraction: secondaryFractionalPrice } = formattedPerItemPrice;
+
+  /* Might Add Later*/
+
+  // <div class="cart-item-select">
+  //   <input type="checkbox" class="cart-item-checkbox" data-product-id="${cartItem.product.id}" />
+  // </div>
+
+  
 
   const html = `
     <div class='cart-item' data-product-id="${cartItem.product.id}">
+
       <div class="cart-item-img-container">
         <img src="${cartItem.product.image}" alt="${cartItem.product.title}" class="img" />
       </div>
@@ -39,9 +45,10 @@ export const renderSingleCartItem = (cartItem) => {
       </div>
 
       <div class="price-container">
-          <p class="price"><span>${mainPrice}</span>.<span>${fractionalPrice}</span>
+          <p class="price"><span>${mainPrice}</span>.<span>${fractionalPrice}</span></p>
           <p class="price-per-item">
             (<span>${secondaryPrice}</span>.<span>${secondaryFractionalPrice}</span> per item)
+          </p>
       </div>
     </div>
   `;

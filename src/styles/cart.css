@@ -225,19 +225,78 @@
   color: hsl(var(--foreground));
 }
 
-.subtotal-value span:last-child,
-.shipping-value span:last-child {
+.cart .filled-cart .checkout-summary .subtotal-value span:last-child,
+.cart .filled-cart .checkout-summary .shipping-value span:last-child {
   font-size: 0.7rem;
 }
 
 .cart .filled-cart .checkout-summary .price-line.total {
-  margin-top: 2rem;
   font-weight: 500;
   font-size: 1.1rem;
   border-bottom: none;
 }
 
-.total-value span:last-child {
+.cart .filled-cart .checkout-summary .total-value span:last-child {
   font-size: 0.8rem;
 }
 
+.cart .filled-cart .checkout-summary .checkout-buttons {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.cart .filled-cart .checkout-summary .checkout-buttons .btn {
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-family: var(--font-primary);
+  letter-spacing: 1px;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-small);
+  transition: all 0.3s ease-out;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.cart .filled-cart .checkout-summary .checkout-buttons .btn svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.cart .filled-cart .checkout-summary .checkout-buttons .btn:hover {
+  transform: translateY(-3px);
+}
+
+.cart .filled-cart .checkout-summary .checkout-buttons .btn:active {
+  transform: scale(0.9);
+}
+
+.cart .filled-cart .checkout-summary .checkout-buttons .btn.secondary-btn {
+  background-color: hsl(var(--secondary));
+  color: hsl(var(--secondary-foreground));
+  border: 1px solid hsl(var(--foreground));
+}
+
+.cart
+  .filled-cart
+  .checkout-summary
+  .checkout-buttons
+  .btn.secondary-btn:hover {
+  background-color: hsl(var(--foreground));
+  color: hsl(var(--background));
+}
+
+.cart .filled-cart .checkout-summary .checkout-buttons .btn.primary-btn {
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  border: 1px solid hsl(var(--primary));
+}
+
+.cart .filled-cart .checkout-summary .checkout-buttons .btn.primary-btn:hover {
+  filter: saturate(0.8);
+}
