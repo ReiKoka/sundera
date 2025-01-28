@@ -160,20 +160,6 @@
   font-weight: 300;
 }
 
-.product-container .checkout-container .ship-to > p {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  cursor: pointer;
-}
-
-.product-container .checkout-container .ship-to svg {
-  width: 16px;
-  height: 16px;
-  stroke: hsl(var(--foreground));
-}
-
 .product-container .checkout-container .quantity {
   display: flex;
   flex-direction: column;
@@ -202,16 +188,16 @@
 
 .product-container
   .checkout-container
-  .checkout-p
-  div:last-child
-  > .quantity-button:active {
+  .quantity
+  .quantity-controls
+  .quantity-button:active {
   transform: scale(0.9);
 }
 
 .product-container
   .checkout-container
-  .checkout-p
-  div:last-child
+  .quantity
+  .quantity-controls
   .quantity-button
   svg {
   display: inline-block;
@@ -244,30 +230,21 @@
   cursor: pointer;
 }
 
-.product-container .checkout-container .primary-button.buy-now {
-  color: hsl(var(--foreground));
-  border: 1px solid hsl(var(--muted-foreground));
-}
-
-.product-container .checkout-container .primary-button.add-to-cart {
+.product-container .checkout-container .primary-button {
   background-color: hsl(var(--primary));
   color: hsl(var(--primary-foreground));
   border: 1px solid hsl(var(--primary));
-}
-
-.product-container .checkout-container .primary-button:active {
-  transform: scale(0.9);
 }
 
 .product-container .checkout-container .primary-button svg {
   width: 18px;
   height: 18px;
   stroke-width: 2px;
-  stroke: hsl(var(--foreground));
+  stroke: hsl(var(--primary-foreground));
 }
 
-.product-container .checkout-container .primary-button.add-to-cart svg {
-  stroke: hsl(var(--primary-foreground));
+.product-container .checkout-container .primary-button:active {
+  transform: scale(0.9);
 }
 
 .product-container .reviews-container {

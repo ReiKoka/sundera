@@ -1,32 +1,24 @@
 "use strict";
 
 import { renderModal } from "../renderModal";
-import {
-  calculateShipping,
-  formatCurrency,
-  location,
-  setupColorButtons,
-} from "../utils/helpers";
 
 export const renderCheckout = (product) => {
-  const formattedShipping = product.freeShipping
-    ? "0.00"
-    : formatCurrency(calculateShipping(product.price));
-  const [mainShipping, fractionalShipping] = formattedShipping.split(".");
   let quantityNumber = 1;
 
   const html = `
     <div class="checkout-container">
       <h2 class="title">Checkout</h2>
-      <p class="checkout-p">Sold By<span>${product.company}</span></p>
-      <div class="checkout-p ship-to">Deliver to 
-        <p id="modalBtn">
+      <div class="checkout-p">
+        <div>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
-            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 21v-7.5a.75.75 0 0 1 .75-.75h3a.75.75 0 0 1 .75.75V21m-4.5 0H2.36m11.14 0H18m0 0h3.64m-1.39 0V9.349M3.75 21V9.349m0 0a3.001 3.001 0 0 0 3.75-.615A2.993 2.993 0 0 0 9.75 9.75c.896 0 1.7-.393 2.25-1.016a2.993 2.993 0 0 0 2.25 1.016c.896 0 1.7-.393 2.25-1.015a3.001 3.001 0 0 0 3.75.614m-16.5 0a3.004 3.004 0 0 1-.621-4.72l1.189-1.19A1.5 1.5 0 0 1 5.378 3h13.243a1.5 1.5 0 0 1 1.06.44l1.19 1.189a3 3 0 0 1-.621 4.72M6.75 18h3.75a.75.75 0 0 0 .75-.75V13.5a.75.75 0 0 0-.75-.75H6.75a.75.75 0 0 0-.75.75v3.75c0 .414.336.75.75.75Z" />
           </svg>
-          <span>${location?.country}</span>
-        </p>
+          <p>Sold By</p>
+        </div>
+          
+        <div>
+          <span>${product.company}</span>
+        </div>
       </div>
 
       <div class="checkout-p">
@@ -38,7 +30,7 @@ export const renderCheckout = (product) => {
         </div>
           
         <div>
-          <span>${mainShipping}</span>.<span>${fractionalShipping}</span>
+          <span>5 working days</span>
         </div>
       </div>
 
@@ -75,16 +67,7 @@ export const renderCheckout = (product) => {
       </div>
 
       <div class="checkout-buttons">
-        <button type="button" class="primary-button buy-now">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0 1 15.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 0 1 3 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 0 0-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 0 1-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 0 0 3 15h-.75M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm3 0h.008v.008H18V10.5Zm-12 0h.008v.008H6V10.5Z" />
-          </svg>
-          <span>
-            Buy Now
-          </span>
-        </button>
-  
-        <button type="button" class="primary-button add-to-cart">
+        <button type="button" class="primary-button ">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
             <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
           </svg>
@@ -95,7 +78,7 @@ export const renderCheckout = (product) => {
       </div>
 
     <div class="modal" id="modal">
-      ${renderModal("Deliver To")}
+      ${renderModal("Place your order")}
     </div>
   </div> 
   `;

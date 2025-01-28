@@ -4,7 +4,6 @@ import { getProducts } from "./../../services/getProducts";
 import { renderProducts } from "./../renderProducts";
 import { getProductById } from "./../../services/getProductById";
 import { renderSingleProduct } from "../renderSingleProduct";
-import { getLocation } from "../../services/getLocation";
 import { addToCart, getCart } from "../cartState";
 import { Notyf } from "notyf";
 
@@ -63,19 +62,6 @@ export const formatAndSplitPrice = (price) => {
   const [main, fraction] = formattedPrice.split(".");
   return { main, fraction };
 };
-
-// Get location data
-export const getLocationData = async () => {
-  try {
-    const locationData = await getLocation();
-    return locationData;
-  } catch (error) {
-    console.error("Error getting location:", error);
-  }
-};
-
-// Export location variable
-export const location = await getLocationData();
 
 // Calculate Shipping function
 export const calculateShipping = (value) => {

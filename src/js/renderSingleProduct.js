@@ -14,7 +14,7 @@ import { renderImage } from "./singleProduct/renderImage.js";
 export const renderSingleProduct = (product) => {
   const productContainer = document.querySelector(".product-container");
   let selectedColor = product.colors[0].color;
-  
+
   let selectedQuantity = 1;
 
   function updateSelectedQuantity(change) {
@@ -38,16 +38,10 @@ export const renderSingleProduct = (product) => {
 
   setupColorButtons(colorButtons, product, handleColorSelect);
 
-  const deliverToButton = document.querySelector("#modalBtn");
   const modal = document.querySelector("#modal");
   const modalBox = document.querySelector(".modal-box");
   const reviewsContainer = document.querySelector(".reviews-container");
   const commentsContainer = document.querySelector(".comments-container");
-
-  // Modal Controls to select shipping country and close modal
-  deliverToButton.addEventListener("click", () => {
-    modal.style.display = "block";
-  });
 
   window.addEventListener("click", (e) => {
     if (e.target === modalBox) {
@@ -65,5 +59,9 @@ export const renderSingleProduct = (product) => {
   });
 
   updateQuantityHandler(updateSelectedQuantity);
-  addProductHandler([product], () => selectedQuantity, () => selectedColor);
+  addProductHandler(
+    [product],
+    () => selectedQuantity,
+    () => selectedColor
+  );
 };
