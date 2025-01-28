@@ -134,9 +134,10 @@ export const addProductHandler = (products, getQuantity, getColor) => {
 };
 
 // Update Quantity Buttons
-export const updateQuantityHandler = (updateQuantity) => {
+export const updateQuantityHandler = (updateQuantity, price) => {
   const addOrRemoveButtons = document.querySelectorAll(".quantity-button");
   const quantityDisplay = document.querySelector(".quantity-display");
+  const totalValue = document.querySelector(".total-value");
 
   addOrRemoveButtons.forEach((button) =>
     button.addEventListener("click", (e) => {
@@ -150,6 +151,11 @@ export const updateQuantityHandler = (updateQuantity) => {
         quantity = updateQuantity(-1);
       }
       quantityDisplay.textContent = quantity;
+
+      const formattedTotalPrice = formatAndSplitPrice(quantity * price);
+      const { main: totalMainPrice, fraction: totalFractionalPrice } =
+        formattedTotalPrice;
+      totalValue.innerHTML = `<span>${totalMainPrice}</span>.<span>${totalFractionalPrice}</span>`;
     })
   );
 };

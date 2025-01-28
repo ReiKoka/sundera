@@ -25,7 +25,7 @@ export const renderSingleProduct = (product) => {
   productContainer.innerHTML = `
     ${renderImage(product)}
     ${renderDetails(product)}
-    ${renderCheckout(product)}
+    ${renderCheckout(product, selectedQuantity, product.price)}
     ${renderReviews(product)}
   `;
 
@@ -38,16 +38,8 @@ export const renderSingleProduct = (product) => {
 
   setupColorButtons(colorButtons, product, handleColorSelect);
 
-  const modal = document.querySelector("#modal");
-  const modalBox = document.querySelector(".modal-box");
   const reviewsContainer = document.querySelector(".reviews-container");
   const commentsContainer = document.querySelector(".comments-container");
-
-  window.addEventListener("click", (e) => {
-    if (e.target === modalBox) {
-      modal.style.display = "none";
-    }
-  });
 
   renderStars(productContainer, product);
   renderStars(reviewsContainer, product);
@@ -58,7 +50,7 @@ export const renderSingleProduct = (product) => {
     renderStars(ratingsContainer, review);
   });
 
-  updateQuantityHandler(updateSelectedQuantity);
+  updateQuantityHandler(updateSelectedQuantity, product.price);
   addProductHandler(
     [product],
     () => selectedQuantity,
