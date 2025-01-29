@@ -16,6 +16,12 @@
   gap: 1rem;
 }
 
+.filters-form {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
 .input-container {
   display: flex;
   flex-direction: column;

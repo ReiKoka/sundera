@@ -7,6 +7,7 @@ import { renderSingleProduct } from "../renderSingleProduct";
 import { addToCart, getCart } from "../cartState";
 import { Notyf } from "notyf";
 import { renderFilters } from "../renderFilters";
+import { getProductsWithParams } from "../../services/getProductsWithParams";
 
 // Update CartItems Count - DOM
 export const updateCartItemsCount = () => {
@@ -213,4 +214,23 @@ export const updateDomOnCartClearance = (renderCart) => {
 export const capitalizeFirstLetter = (str) => {
   if (!str) return "";
   return str.charAt(0).toUpperCase() + str.slice(1);
+};
+
+export const updateURLAndFetch = (newParams) => {
+  console.log(newParams);
+  const url = new URL(window.location.href);
+  Object.keys(newParams).forEach((key) => {
+    console.log(key);
+    if (newParams[key]) {
+      url.searchParams.set(key, newParams[key]);
+    }
+  });
+
+  window.history.pushState({}, "", url);
+  const params = Object.fromEntries(url.searchParams.entries());
+  getProductsWithParams(params.category, params.sort)
+    .then((data) => {
+      renderProducts(data);
+    })
+    .catch((err) => console.error(err));
 };
