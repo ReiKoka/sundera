@@ -7,7 +7,7 @@ import { renderSingleProduct } from "../renderSingleProduct";
 import { addToCart, getCart } from "../cartState";
 import { Notyf } from "notyf";
 
-// Update CartItems Count
+// Update CartItems Count - DOM
 export const updateCartItemsCount = () => {
   const cartItemsNumber = document.querySelector(".cart-items-number");
   if (cartItemsNumber) {
@@ -61,11 +61,6 @@ export const formatAndSplitPrice = (price) => {
   const formattedPrice = formatCurrency(price);
   const [main, fraction] = formattedPrice.split(".");
   return { main, fraction };
-};
-
-// Calculate Shipping function
-export const calculateShipping = (value) => {
-  return value * 0.1;
 };
 
 // Calculate review average
@@ -158,4 +153,42 @@ export const updateQuantityHandler = (updateQuantity, price) => {
       totalValue.innerHTML = `<span>${totalMainPrice}</span>.<span>${totalFractionalPrice}</span>`;
     })
   );
+};
+
+// Calculate Subtotal
+export const calculateSubtotal = (arr) => {
+  return arr
+    ?.map((item) => item.product.price * item.quantity)
+    ?.reduce((acc, curr) => acc + curr, 0);
+};
+
+// Calculate Shipping
+export const calculateShipping = (arr) => {
+  if (calculateSubtotal(arr) < 30) return calculateSubtotal(arr) * 0.2;
+
+  if (calculateSubtotal(arr) >= 30 && calculateSubtotal(arr) < 70)
+    return calculateSubtotal(arr) * 0.1;
+
+  if (calculateSubtotal(arr) >= 70 && calculateSubtotal(arr) < 120)
+    return calculateSubtotal(arr) * 0.05;
+
+  if (calculateSubtotal(arr) >= 120) return 0.0;
+};
+
+// Calculate Total
+export const calculateTotal = (arr) => {
+  return calculateSubtotal(arr) + calculateShipping(arr);
+};
+
+// Update Prices in DOM
+export const updatePricesInDOM = (selector, calculatePrice, arr) => {
+  const formattedPrice = formatAndSplitPrice(calculatePrice(arr));
+  const mainPrice = formattedPrice.main;
+  const fractionalPrice = formattedPrice.fraction;
+
+  const priceContainer = document.querySelector(selector);
+
+  if (priceContainer) {
+    priceContainer.innerHTML = `<span>${mainPrice}</span>.<span>${fractionalPrice}</span>`;
+  }
 };

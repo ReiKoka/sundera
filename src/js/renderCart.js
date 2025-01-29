@@ -1,7 +1,14 @@
 import { Notyf } from "notyf";
 import { clearCart, getCart, setCart } from "./cartState";
 import { renderSingleCartItem } from "./renderSingleCartItem";
-import { formatAndSplitPrice, updateCartItemsCount } from "./utils/helpers";
+import {
+  calculateShipping,
+  calculateSubtotal,
+  calculateTotal,
+  formatAndSplitPrice,
+  updateCartItemsCount,
+  updatePricesInDOM,
+} from "./utils/helpers";
 
 export const renderCart = () => {
   const allCartItems = getCart();
@@ -11,11 +18,6 @@ export const renderCart = () => {
   });
 
   // Subtotal
-  const calculateSubtotal = (arr) => {
-    return arr
-      ?.map((item) => item.product.price * item.quantity)
-      ?.reduce((acc, curr) => acc + curr, 0);
-  };
   let formattedSubtotalPrice = formatAndSplitPrice(
     calculateSubtotal(allCartItems)
   );
@@ -23,25 +25,11 @@ export const renderCart = () => {
     formattedSubtotalPrice;
 
   // Shipping
-  const calculateShipping = (arr) => {
-    if (calculateSubtotal(arr) < 30) return calculateSubtotal(arr) * 0.2;
-
-    // prettier-ignore
-    if (calculateSubtotal(arr) >= 30 && calculateSubtotal(arr) < 70) return calculateSubtotal(arr) * 0.1;
-
-    // prettier-ignore
-    if (calculateSubtotal(arr) >= 70 && calculateSubtotal(arr) < 120) return calculateSubtotal(arr) * 0.05;
-
-    if (calculateSubtotal(arr) >= 120) return 0.0;
-  };
   let formattedShipping = formatAndSplitPrice(calculateShipping(allCartItems));
   let { main: shippingMainPrice, fraction: shippingFractionalPrice } =
     formattedShipping;
 
   // Total
-  const calculateTotal = (arr) => {
-    return calculateSubtotal(arr) + calculateShipping(arr);
-  };
   let formattedTotal = formatAndSplitPrice(calculateTotal(allCartItems));
   let { main: totalMainPrice, fraction: totalFractionalPrice } = formattedTotal;
 
@@ -112,8 +100,8 @@ export const renderCart = () => {
       const button = e.target.closest(".quantity-button");
       const cart = getCart();
 
+      // Handle quantity buttons
       if (button) {
-        // Handle quantity buttons
         const cartItemEl = button.closest(".cart-item");
         const productId = cartItemEl.dataset.productId;
         const isAddButton = button.classList.contains("quantity-add");
@@ -142,36 +130,8 @@ export const renderCart = () => {
         const productPriceContainer = cartItemEl.querySelector(
           ".price-container .price"
         );
-        productPriceContainer.innerHTML = "";
+
         productPriceContainer.innerHTML = `<span>${mainPrice}</span>.<span>${fractionalPrice}</span>`;
-
-        // Subtotal Price
-        formattedSubtotalPrice = formatAndSplitPrice(
-          calculateSubtotal(getCart())
-        );
-        subtotalMainPrice = formattedSubtotalPrice.main;
-        subtotalFractionalPrice = formattedSubtotalPrice.fraction;
-
-        const subtotalPriceContainer =
-          document.querySelector(".subtotal-value");
-        subtotalPriceContainer.innerHTML = `<span>${subtotalMainPrice}</span>.<span>${subtotalFractionalPrice}</span>`;
-
-        // Shipping Price
-        formattedShipping = formatAndSplitPrice(calculateShipping(getCart()));
-        shippingMainPrice = formattedShipping.main;
-        shippingFractionalPrice = formattedShipping.fraction;
-
-        const shippingPriceContainer =
-          document.querySelector(".shipping-value");
-        shippingPriceContainer.innerHTML = `<span>${shippingMainPrice}</span>.<span>${shippingFractionalPrice}</span>`;
-
-        // Total Price
-        formattedTotal = formatAndSplitPrice(calculateTotal(getCart()));
-        totalMainPrice = formattedTotal.main;
-        totalFractionalPrice = formattedTotal.fraction;
-
-        const totalPriceContainer = document.querySelector(".total-value");
-        totalPriceContainer.innerHTML = `<span>${totalMainPrice}</span>.<span>${totalFractionalPrice}</span>`;
       }
 
       const removeButton = e.target.closest(".remove-item");
@@ -190,6 +150,13 @@ export const renderCart = () => {
         cartItemEl.remove();
         updateCartItemsCount();
       }
+
+      // Subtotal Price
+      updatePricesInDOM(".subtotal-value", calculateSubtotal, getCart());
+      // Shipping Price
+      updatePricesInDOM(".shipping-value", calculateShipping, getCart());
+      // Total Price
+      updatePricesInDOM(" .total-value", calculateTotal, getCart());
     });
   }
 
