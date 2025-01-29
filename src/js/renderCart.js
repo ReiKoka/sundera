@@ -43,7 +43,7 @@ export const renderCart = () => {
 
   cartItemsContainer.innerHTML = !allCartItems.length
     ? `
-      <div class="img-container"><img src="public/empty-cart.svg" alt="empty-cart-illustration" class="img"/></div>
+      <div class="img-container"><img src="/empty-cart.svg" alt="empty-cart-illustration" class="img"/></div>
       <h3 class="cart-empty-info">Your Sundera cart is empty! </h3>
       <a href="../../products.html" class="cta-button">Go to products</a>
     `

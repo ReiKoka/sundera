@@ -6,6 +6,7 @@ import { getProductById } from "./../../services/getProductById";
 import { renderSingleProduct } from "../renderSingleProduct";
 import { addToCart, getCart } from "../cartState";
 import { Notyf } from "notyf";
+import { renderFilters } from "../renderFilters";
 
 // Update CartItems Count - DOM
 export const updateCartItemsCount = () => {
@@ -18,6 +19,13 @@ export const updateCartItemsCount = () => {
 // Init All Products
 export const initProducts = async (featured) => {
   const featuredProducts = await getProducts(featured);
+
+  if (featured) {
+    renderProducts(featuredProducts);
+    return;
+  }
+
+  renderFilters();
   renderProducts(featuredProducts);
 };
 
