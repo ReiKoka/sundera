@@ -18,15 +18,15 @@ export const updateCartItemsCount = () => {
 
 // Init All Products
 export const initProducts = async (featured) => {
-  const featuredProducts = await getProducts(featured);
+  const products = await getProducts(featured);
 
   if (featured) {
-    renderProducts(featuredProducts);
+    renderProducts(products);
     return;
   }
 
-  renderFilters();
-  renderProducts(featuredProducts);
+  renderFilters(products);
+  renderProducts(products);
 };
 
 // Init Single Product
@@ -208,4 +208,9 @@ export const updateDomOnCartClearance = (renderCart) => {
     cartParentContainer.removeChild(cartParentContainer.firstChild);
   }
   renderCart();
+};
+
+export const capitalizeFirstLetter = (str) => {
+  if (!str) return "";
+  return str.charAt(0).toUpperCase() + str.slice(1);
 };
