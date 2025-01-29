@@ -192,3 +192,12 @@ export const updatePricesInDOM = (selector, calculatePrice, arr) => {
     priceContainer.innerHTML = `<span>${mainPrice}</span>.<span>${fractionalPrice}</span>`;
   }
 };
+
+// Update DOM when cart gets cleared
+export const updateDomOnCartClearance = (renderCart) => {
+  const cartParentContainer = document.querySelector(".cart");
+  while (cartParentContainer.firstChild) {
+    cartParentContainer.removeChild(cartParentContainer.firstChild);
+  }
+  renderCart();
+};

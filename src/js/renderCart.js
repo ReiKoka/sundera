@@ -7,6 +7,7 @@ import {
   calculateTotal,
   formatAndSplitPrice,
   updateCartItemsCount,
+  updateDomOnCartClearance,
   updatePricesInDOM,
 } from "./utils/helpers";
 
@@ -149,6 +150,12 @@ export const renderCart = () => {
         setCart(updatedCart);
         cartItemEl.remove();
         updateCartItemsCount();
+        notyf.success(`Item #${productId} removed from cart!`);
+
+        if (updatedCart.length === 0) {
+          updateDomOnCartClearance(renderCart);
+          return;
+        }
       }
 
       // Subtotal Price
@@ -166,12 +173,7 @@ export const renderCart = () => {
     clearCartBtn.addEventListener("click", () => {
       clearCart();
       notyf.success("Cart cleared");
-      const cartParentContainer = document.querySelector(".cart");
-      while (cartParentContainer.firstChild) {
-        cartParentContainer.removeChild(cartParentContainer.firstChild);
-      }
-
-      renderCart();
+      updateDomOnCartClearance(renderCart);
       updateCartItemsCount();
     });
   }
