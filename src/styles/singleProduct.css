@@ -1,7 +1,37 @@
+.main {
+  padding-inline: 0;
+}
+
 .product-container {
   display: grid;
   gap: 1.5rem;
   grid-template-columns: 2fr 2fr 1fr;
+}
+
+.product-container .navigate-back {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: hsl(var(--muted));
+  color: hsl(var(--foreground));
+  position: absolute;
+  border-top-left-radius: var(--radius-medium);
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  width: fit-content;
+  text-decoration: none;
+  outline: none;
+}
+
+.product-container .navigate-back:hover {
+  color: hsl(var(--destructive));
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+.product-container .navigate-back svg {
+  width: 0.9rem;
+  height: 0.9rem;
 }
 
 .product-container .img-container img {
