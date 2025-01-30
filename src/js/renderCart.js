@@ -105,10 +105,11 @@ export const renderCart = () => {
       if (button) {
         const cartItemEl = button.closest(".cart-item");
         const productId = cartItemEl.dataset.productId;
+        const productColor = cartItemEl.dataset.productColor;
         const isAddButton = button.classList.contains("quantity-add");
         const isRemoveButton = button.classList.contains("quantity-remove");
 
-        const cartItem = cart.find((item) => item.product.id === productId);
+        const cartItem = cart.find((item) => item.product.id === productId && item.color === productColor);
 
         if (cartItem) {
           if (isAddButton) cartItem.quantity++;
