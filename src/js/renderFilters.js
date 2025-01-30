@@ -83,6 +83,13 @@ export const renderFilters = (products) => {
   const categorySelect = document.querySelector("#categories");
   const sortSelect = document.querySelector("#sort-by");
 
+  const urlParams = new URLSearchParams(window.location.search);
+  const categoryFromUrl = urlParams.get("category") || "";
+  const sortFromUrl = urlParams.get("sort") || "";
+
+  categorySelect.value = categoryFromUrl;
+  sortSelect.value = sortFromUrl;
+
   form.addEventListener("submit", (e) => {
     e.preventDefault();
     const category = categorySelect.value;
