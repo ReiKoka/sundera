@@ -1,9 +1,6 @@
-@import url(base.css);
-@import url(stars.css);
-
 .featured-products .title-search-container {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: space-between;
   padding-bottom: 1rem;
 }
@@ -11,6 +8,7 @@
 .featured-products h1 {
   width: 100%;
   color: hsl(var(--foreground));
+  margin-top: -5px;
 }
 
 .featured-products .utilities-container {
@@ -45,8 +43,8 @@
   top: 50%;
   right: 0;
   padding-inline: 1rem;
-  border-top-right-radius: 50px;
-  border-bottom-right-radius: 50px;
+  border-top-right-radius: var(--radius-medium);
+  border-bottom-right-radius: var(--radius-medium);
   background-color: hsl(var(--primary));
   transform: translateY(-50%);
   color: hsl(var(--primary-foreground));
@@ -66,7 +64,7 @@
   height: 100%;
   padding-inline: 1rem;
   border: 2px solid hsl(var(--border));
-  border-radius: 50px;
+  border-radius: var(--radius-medium);
   position: absolute;
   background-color: hsl(var(--background));
   top: 0;

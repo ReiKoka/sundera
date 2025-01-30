@@ -1,6 +1,3 @@
-@import url(base.css);
-
-/* Default styles which are used in the product cards, in the featured products section on home page and all products page */
 .star-rating-container {
   align-self: center;
 }
