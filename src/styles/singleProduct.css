@@ -1,5 +1,4 @@
 .main {
-  padding-inline: 0;
   padding-top: 2.5rem;
 }
 
@@ -20,16 +19,23 @@
   left: 0;
   border-top-left-radius: var(--radius-medium);
   padding-block: 0.75rem;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   width: fit-content;
   text-decoration: none;
   outline: none;
   font-weight: 500;
+  border: none;
+  font-family: var(--font-primary);
+  cursor: pointer;
 }
 
 .product-container .navigate-back:hover {
   text-decoration: underline;
   text-underline-offset: 4px;
+}
+
+.product-container .navigate-back:active {
+  transform: scale(0.9);
 }
 
 .product-container .navigate-back svg {
