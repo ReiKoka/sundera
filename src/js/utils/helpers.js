@@ -19,7 +19,17 @@ export const updateCartItemsCount = () => {
 
 // Init All Products
 export const initProducts = async (featured) => {
-  const products = await getProducts(featured);
+  const urlParams = new URLSearchParams(window.location.search);
+  const category = urlParams.get("category") || "";
+  const sort = urlParams.get("sort") || "";
+
+  let products;
+
+  if (category || sort) {
+    products = await getProductsWithParams(category, sort);
+  } else {
+    products = await getProducts(featured);
+  }
 
   if (featured) {
     renderProducts(products);
@@ -220,7 +230,6 @@ export const updateURLAndFetch = (newParams) => {
   console.log(newParams);
   const url = new URL(window.location.href);
   Object.keys(newParams).forEach((key) => {
-    console.log(key);
     if (newParams[key]) {
       url.searchParams.set(key, newParams[key]);
     }
@@ -228,6 +237,8 @@ export const updateURLAndFetch = (newParams) => {
 
   window.history.pushState({}, "", url);
   const params = Object.fromEntries(url.searchParams.entries());
+
+  if (params.category === "all" && params.sort === "id") return;
   getProductsWithParams(params.category, params.sort)
     .then((data) => {
       renderProducts(data);

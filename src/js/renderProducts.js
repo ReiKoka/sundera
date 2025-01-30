@@ -12,6 +12,8 @@ export const renderProducts = (products) => {
     ".featured-products-container"
   );
 
+  productsContainer.innerHTML = "";
+
   products.forEach((product) => {
     const productCard = document.createElement("div");
     productCard.classList.add("product-card");

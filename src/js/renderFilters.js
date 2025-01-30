@@ -1,4 +1,5 @@
-import { getProductsWithParams } from "../services/getProductsWithParams";
+import { getProducts } from "../services/getProducts";
+import { renderProducts } from "./renderProducts";
 import { capitalizeFirstLetter, updateURLAndFetch } from "./utils/helpers";
 
 export const renderFilters = (products) => {
@@ -41,7 +42,7 @@ export const renderFilters = (products) => {
           id="sort-by"
           class="form-select"
         >
-          
+          <option value="id">Default</option>
           <option value="price">Sort By Price (Lowest First)</option>
           <option value="-price">Sort By Price (Highest First)</option>
         </select>
@@ -90,15 +91,19 @@ export const renderFilters = (products) => {
   });
 
   resetBtn.addEventListener("click", () => {
+    if (categorySelect.selectedIndex === 0 && sortSelect.selectedIndex === 0)
+      return;
+
     categorySelect.selectedIndex = 0;
     sortSelect.selectedIndex = 0;
 
     const url = new URL(window.location.href);
     url.search = "";
     window.history.pushState({}, "", url);
-    getProductsWithParams()
+    getProducts()
       .then((data) => {
         renderProducts(data);
+        console.log(data);
       })
       .catch((err) => console.error(err));
   });
