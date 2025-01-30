@@ -59,7 +59,7 @@ export const renderFilters = (products) => {
   `;
 
   productsMain.insertBefore(utilitiesContainer, productsContainer);
-
+  
   const form = document.querySelector("#filters-form");
   const resetBtn = document.querySelector(".reset-filters-btn");
   const categorySelect = document.querySelector("#categories");
@@ -96,4 +96,6 @@ export const renderFilters = (products) => {
       })
       .catch((err) => console.error(err));
   });
+
+
 };

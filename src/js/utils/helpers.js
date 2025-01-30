@@ -8,6 +8,7 @@ import { addToCart, getCart } from "../cartState";
 import { Notyf } from "notyf";
 import { renderFilters } from "../renderFilters";
 import { getProductsWithParams } from "../../services/getProductsWithParams";
+import { searchProduct } from "../searchProduct";
 
 // Update CartItems Count - DOM
 export const updateCartItemsCount = () => {
@@ -36,6 +37,7 @@ export const initProducts = async (featured) => {
     return;
   }
 
+  searchProduct(products);
   renderFilters(products);
   renderProducts(products);
 };
@@ -244,4 +246,22 @@ export const updateURLAndFetch = (newParams) => {
       renderProducts(data);
     })
     .catch((err) => console.error(err));
+};
+
+export const searchByTitle = (products, searchTerm) => {
+  return products.filter((product) =>
+    product.title.toLowerCase().includes(searchTerm)
+  );
+};
+
+export const searchByCategory = (products, searchTerm) => {
+  return products.filter((product) =>
+    product.category.toLowerCase().includes(searchTerm)
+  );
+};
+
+export const searchByDescription = (products, searchTerm) => {
+  return products.filter((product) =>
+    product.description.toLowerCase().includes(searchTerm)
+  );
 };
