@@ -1,9 +1,15 @@
 @import url(base.css);
 @import url(stars.css);
 
+.featured-products .title-search-container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+}
+
 .featured-products h1 {
   width: 100%;
-  padding-bottom: 1rem;
   color: hsl(var(--foreground));
 }
 
@@ -12,7 +18,7 @@
   color: hsl(var(--foreground));
   display: flex;
   align-items: flex-end;
-  justify-content: flex-end;
+  justify-content: flex-start;
   gap: 1rem;
 }
 
@@ -28,8 +34,7 @@
   gap: 0.25rem;
   width: fit-content;
   position: relative;
-  width: 250px;
-  height: 40px;
+  width: 300px;
 }
 
 .input-container .search-icon {
@@ -105,9 +110,9 @@
 }
 
 select {
-  /* -webkit-appearance: none;
+  -webkit-appearance: none;
   -moz-appearance: none;
-  -ms-appearance: none; */
+  -ms-appearance: none;
   appearance: none;
   outline: none;
   box-shadow: none;
@@ -126,8 +131,7 @@ select {
   gap: 0.25rem;
   width: fit-content;
   position: relative;
-  width: 250px;
-  height: 40px;
+  width: auto;
 }
 
 .select-container .icon {
@@ -156,17 +160,47 @@ select {
   font-family: var(--primary);
   font-size: 0.9rem;
   color: hsl(var(--foreground));
-  padding-inline: 1rem;
+  padding-inline: 1rem 2rem;
   border-radius: var(--radius-medium);
 }
 
-.form-select option {
-  width: 100%;
-  background-color: hsl(var(--muted));
+.filters-form .btn {
+  height: 38px;
+  border-radius: var(--radius-medium);
+  font-family: var(--font-primary);
+  font-size: 0.9rem;
+  padding-inline: 1rem;
   cursor: pointer;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+  transition: all 0.3s ease-out;
 }
 
-/* ----------------------------------------------------------------------------------------------------------------- */
+.filters-form .btn:active {
+  transform: scale(0.9);
+}
+
+.filters-form .btn.reset-filters-btn {
+  border: 2px solid hsl(var(--secondary-foreground));
+  background-color: hsl(var(--secondary));
+  color: hsl(var(--secondary-foreground));
+}
+
+.filters-form .btn.reset-filters-btn:hover {
+  background-color: hsl(var(--foreground));
+  color: hsl(var(--background));
+}
+
+.filters-form .btn.apply-filters-btn {
+  border: 2px solid hsl(var(--primary));
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+}
+
+.filters-form .btn.apply-filters-btn:hover {
+  filter: saturate(0.8);
+}
+
 .featured-products .featured-products-container {
   padding-top: 1rem;
   display: grid;
@@ -246,7 +280,10 @@ select {
   .checkout
   .add-to-cart {
   padding: 0.5rem 0.75rem;
-  font-family: var(--primary);
+  font-family: var(--font-primary);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
   display: flex;
   align-items: center;
   gap: 1rem;

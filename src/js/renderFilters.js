@@ -56,24 +56,6 @@ export const renderFilters = (products) => {
       <button type="button" class="btn reset-filters-btn">Reset</button>
       <button type="submit" class="btn apply-filters-btn">Apply Filters</button>
     </form>
-
-    <div class="input-container">
-      <input
-        type="text"
-        id="search"
-        class="form-input"
-        autocomplete="off"
-        placeholder=""
-      />
-      <label for="search" class="form-label">Search Products</label>
-     <div class="icon search-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-6">
-          <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
-        </svg>
-     </div>
-    </div>
-
-
   `;
 
   productsMain.insertBefore(utilitiesContainer, productsContainer);
@@ -84,8 +66,8 @@ export const renderFilters = (products) => {
   const sortSelect = document.querySelector("#sort-by");
 
   const urlParams = new URLSearchParams(window.location.search);
-  const categoryFromUrl = urlParams.get("category") || "";
-  const sortFromUrl = urlParams.get("sort") || "";
+  const categoryFromUrl = urlParams.get("category") || "all";
+  const sortFromUrl = urlParams.get("sort") || "id";
 
   categorySelect.value = categoryFromUrl;
   sortSelect.value = sortFromUrl;
