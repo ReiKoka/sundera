@@ -23,6 +23,7 @@ export const initProducts = async (featured) => {
   const urlParams = new URLSearchParams(window.location.search);
   const category = urlParams.get("category") || "";
   const sort = urlParams.get("sort") || "";
+  const loader = document.querySelector(".loader-container");
 
   let products;
 
@@ -30,6 +31,10 @@ export const initProducts = async (featured) => {
     products = await getProductsWithParams(category, sort);
   } else {
     products = await getProducts(featured);
+  }
+
+  if (products) {
+    loader.classList.add("hide");
   }
 
   if (featured) {

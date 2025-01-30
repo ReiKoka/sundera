@@ -7,7 +7,11 @@ import { switchTheme } from "./switchTheme";
 switchTheme();
 
 const init = () => {
+  const loader = document.querySelector(".loader-container");
+
   updateCartItemsCount();
+
+  loader.remove();
   renderCart();
 };
 

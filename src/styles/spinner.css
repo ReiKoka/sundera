@@ -1,11 +1,30 @@
-/* HTML: <div class="loader"></div> */
+.loader-container {
+  width: 100%;
+  height: calc(100dvh - 12rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: visible;
+  backdrop-filter: blur(5px);
+  z-index: 100;
+}
+
+.loader-container.hide {
+  visibility: hidden;
+}
+
 .loader {
-  width: 50px;
+  width: 80px;
+  margin-top: -10rem;
   aspect-ratio: 1;
   border-radius: 50%;
-  background: radial-gradient(farthest-side, #0084ff 95%, #0000) 50% 1px/12px
-      12px no-repeat,
-    radial-gradient(farthest-side, #0000 calc(100% - 14px), #ccc 0);
+  background: radial-gradient(farthest-side, #0084ff 95%, #0000) 50% 1px/16px
+      16px no-repeat,
+    radial-gradient(farthest-side, #0000 calc(100% - 18px), #ccc 0);
   animation: l9 2s infinite linear;
 }
 @keyframes l9 {

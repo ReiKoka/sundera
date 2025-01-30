@@ -1,6 +1,7 @@
 .hero {
   display: flex;
   gap: 2rem;
+  z-index: 1;
 }
 
 .hero .text {
