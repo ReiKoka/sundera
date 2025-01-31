@@ -1,5 +1,8 @@
 "use strict";
 
+import { createOrEditProduct } from "../services/createOrEditProduct";
+import { renderProducts } from './renderProducts';
+
 export const addFormHandler = () => {
   const form = document.querySelector(".add-product-form");
 
@@ -27,5 +30,10 @@ export const addFormHandler = () => {
       price,
       colors,
     };
+
+    console.log(newProduct);
+    createOrEditProduct(newProduct);
+
+    renderProducts(products)
   });
 };
