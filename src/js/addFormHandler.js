@@ -1,9 +1,9 @@
 "use strict";
 
 import { createOrEditProduct } from "../services/createOrEditProduct";
-import { renderProducts } from './renderProducts';
+import { initProducts } from "./utils/helpers";
 
-export const addFormHandler = () => {
+export const addFormHandler = (products) => {
   const form = document.querySelector(".add-product-form");
 
   form.addEventListener("submit", (e) => {
@@ -31,9 +31,7 @@ export const addFormHandler = () => {
       colors,
     };
 
-    console.log(newProduct);
     createOrEditProduct(newProduct);
-
-    renderProducts(products)
+    initProducts();
   });
 };

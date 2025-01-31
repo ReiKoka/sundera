@@ -2,7 +2,6 @@
 import { URL } from "../js/utils/constants";
 
 export const createOrEditProduct = async (product, productId) => {
-  console.log(product);
   let response;
   try {
     response = await fetch(

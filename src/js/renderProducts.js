@@ -6,6 +6,7 @@ import {
   getProductIdAndPassToUrl,
 } from "./utils/helpers";
 import { renderStars } from "./renderStars";
+import { initAddModal } from "./initAddModal";
 
 export const renderProducts = (products) => {
   const productsContainer = document.querySelector(
@@ -42,7 +43,7 @@ export const renderProducts = (products) => {
     renderStars(productCard, product);
   });
 
-
+  initAddModal();
   getProductIdAndPassToUrl();
   addProductHandler(products, () => 1);
 };
