@@ -142,7 +142,7 @@ export const addProductHandler = (products, getQuantity, getColor) => {
       const productId = productCard.querySelector(".img-container").dataset.id;
 
       const selectedProduct = products.find(
-        (p) => Number(p.id) === Number(productId)
+        (p) => p.id === productId
       );
 
       if (selectedProduct) {

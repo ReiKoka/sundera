@@ -45,7 +45,6 @@ export const initAddModal = () => {
   addFormHandler();
 
   triggerButton?.addEventListener("click", () => {
-    console.log("Opening modal...");
     modal.style.display = "block";
   });
 

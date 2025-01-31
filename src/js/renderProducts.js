@@ -43,7 +43,7 @@ export const renderProducts = (products) => {
     renderStars(productCard, product);
   });
 
-  initAddModal();
+  if (window.location.href.toString().includes("/products")) initAddModal();
   getProductIdAndPassToUrl();
   addProductHandler(products, () => 1);
 };

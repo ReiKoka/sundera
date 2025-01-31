@@ -127,18 +127,20 @@
 }
 
 .color-picker {
-  width: 100%;
+  width: 80px;
   height: 100%;
   border: none;
-  width: 50px;
-  height: 30px;
+  height: 40px;
   cursor: pointer;
+  background: none;
+  border: none;
 }
 
 .color-picker-label {
   font-size: 0.9rem;
   font-weight: 500;
   font-family: var(--font-primary);
+  color: hsl(var(--foreground));
 }
 
 .modal-buttons {
