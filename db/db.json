@@ -2,7 +2,6 @@
   "orders": [],
   "products": [
     {
-      "id": "1",
       "title": "Rambler® 30 oz Stackable Cup",
       "company": "YETI",
       "description": "Insulated coffee cup for hot or cold coffee. May also be used for tea and other hot drinks",
@@ -17,7 +16,6 @@
       ]
     },
     {
-      "id": "2",
       "title": "Eco-Friendly Water Bottle",
       "company": "EcoGear",
       "description": "Reusable water bottle made from sustainable materials, perfect for travel or gym use.",
@@ -33,7 +31,6 @@
       ]
     },
     {
-      "id": "3",
       "title": "Premium Yoga Mat",
       "company": "ZenFit",
       "description": "Non-slip yoga mat with extra cushioning for maximum comfort during workouts.",
@@ -48,7 +45,6 @@
       ]
     },
     {
-      "id": "4",
       "title": "Adjustable Dumbbells",
       "company": "REP Fitness",
       "description": "Compact and adjustable dumbbells for strength training at home.",
@@ -63,7 +59,6 @@
       ]
     },
     {
-      "id": "5",
       "title": "SoundCore Liberty 4 Pro",
       "company": "SoundCore",
       "description": "Noise-cancelling wireless earbuds with a long-lasting battery.",
@@ -79,7 +74,6 @@
       ]
     },
     {
-      "id": "6",
       "title": "Smart Fitness Tracker",
       "company": "FitSmart",
       "description": "Track your steps, heart rate, and sleep with this sleek fitness tracker.",
@@ -94,7 +88,6 @@
       ]
     },
     {
-      "id": "7",
       "title": "Laptop Backpack",
       "company": "UrbanCarry",
       "description": "Durable backpack with multiple compartments, perfect for work or travel.",
@@ -110,7 +103,6 @@
       ]
     },
     {
-      "id": "8",
       "title": "Leather Messenger Bag",
       "company": "ClassicCraft",
       "description": "Stylish leather messenger bag for professionals on the go.",
@@ -127,7 +119,6 @@
       ]
     },
     {
-      "id": "9",
       "title": "LED Desk Lamp",
       "company": "BrightHome",
       "description": "Energy-efficient LED desk lamp with adjustable brightness and color settings.",
@@ -142,7 +133,6 @@
       ]
     },
     {
-      "id": "10",
       "title": "Ceramic Dinner Set",
       "company": "HomeStyle",
       "description": "Elegant ceramic dinner set with plates, bowls, and mugs.",

@@ -42,6 +42,7 @@ export const renderProducts = (products) => {
     renderStars(productCard, product);
   });
 
+
   getProductIdAndPassToUrl();
   addProductHandler(products, () => 1);
 };
