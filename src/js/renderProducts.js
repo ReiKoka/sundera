@@ -6,7 +6,7 @@ import {
   getProductIdAndPassToUrl,
 } from "./utils/helpers";
 import { renderStars } from "./renderStars";
-import { initAddModal } from "./initAddModal";
+import { initAddModal } from "./modals/initAddModal";
 
 export const renderProducts = (products) => {
   const productsContainer = document.querySelector(

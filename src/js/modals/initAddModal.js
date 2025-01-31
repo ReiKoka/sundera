@@ -1,8 +1,8 @@
 "use strict";
 
-import { addFormHandler } from "./addFormHandler";
-import { renderColorPicker } from "./renderColorPicker";
-import { renderInput } from "./renderInput";
+import { addFormHandler } from "../addFormHandler";
+import { renderColorPicker } from "../renderColorPicker";
+import { renderInput } from "../renderInput";
 import { renderModal } from "./renderModal";
 
 export const initAddModal = () => {
@@ -17,7 +17,7 @@ export const initAddModal = () => {
           <path stroke-linecap="round" stroke-linejoin="round" d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
         </svg>
       </button>
-      <form action="" method="post" class="add-product-form">
+      <form method="post" class="add-product-form">
         ${renderInput("title", "text", "Title", "input")}
         ${renderInput("company", "text", "Company", "input")}
         ${renderInput("description", "text", "Description", "input")}

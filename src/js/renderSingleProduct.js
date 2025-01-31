@@ -11,6 +11,7 @@ import { renderCheckout } from "./singleProduct/renderCheckout.js";
 import { renderReviews } from "./singleProduct/renderReviews.js";
 import { renderImage } from "./singleProduct/renderImage.js";
 import { renderButtons } from "./singleProduct/renderButtons.js";
+import { initAddNewColor } from "./modals/initAddNewColor.js";
 
 export const renderSingleProduct = (product) => {
   const productContainer = document.querySelector(".product-container");
@@ -63,4 +64,6 @@ export const renderSingleProduct = (product) => {
   backButton.addEventListener("click", () => {
     window.history.back();
   });
+
+  initAddNewColor();
 };
