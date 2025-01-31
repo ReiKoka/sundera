@@ -3,7 +3,7 @@
 import { createOrEditProduct } from "../services/createOrEditProduct";
 import { initProducts } from "./utils/helpers";
 
-export const addFormHandler = (products) => {
+export const addFormHandler = (modal) => {
   const form = document.querySelector(".add-product-form");
 
   form.addEventListener("submit", (e) => {
@@ -32,6 +32,8 @@ export const addFormHandler = (products) => {
     };
 
     createOrEditProduct(newProduct);
+
+    modal.style.display = "none";
     initProducts();
   });
 };

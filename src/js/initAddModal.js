@@ -42,7 +42,7 @@ export const initAddModal = () => {
     `
   );
 
-  addFormHandler();
+  addFormHandler(modal);
 
   triggerButton?.addEventListener("click", () => {
     modal.style.display = "block";

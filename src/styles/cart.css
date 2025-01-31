@@ -211,12 +211,21 @@
   top: 1rem;
   right: 1rem;
   cursor: pointer;
+  transition: all 0.3s ease-out;
 }
 
 .cart .filled-cart .cart-items .cart-item .remove-item svg {
   width: 1.125rem;
   height: 1.125rem;
   stroke: hsl(var(--destructive));
+}
+
+.cart .filled-cart .cart-items .cart-item .remove-item:hover {
+  transform: scale(1.1) rotate(0);
+}
+
+.cart .filled-cart .cart-items .cart-item .remove-item:active {
+  transform: scale(0.8) rotate(360deg);
 }
 
 .cart .filled-cart .checkout-summary {

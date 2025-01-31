@@ -219,6 +219,10 @@ select {
   gap: 0.5rem;
 }
 
+.filters-form .btn:hover {
+  transform: translateY(-3px);
+}
+
 .filters-form .btn:active {
   transform: scale(0.9);
 }
