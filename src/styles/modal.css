@@ -12,6 +12,17 @@
   backdrop-filter: blur(5px);
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
 .modal-box {
   background-color: transparent;
   width: 100%;
@@ -91,8 +102,8 @@
   position: absolute;
   font-family: var(--font-primary);
   top: 50%;
-  left: 6%;
-  color: hsl(var(--foreground));
+  left: 15px;
+  color: hsl(var(--muted-foreground));
   transform: translateY(-50%);
   padding: 0 0.5rem;
   cursor: text;
@@ -103,7 +114,7 @@
 .input:focus ~ .label,
 .input:not(:placeholder-shown).input:not(:focus) ~ .label {
   top: 0;
-  left: 4%;
+  left: 5px;
   font-size: 0.9rem;
   background-color: hsl(var(--background));
   color: hsl(var(--primary));
@@ -114,23 +125,36 @@
   gap: 1rem;
 }
 
-.color-quantity-parent .field:last-of-type {
+.color-quantity-parent .color-field {
   border: 2px solid hsl(var(--border));
   border-radius: var(--radius-medium);
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
   justify-content: space-between;
-  padding-inline: 1rem;
+  padding-inline: 1rem 0;
+  position: relative;
 }
 
-.color-picker {
-  width: 80px;
-  height: 100%;
+.color-picker-input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin-right: -2px;
+  width: 45px;
+  height: 45px;
   border: none;
-  height: 40px;
   cursor: pointer;
-  background: none;
+  background-color: transparent;
+}
+
+.color-picker-input::-webkit-color-swatch {
+  border-radius: var(--radius-medium);
+  border: none;
+}
+
+.color-picker-input::-moz-color-swatch {
+  border-radius: var(--radius-medium);
   border: none;
 }
 
@@ -139,6 +163,10 @@
   font-weight: 500;
   font-family: var(--font-primary);
   color: hsl(var(--foreground));
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
 }
 
 .modal-buttons {

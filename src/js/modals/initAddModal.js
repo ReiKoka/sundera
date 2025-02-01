@@ -21,16 +21,16 @@ export const initAddModal = () => {
         ${renderInput("title", "text", "Title", "input")}
         ${renderInput("company", "text", "Company", "input")}
         ${renderInput("description", "text", "Description", "input")}
-        ${renderInput("price", "number", "Price", "input")}
+        ${renderInput("price", "number", "Price", "input", 1)}
         ${renderInput("category", "text", "Category", "input")}
         ${renderInput("image", "text", "Image URL", "input")}
         <div class="color-quantity-parent">
-          ${renderInput("inStock", "number", "Quantity", "input")}
+          ${renderInput("inStock", "number", "Quantity", "input", 1)}
           ${renderColorPicker(
             "color",
             "color",
             "Select Color",
-            "color-picker",
+            "color-picker-input",
             "color-picker-label"
           )}
         </div>

@@ -22,11 +22,11 @@ export const initAddNewColor = () => {
              "color",
              "color",
              "Select Color",
-             "color-picker",
+             "color-picker-input",
              "color-picker-label"
            )}
          </div>
-         ${renderInput("inStock", "number", "Quantity", "input")}
+         ${renderInput("inStock", "number", "Quantity", "input", 1)}
          <div class="modal-buttons">
           <button type="reset" class="btn btn-clear">Clear</button>
           <button type="submit" class="btn btn-submit">Add new color</button>

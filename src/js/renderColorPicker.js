@@ -8,9 +8,9 @@ export const renderColorPicker = (
   labelClassName
 ) => {
   const input = `
-    <div class="field">
+    <div class="field color-field">
       <input type="${type}" id="${field}" name="${field}" class="${inputClassName}" />
-      <label htmlFor="${field}" class="${labelClassName}">${
+      <label for="${field}" class="${labelClassName}">${
     customLabel ? customLabel : field
   }</label>
     </div>
