@@ -36,8 +36,6 @@ export const initAddColorModal = (product) => {
     `
   );
 
-  modal;
-
   addProductColorFormHandler(product, modal);
 
   triggerButton?.addEventListener("click", () => {

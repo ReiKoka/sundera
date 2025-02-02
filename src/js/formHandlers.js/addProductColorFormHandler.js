@@ -4,7 +4,6 @@ import { createOrEditProduct } from "./../../services/createOrEditProduct";
 
 export const addProductColorFormHandler = (product, modal) => {
   const form = document.querySelector(".form.add-color-form");
-  console.log(form);
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();

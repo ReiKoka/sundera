@@ -39,7 +39,6 @@ input[type="number"] {
   min-width: 300px;
   padding: 2rem;
   height: auto;
-  border-radius: var(--radius);
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
     rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
     rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
@@ -47,6 +46,7 @@ input[type="number"] {
   flex-direction: column;
   gap: 2rem;
   position: relative;
+  border-radius: var(--radius-large);
 }
 
 .modal-title {
@@ -56,7 +56,8 @@ input[type="number"] {
   color: hsl(var(--foreground));
 }
 
-.modal-content .form {
+.modal-content .form,
+.modal-content .delete-product {
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -190,13 +191,15 @@ input[type="number"] {
   font-weight: 500;
 }
 
-.modal-buttons .btn.btn-clear {
+.modal-buttons .btn.btn-clear,
+.modal-buttons .btn.btn-cancel {
   background-color: hsl(var(--secondary));
   color: hsl(var(--secondary-foreground));
   border: 1px solid hsl(var(--secondary-foreground));
 }
 
-.modal-buttons .btn.btn-submit {
+.modal-buttons .btn.btn-submit,
+.modal-buttons .btn.btn-confirm {
   background-color: hsl(var(--primary));
   color: hsl(var(--primary-foreground));
   border: 1px solid hsl(var(--primary));
@@ -235,4 +238,17 @@ input[type="number"] {
   width: 30px;
   height: 30px;
   stroke: hsl(var(--destructive));
+}
+
+/* ///////////////////////////////////////// Delete Product Modal Styles ///////////////////////////////////////// */
+
+.delete-product .modal-img {
+  width: 150px;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+}
+
+.delete-product-text,
+.delete-product-subtext {
+  text-align: center;
 }

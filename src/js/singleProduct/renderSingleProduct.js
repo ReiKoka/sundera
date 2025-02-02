@@ -12,6 +12,7 @@ import { renderReviews } from "./renderReviews.js";
 import { renderImage } from "./renderImage.js";
 import { renderButtons } from "./renderButtons.js";
 import { initAddColorModal } from "../modals/initAddColorModal.js";
+import { initDeleteProduct } from "../modals/initDeleteProductModal.js";
 
 export const renderSingleProduct = (product) => {
   const productContainer = document.querySelector(".product-container");
@@ -66,4 +67,5 @@ export const renderSingleProduct = (product) => {
   });
 
   initAddColorModal(product);
+  initDeleteProduct(product);
 };
