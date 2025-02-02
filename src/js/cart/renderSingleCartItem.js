@@ -1,4 +1,4 @@
-import { formatAndSplitPrice } from "./utils/helpers";
+import { formatAndSplitPrice } from "../utils/helpers";
 
 export const renderSingleCartItem = (cartItem) => {
   const formattedTotalPerProductPrice = formatAndSplitPrice(

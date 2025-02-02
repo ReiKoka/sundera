@@ -4,9 +4,9 @@ import {
   addProductHandler,
   formatCurrency,
   getProductIdAndPassToUrl,
-} from "./utils/helpers";
-import { renderStars } from "./renderStars";
-import { initAddModal } from "./modals/initAddModal";
+} from "../utils/helpers";
+import { renderStars } from "../renderStars";
+import { initAddModal } from "../modals/initAddModal";
 
 export const renderProducts = (products) => {
   const productsContainer = document.querySelector(

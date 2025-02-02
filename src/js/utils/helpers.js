@@ -1,14 +1,14 @@
 "use strict";
 
 import { getProducts } from "./../../services/getProducts";
-import { renderProducts } from "./../renderProducts";
 import { getProductById } from "./../../services/getProductById";
-import { renderSingleProduct } from "../renderSingleProduct";
+import { renderSingleProduct } from "../singleProduct/renderSingleProduct";
 import { addToCart, getCart } from "../cart/cartState";
 import { Notyf } from "notyf";
-import { renderFilters } from "../renderFilters";
 import { getProductsWithParams } from "../../services/getProductsWithParams";
 import { searchProduct } from "../searchProduct";
+import { renderProducts } from "../products/renderProducts";
+import { renderFilters } from "../products/renderFilters";
 
 // Update CartItems Count - DOM
 export const updateCartItemsCount = () => {
@@ -141,9 +141,7 @@ export const addProductHandler = (products, getQuantity, getColor) => {
       const productCard = e.target.closest(".product-card");
       const productId = productCard.querySelector(".img-container").dataset.id;
 
-      const selectedProduct = products.find(
-        (p) => p.id === productId
-      );
+      const selectedProduct = products.find((p) => p.id === productId);
 
       if (selectedProduct) {
         addToCart(selectedProduct, 1, selectedProduct.colors[0].color);

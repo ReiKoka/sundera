@@ -1,4 +1,4 @@
-import { renderProducts } from "./renderProducts";
+import { renderProducts } from "./products/renderProducts";
 import {
   searchByCategory,
   searchByDescription,

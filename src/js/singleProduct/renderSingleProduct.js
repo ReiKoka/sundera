@@ -4,14 +4,14 @@ import {
   addProductHandler,
   setupColorButtons,
   updateQuantityHandler,
-} from "./utils/helpers.js";
-import { renderStars } from "./renderStars.js";
-import { renderDetails } from "./singleProduct/renderDetails";
-import { renderCheckout } from "./singleProduct/renderCheckout.js";
-import { renderReviews } from "./singleProduct/renderReviews.js";
-import { renderImage } from "./singleProduct/renderImage.js";
-import { renderButtons } from "./singleProduct/renderButtons.js";
-import { initAddColorModal } from "./modals/initAddColorModal.js";
+} from "../utils/helpers.js";
+import { renderStars } from "../renderStars.js";
+import { renderDetails } from "./renderDetails.js";
+import { renderCheckout } from "./renderCheckout.js";
+import { renderReviews } from "./renderReviews.js";
+import { renderImage } from "./renderImage.js";
+import { renderButtons } from "./renderButtons.js";
+import { initAddColorModal } from "../modals/initAddColorModal.js";
 
 export const renderSingleProduct = (product) => {
   const productContainer = document.querySelector(".product-container");

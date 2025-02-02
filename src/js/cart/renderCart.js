@@ -1,6 +1,6 @@
 import { Notyf } from "notyf";
 import { clearCart, getCart, setCart } from "./cartState";
-import { renderSingleCartItem } from "../renderSingleCartItem";
+
 import {
   calculateShipping,
   calculateSubtotal,
@@ -10,6 +10,7 @@ import {
   updateDomOnCartClearance,
   updatePricesInDOM,
 } from "../utils/helpers";
+import { renderSingleCartItem } from "./renderSingleCartItem";
 
 export const renderCart = () => {
   const allCartItems = getCart();
@@ -109,7 +110,9 @@ export const renderCart = () => {
         const isAddButton = button.classList.contains("quantity-add");
         const isRemoveButton = button.classList.contains("quantity-remove");
 
-        const cartItem = cart.find((item) => item.product.id === productId && item.color === productColor);
+        const cartItem = cart.find(
+          (item) => item.product.id === productId && item.color === productColor
+        );
 
         if (cartItem) {
           if (isAddButton) cartItem.quantity++;
