@@ -1,6 +1,6 @@
 import { Notyf } from "notyf";
 import { clearCart, getCart, setCart } from "./cartState";
-import { renderSingleCartItem } from "./renderSingleCartItem";
+import { renderSingleCartItem } from "../renderSingleCartItem";
 import {
   calculateShipping,
   calculateSubtotal,
@@ -9,7 +9,7 @@ import {
   updateCartItemsCount,
   updateDomOnCartClearance,
   updatePricesInDOM,
-} from "./utils/helpers";
+} from "../utils/helpers";
 
 export const renderCart = () => {
   const allCartItems = getCart();

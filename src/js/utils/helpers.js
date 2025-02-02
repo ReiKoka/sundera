@@ -4,7 +4,7 @@ import { getProducts } from "./../../services/getProducts";
 import { renderProducts } from "./../renderProducts";
 import { getProductById } from "./../../services/getProductById";
 import { renderSingleProduct } from "../renderSingleProduct";
-import { addToCart, getCart } from "../cartState";
+import { addToCart, getCart } from "../cart/cartState";
 import { Notyf } from "notyf";
 import { renderFilters } from "../renderFilters";
 import { getProductsWithParams } from "../../services/getProductsWithParams";
