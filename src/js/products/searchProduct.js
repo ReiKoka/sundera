@@ -1,9 +1,9 @@
-import { renderProducts } from "./products/renderProducts";
+import { renderProducts } from "./renderProducts";
 import {
   searchByCategory,
   searchByDescription,
   searchByTitle,
-} from "./utils/helpers";
+} from "../utils/helpers";
 
 export const searchProduct = (products) => {
   const searchInput = document.querySelector("#search");

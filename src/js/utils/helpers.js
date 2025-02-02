@@ -6,7 +6,7 @@ import { renderSingleProduct } from "../singleProduct/renderSingleProduct";
 import { addToCart, getCart } from "../cart/cartState";
 import { Notyf } from "notyf";
 import { getProductsWithParams } from "../../services/getProductsWithParams";
-import { searchProduct } from "../searchProduct";
+import { searchProduct } from "../products/searchProduct";
 import { renderProducts } from "../products/renderProducts";
 import { renderFilters } from "../products/renderFilters";
 
