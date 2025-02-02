@@ -21,7 +21,7 @@
         },
         {
           "color": "#ff0000",
-          "inStock": 200
+          "inStock": 1600
         },
         {
           "color": "#94e105",
@@ -276,6 +276,32 @@
         }
       ],
       "id": "f10e"
+    },
+    {
+      "id": "e1bf",
+      "title": "test",
+      "company": "test",
+      "description": "test1234",
+      "price": 19231,
+      "category": "dasf",
+      "image": "https://images.unsplash.com/photo-1738363436637-ee6f4a910715?q=80&w=1965&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "featured": false,
+      "soldAllTime": 0,
+      "colors": [
+        {
+          "color": "#000000",
+          "inStock": 23
+        },
+        {
+          "color": "#720d5c",
+          "inStock": 10
+        },
+        {
+          "color": "#00bd84",
+          "inStock": 20
+        }
+      ],
+      "reviews": []
     }
   ],
   "reviews": [

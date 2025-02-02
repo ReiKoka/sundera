@@ -1,9 +1,10 @@
 "use strict";
 
-import { addProductFormHandler } from "../addProductFormHandler";
+
 import { renderColorPicker } from "../renderColorPicker";
 import { renderInput } from "../renderInput";
 import { renderModal } from "./renderModal";
+import { addProductFormHandler } from './../formHandlers.js/addProductFormHandler';
 
 export const initAddModal = () => {
   const triggerButton = document.querySelector(".add-new-product");
@@ -43,6 +44,7 @@ export const initAddModal = () => {
   );
 
   addProductFormHandler(modal);
+
 
   triggerButton?.addEventListener("click", () => {
     modal.style.display = "block";

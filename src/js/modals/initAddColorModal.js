@@ -1,9 +1,9 @@
 "use strict";
 
-import { addProductColorFormHandler } from "../addProductColorFormHandler";
 import { renderColorPicker } from "../renderColorPicker";
 import { renderInput } from "../renderInput";
 import { renderModal } from "./renderModal";
+import { addProductColorFormHandler } from "./../formHandlers.js/addProductColorFormHandler";
 
 export const initAddColorModal = (product) => {
   const triggerButton = document.querySelector(".btn.add-new-colors");

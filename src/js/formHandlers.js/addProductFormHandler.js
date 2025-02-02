@@ -1,7 +1,7 @@
 "use strict";
 
-import { createOrEditProduct } from "../services/createOrEditProduct";
-import { initProducts } from "./utils/helpers";
+import { createOrEditProduct } from "../../services/createOrEditProduct";
+import { initProducts } from "../utils/helpers";
 
 export const addProductFormHandler = (modal) => {
   const form = document.querySelector(".form.add-product-form");
