@@ -3,8 +3,8 @@
 import { createOrEditProduct } from "../services/createOrEditProduct";
 import { initProducts } from "./utils/helpers";
 
-export const addFormHandler = (modal) => {
-  const form = document.querySelector(".add-product-form");
+export const addProductFormHandler = (modal) => {
+  const form = document.querySelector(".form.add-product-form");
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();

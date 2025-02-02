@@ -1,10 +1,11 @@
 "use strict";
 
+import { addProductColorFormHandler } from "../addProductColorFormHandler";
 import { renderColorPicker } from "../renderColorPicker";
 import { renderInput } from "../renderInput";
 import { renderModal } from "./renderModal";
 
-export const initAddNewColor = () => {
+export const initAddColorModal = (product) => {
   const triggerButton = document.querySelector(".btn.add-new-colors");
   const modal = document.querySelector("#modal");
 
@@ -16,7 +17,7 @@ export const initAddNewColor = () => {
           <path stroke-linecap="round" stroke-linejoin="round" d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
         </svg>
       </button>
-      <form method="patch" class="add-product-form">
+      <form method="patch" class="form add-color-form">
           <div class="color-quantity-parent">
            ${renderColorPicker(
              "color",
@@ -34,6 +35,10 @@ export const initAddNewColor = () => {
       </form>
     `
   );
+
+  modal;
+
+  addProductColorFormHandler(product, modal);
 
   triggerButton?.addEventListener("click", () => {
     modal.style.display = "block";

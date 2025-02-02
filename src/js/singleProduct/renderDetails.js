@@ -7,6 +7,15 @@ export const renderDetails = (product) => {
   const [mainPrice, fractionalPrice] = formattedPrice.split(".");
   const ratingsArr = product?.reviews?.map((review) => review.rating);
 
+  const colorButtonsHTML = product.colors
+    .map(
+      (color, index) =>
+        `<button class="btn ${
+          index === 0 ? "focused" : ""
+        }" style="background-color: ${color};"></button>`
+    )
+    .join("");
+
   const html = `
     <div class="details-container">
           <div class="title-company">
@@ -34,8 +43,7 @@ export const renderDetails = (product) => {
             <div class="colors">
               <p class="colors-title">Colors</p>
               <div class="colors-buttons">
-                <button class="btn focused"></button>
-                <button class="btn"></button>
+                ${colorButtonsHTML}
               </div>
             </div>
 

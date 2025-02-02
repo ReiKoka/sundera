@@ -18,9 +18,63 @@
         {
           "color": "#000000",
           "inStock": 500
+        },
+        {
+          "color": "#ff0000",
+          "inStock": 200
+        },
+        {
+          "color": "#94e105",
+          "inStock": 300
+        },
+        {
+          "color": "#a2a0a0",
+          "inStock": 100
         }
       ],
-      "id": "83ab"
+      "id": "83ab",
+      "reviews": [
+        {
+          "rating": 2,
+          "comment": "Review 1 for product id 83ab",
+          "productId": "83ab",
+          "userId": "1",
+          "userName": "Tomas",
+          "id": "a8df"
+        },
+        {
+          "rating": 4,
+          "comment": "Review 2 for product id 83ab",
+          "productId": "83ab",
+          "userId": "2",
+          "userName": "Emily",
+          "id": "c2a2"
+        },
+        {
+          "rating": 4,
+          "comment": "Review 3 for product id 83ab",
+          "productId": "83ab",
+          "userId": "3",
+          "userName": "Michael",
+          "id": "fee5"
+        },
+        {
+          "rating": 2,
+          "comment": "Review 4 for product id 83ab",
+          "productId": "83ab",
+          "userId": "4",
+          "userName": "Sophia",
+          "id": "eb8d"
+        },
+        {
+          "rating": 5,
+          "comment": "Review 5 for product id 83ab",
+          "productId": "83ab",
+          "userId": "5",
+          "userName": "James",
+          "id": "968a"
+        }
+      ]
     },
     {
       "title": "Eco-Friendly Water Bottle",
@@ -230,260 +284,310 @@
       "comment": "Review 1 for product id 83ab",
       "productId": "83ab",
       "userId": "1",
-      "userName": "Tomas"
+      "userName": "Tomas",
+      "id": "a8df"
     },
     {
       "rating": 4,
       "comment": "Review 2 for product id 83ab",
       "productId": "83ab",
       "userId": "2",
-      "userName": "Emily"
+      "userName": "Emily",
+      "id": "c2a2"
     },
     {
       "rating": 4,
       "comment": "Review 3 for product id 83ab",
       "productId": "83ab",
       "userId": "3",
-      "userName": "Michael"
+      "userName": "Michael",
+      "id": "fee5"
     },
     {
       "rating": 2,
       "comment": "Review 4 for product id 83ab",
       "productId": "83ab",
       "userId": "4",
-      "userName": "Sophia"
+      "userName": "Sophia",
+      "id": "eb8d"
     },
     {
       "rating": 5,
       "comment": "Review 5 for product id 83ab",
       "productId": "83ab",
       "userId": "5",
-      "userName": "James"
+      "userName": "James",
+      "id": "968a"
     },
     {
       "rating": 5,
       "comment": "Review 1 for product id 9703",
-      "productId": "9703"
+      "productId": "9703",
+      "id": "71e2"
     },
     {
       "rating": 3,
       "comment": "Review 2 for product id 9703",
-      "productId": "9703"
+      "productId": "9703",
+      "id": "c17d"
     },
     {
       "rating": 4,
       "comment": "Review 3 for product id 9703",
-      "productId": "9703"
+      "productId": "9703",
+      "id": "0c7b"
     },
     {
       "rating": 2,
       "comment": "Review 4 for product id 9703",
-      "productId": "9703"
+      "productId": "9703",
+      "id": "2831"
     },
     {
       "rating": 4,
       "comment": "Review 5 for product id 9703",
-      "productId": "9703"
+      "productId": "9703",
+      "id": "5f91"
     },
     {
       "rating": 4,
       "comment": "Review 1 for product id b56e",
-      "productId": "b56e"
+      "productId": "b56e",
+      "id": "321d"
     },
     {
       "rating": 5,
       "comment": "Review 2 for product id b56e",
-      "productId": "b56e"
+      "productId": "b56e",
+      "id": "d0be"
     },
     {
       "rating": 3,
       "comment": "Review 3 for product id b56e",
-      "productId": "b56e"
+      "productId": "b56e",
+      "id": "0e94"
     },
     {
       "rating": 4,
       "comment": "Review 4 for product id b56e",
-      "productId": "b56e"
+      "productId": "b56e",
+      "id": "995a"
     },
     {
       "rating": 5,
       "comment": "Review 5 for product id b56e",
-      "productId": "b56e"
+      "productId": "b56e",
+      "id": "31f4"
     },
     {
       "rating": 2,
       "comment": "Review 1 for product id 5a47",
-      "productId": "5a47"
+      "productId": "5a47",
+      "id": "427c"
     },
     {
       "rating": 5,
       "comment": "Review 2 for product id 5a47",
-      "productId": "5a47"
+      "productId": "5a47",
+      "id": "098e"
     },
     {
       "rating": 4,
       "comment": "Review 3 for product id 5a47",
-      "productId": "5a47"
+      "productId": "5a47",
+      "id": "561e"
     },
     {
       "rating": 3,
       "comment": "Review 4 for product id 5a47",
-      "productId": "5a47"
+      "productId": "5a47",
+      "id": "9bd2"
     },
     {
       "rating": 5,
       "comment": "Review 5 for product id 5a47",
-      "productId": "5a47"
+      "productId": "5a47",
+      "id": "8b0b"
     },
     {
       "rating": 4,
       "comment": "Review 1 for product id 3c06",
-      "productId": "3c06"
+      "productId": "3c06",
+      "id": "cf85"
     },
     {
       "rating": 4,
       "comment": "Review 2 for product id 3c06",
-      "productId": "3c06"
+      "productId": "3c06",
+      "id": "45f7"
     },
     {
       "rating": 3,
       "comment": "Review 3 for product id 3c06",
-      "productId": "3c06"
+      "productId": "3c06",
+      "id": "a753"
     },
     {
       "rating": 5,
       "comment": "Review 4 for product id 3c06",
-      "productId": "3c06"
+      "productId": "3c06",
+      "id": "fb34"
     },
     {
       "rating": 2,
       "comment": "Review 5 for product id 3c06",
-      "productId": "3c06"
+      "productId": "3c06",
+      "id": "27df"
     },
     {
       "rating": 5,
       "comment": "Review 1 for product id 38da",
-      "productId": "38da"
+      "productId": "38da",
+      "id": "c052"
     },
     {
       "rating": 4,
       "comment": "Review 2 for product id 38da",
-      "productId": "38da"
+      "productId": "38da",
+      "id": "25f1"
     },
     {
       "rating": 3,
       "comment": "Review 3 for product id 38da",
-      "productId": "38da"
+      "productId": "38da",
+      "id": "d7b7"
     },
     {
       "rating": 4,
       "comment": "Review 4 for product id 38da",
-      "productId": "38da"
+      "productId": "38da",
+      "id": "0b2b"
     },
     {
       "rating": 5,
       "comment": "Review 5 for product id 38da",
-      "productId": "38da"
+      "productId": "38da",
+      "id": "86fa"
     },
     {
       "rating": 3,
       "comment": "Review 1 for product id e123",
-      "productId": "e123"
+      "productId": "e123",
+      "id": "c2a0"
     },
     {
       "rating": 5,
       "comment": "Review 2 for product id e123",
-      "productId": "e123"
+      "productId": "e123",
+      "id": "2cad"
     },
     {
       "rating": 4,
       "comment": "Review 3 for product id e123",
-      "productId": "e123"
+      "productId": "e123",
+      "id": "6378"
     },
     {
       "rating": 2,
       "comment": "Review 4 for product id e123",
-      "productId": "e123"
+      "productId": "e123",
+      "id": "d85e"
     },
     {
       "rating": 5,
       "comment": "Review 5 for product id e123",
-      "productId": "e123"
+      "productId": "e123",
+      "id": "0fa7"
     },
     {
       "rating": 4,
       "comment": "Review 1 for product id f549",
-      "productId": "f549"
+      "productId": "f549",
+      "id": "3967"
     },
     {
       "rating": 5,
       "comment": "Review 2 for product id f549",
-      "productId": "f549"
+      "productId": "f549",
+      "id": "3974"
     },
     {
       "rating": 3,
       "comment": "Review 3 for product id f549",
-      "productId": "f549"
+      "productId": "f549",
+      "id": "2377"
     },
     {
       "rating": 4,
       "comment": "Review 4 for product id f549",
-      "productId": "f549"
+      "productId": "f549",
+      "id": "042d"
     },
     {
       "rating": 5,
       "comment": "Review 5 for product id f549",
-      "productId": "f549"
+      "productId": "f549",
+      "id": "c938"
     },
     {
       "rating": 2,
       "comment": "Review 1 for product id ee30",
-      "productId": "ee30"
+      "productId": "ee30",
+      "id": "08da"
     },
     {
       "rating": 4,
       "comment": "Review 2 for product id ee30",
-      "productId": "ee30"
+      "productId": "ee30",
+      "id": "42d5"
     },
     {
       "rating": 5,
       "comment": "Review 3 for product id ee30",
-      "productId": "ee30"
+      "productId": "ee30",
+      "id": "cda7"
     },
     {
       "rating": 3,
       "comment": "Review 4 for product id ee30",
-      "productId": "ee30"
+      "productId": "ee30",
+      "id": "5eea"
     },
     {
       "rating": 5,
       "comment": "Review 5 for product id ee30",
-      "productId": "ee30"
+      "productId": "ee30",
+      "id": "60f5"
     },
     {
       "rating": 4,
       "comment": "Review 1 for product id f10e",
-      "productId": "f10e"
+      "productId": "f10e",
+      "id": "40a7"
     },
     {
       "rating": 5,
       "comment": "Review 2 for product id f10e",
-      "productId": "f10e"
+      "productId": "f10e",
+      "id": "4561"
     },
     {
       "rating": 3,
       "comment": "Review 3 for product id f10e",
-      "productId": "f10e"
+      "productId": "f10e",
+      "id": "52f9"
     },
     {
       "rating": 4,
       "comment": "Review 4 for product id f10e",
-      "productId": "f10e"
+      "productId": "f10e",
+      "id": "18e4"
     },
     {
       "rating": 5,
       "comment": "Review 5 for product id f10e",
-      "productId": "f10e"
+      "productId": "f10e",
+      "id": "3a43"
     }
   ]
 }

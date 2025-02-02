@@ -20,6 +20,7 @@ input::-webkit-inner-spin-button {
 
 /* Firefox */
 input[type="number"] {
+  appearance: textfield;
   -moz-appearance: textfield;
 }
 
@@ -55,7 +56,7 @@ input[type="number"] {
   color: hsl(var(--foreground));
 }
 
-.modal-content .add-product-form {
+.modal-content .form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
