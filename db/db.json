@@ -5,10 +5,10 @@
       "title": "Rambler® 30 oz Stackable Cup",
       "company": "YETI",
       "description": "Insulated coffee cup for hot or cold coffee. May also be used for tea and other hot drinks",
-      "featured": true,
+      "price": "15",
       "category": "drinkware",
       "image": "https://www.yeti.com/on/demandware.static/-/Sites-siteCatalog_Yeti_US/default/dw858ffac3/200380-Category-Header-Tumblers-Social-1200x6300.jpg",
-      "price": 15,
+      "featured": true,
       "soldAllTime": 150,
       "colors": [
         {
@@ -29,52 +29,10 @@
         },
         {
           "color": "#a2a0a0",
-          "inStock": 100
+          "inStock": 300
         }
       ],
-      "id": "83ab",
-      "reviews": [
-        {
-          "rating": 2,
-          "comment": "Review 1 for product id 83ab",
-          "productId": "83ab",
-          "userId": "1",
-          "userName": "Tomas",
-          "id": "a8df"
-        },
-        {
-          "rating": 4,
-          "comment": "Review 2 for product id 83ab",
-          "productId": "83ab",
-          "userId": "2",
-          "userName": "Emily",
-          "id": "c2a2"
-        },
-        {
-          "rating": 4,
-          "comment": "Review 3 for product id 83ab",
-          "productId": "83ab",
-          "userId": "3",
-          "userName": "Michael",
-          "id": "fee5"
-        },
-        {
-          "rating": 2,
-          "comment": "Review 4 for product id 83ab",
-          "productId": "83ab",
-          "userId": "4",
-          "userName": "Sophia",
-          "id": "eb8d"
-        },
-        {
-          "rating": 5,
-          "comment": "Review 5 for product id 83ab",
-          "productId": "83ab",
-          "userId": "5",
-          "userName": "James",
-          "id": "968a"
-        }
-      ]
+      "id": "83ab"
     },
     {
       "title": "Eco-Friendly Water Bottle",
@@ -276,6 +234,27 @@
         }
       ],
       "id": "f10e"
+    },
+    {
+      "title": "Test2",
+      "company": "Test2",
+      "description": "Test1",
+      "price": "4000",
+      "category": "pictures",
+      "image": "https://images.unsplash.com/photo-1738363436637-ee6f4a910715?q=80&w=1965&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "featured": true,
+      "soldAllTime": 0,
+      "colors": [
+        {
+          "color": "#000000",
+          "inStock": 500
+        },
+        {
+          "color": "#d60000",
+          "inStock": 200
+        }
+      ],
+      "id": "6602"
     }
   ],
   "reviews": [

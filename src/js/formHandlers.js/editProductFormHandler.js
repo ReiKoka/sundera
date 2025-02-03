@@ -2,10 +2,10 @@
 
 import { Notyf } from "notyf";
 import { createOrEditProduct } from "../../services/createOrEditProduct";
-import { initProducts } from "../utils/helpers";
+import { initSingleProduct } from "../utils/helpers";
 
-export const addProductFormHandler = (modal) => {
-  const form = document.querySelector(".form.add-product-form");
+export const editProductFormHandler = (product, modal) => {
+  const form = document.querySelector(".form.edit-product-form");
   const notyf = new Notyf({
     position: { x: "center", y: "top" },
   });
@@ -13,31 +13,31 @@ export const addProductFormHandler = (modal) => {
   form.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    if (!form) return;
-
     const formData = new FormData(form);
     const productData = Object.fromEntries(formData.entries());
 
-    const featured = false;
-    const soldAllTime = 0;
+    const soldAllTime = product.soldAllTime;
+    const featured = productData.featured === "on";
     const price = Number(productData.price);
     const inStock = Number(productData.inStock);
-    const colors = [{ color: productData.color, inStock }];
+    const updatedColors = product.colors.map((c) =>
+      c.color === productData.color ? { ...c, inStock } : c
+    );
 
     delete productData.color;
     delete productData.inStock;
 
-    const newProduct = {
+    const updatedProduct = {
       ...productData,
       featured,
       soldAllTime,
-      price,
-      colors,
+      colors: updatedColors,
     };
 
-    createOrEditProduct(newProduct);
-    notyf.success("New product added successfully");
+    console.log(updatedProduct);
+    createOrEditProduct(updatedProduct, product.id);
+    notyf.success("Product updated");
     modal.style.display = "none";
-    initProducts();
+    initSingleProduct();
   });
 };

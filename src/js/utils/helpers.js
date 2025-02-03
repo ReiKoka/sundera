@@ -109,7 +109,7 @@ export const setupColorButtons = (buttons, product, onColorSelect) => {
 
       const selectedColor = product.colors[i];
       onColorSelect(selectedColor.color);
-      console.log(selectedColor);
+
       stockDisplayElement.textContent = `${selectedColor.inStock} available`;
     });
   });
@@ -267,4 +267,9 @@ export const searchByDescription = (products, searchTerm) => {
   return products.filter((product) =>
     product.description.toLowerCase().includes(searchTerm)
   );
+};
+
+export const rgbToHex = (rgbString) => {
+  const rgbValues = rgbString.match(/\d+/g).map(Number);
+  return `#${rgbValues.map(val => val.toString(16).padStart(2, "0")).join("")}`;
 };
