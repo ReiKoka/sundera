@@ -6,15 +6,18 @@ import { closeModalHandler } from "./closeModalHandler";
 import { renderModal } from "./renderModal";
 import { getCountries } from "./../../services/getCountries";
 import { checkoutFormHandler } from "../formHandlers.js/checkoutFormHandler";
+import { getCart } from "../cart/cartState";
 
 export const initCheckoutModal = async () => {
   const checkoutTriggerButton = document.querySelector(
     ".checkout-buttons .btn.primary-btn"
   );
   const modal = document.querySelector("#modal");
+  const cart = getCart();
 
   const countries = await getCountries();
-
+  
+  if (cart.length === 0) return;
   checkoutTriggerButton.addEventListener("click", () => {
     modal.innerHTML = renderModal(
       "Place your order",
@@ -69,6 +72,7 @@ export const initCheckoutModal = async () => {
       `
     );
     modal.style.display = "block";
+
     checkoutFormHandler(modal);
     closeModalHandler(modal);
   });

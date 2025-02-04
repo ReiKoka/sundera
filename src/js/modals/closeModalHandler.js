@@ -3,9 +3,7 @@
 export const closeModalHandler = (modal) => {
   const modalBox = document.querySelector(".modal-box");
   const closeModalBtn = modalBox.querySelector(".close-modal-btn");
-  console.log(closeModalBtn);
 
-  
   closeModalBtn.addEventListener("click", (e) => {
     modal.style.display = "none";
   });

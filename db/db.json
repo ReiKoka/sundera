@@ -21,6 +21,130 @@
       "subtotal": 90,
       "shipping": 4.5,
       "total": 94.5
+    },
+    {
+      "id": "7a1b",
+      "firstName": "Rei",
+      "lastName": "Koka",
+      "address": "Rruga Pjeter Budi",
+      "apartment": "P19 Ap 4/2",
+      "city": "Tirane",
+      "postcode": "1057",
+      "email": "reikoka1@outlook.com",
+      "phoneNumber": "0688161541",
+      "products": [
+        {
+          "title": "Rambler® 30 oz Stackable Cup",
+          "quantity": 50,
+          "color": "#000000",
+          "totalPrice": 750
+        }
+      ],
+      "subtotal": 750,
+      "shipping": 0,
+      "total": 750
+    },
+    {
+      "id": "8345",
+      "firstName": "Rei",
+      "lastName": "Koka",
+      "address": "Rruga Pjeter Budi",
+      "apartment": "P19 Ap 4/2",
+      "city": "Tirane",
+      "postcode": "1057",
+      "email": "reikoka1@outlook.com",
+      "phoneNumber": "0688161541",
+      "products": [
+        {
+          "title": "Rambler® 30 oz Stackable Cup",
+          "quantity": 2,
+          "color": "#38219B",
+          "totalPrice": 30
+        },
+        {
+          "title": "Eco-Friendly Water Bottle",
+          "quantity": 1,
+          "color": "#000000",
+          "totalPrice": 20
+        },
+        {
+          "title": "Premium Yoga Mat",
+          "quantity": 1,
+          "color": "#412835",
+          "totalPrice": 30
+        },
+        {
+          "title": "Adjustable Dumbbells",
+          "quantity": 1,
+          "color": "#000000",
+          "totalPrice": 150
+        },
+        {
+          "title": "SoundCore Liberty 4 Pro",
+          "quantity": 1,
+          "color": "#FFFFFF",
+          "totalPrice": 200
+        }
+      ],
+      "subtotal": 430,
+      "shipping": 0,
+      "total": 430
+    },
+    {
+      "id": "9006",
+      "firstName": "Rei",
+      "lastName": "Koka",
+      "address": "Rruga Pjeter Budi",
+      "apartment": "P19 Ap 4/2",
+      "city": "Tirane",
+      "postcode": "1057",
+      "email": "reikoka1@outlook.com",
+      "phoneNumber": "0688161541",
+      "products": [
+        {
+          "title": "Rambler® 30 oz Stackable Cup",
+          "quantity": 1,
+          "color": "#38219B",
+          "totalPrice": 15
+        },
+        {
+          "title": "Eco-Friendly Water Bottle",
+          "quantity": 1,
+          "color": "#000000",
+          "totalPrice": 20
+        },
+        {
+          "title": "Premium Yoga Mat",
+          "quantity": 1,
+          "color": "#412835",
+          "totalPrice": 30
+        }
+      ],
+      "subtotal": 65,
+      "shipping": 6.5,
+      "total": 71.5
+    },
+    {
+      "id": "c36f",
+      "firstName": "Rei",
+      "lastName": "Koka",
+      "address": "Rruga Pjeter Budi",
+      "apartment": "P19 Ap 4/2",
+      "city": "Tirane",
+      "postcode": "1057",
+      "email": "reikoka1@outlook.com",
+      "phoneNumber": "0688161541",
+      "products": [
+        {
+          "title": "Rambler® 30 oz Stackable Cup",
+          "quantity": 12,
+          "color": "#000000",
+          "totalPrice": 180
+        }
+      ],
+      "subtotal": 180,
+      "shipping": 0,
+      "total": 180
     }
   ],
   "products": [
@@ -36,11 +160,11 @@
       "colors": [
         {
           "color": "#38219B",
-          "inStock": 1000
+          "inStock": 977
         },
         {
           "color": "#000000",
-          "inStock": 500
+          "inStock": 388
         },
         {
           "color": "#ff0000",
@@ -52,10 +176,52 @@
         },
         {
           "color": "#a2a0a0",
-          "inStock": 300
+          "inStock": 280
         }
       ],
-      "id": "83ab"
+      "id": "83ab",
+      "reviews": [
+        {
+          "rating": 2,
+          "comment": "Review 1 for product id 83ab",
+          "productId": "83ab",
+          "userId": "1",
+          "userName": "Tomas",
+          "id": "a8df"
+        },
+        {
+          "rating": 4,
+          "comment": "Review 2 for product id 83ab",
+          "productId": "83ab",
+          "userId": "2",
+          "userName": "Emily",
+          "id": "c2a2"
+        },
+        {
+          "rating": 4,
+          "comment": "Review 3 for product id 83ab",
+          "productId": "83ab",
+          "userId": "3",
+          "userName": "Michael",
+          "id": "fee5"
+        },
+        {
+          "rating": 2,
+          "comment": "Review 4 for product id 83ab",
+          "productId": "83ab",
+          "userId": "4",
+          "userName": "Sophia",
+          "id": "eb8d"
+        },
+        {
+          "rating": 5,
+          "comment": "Review 5 for product id 83ab",
+          "productId": "83ab",
+          "userId": "5",
+          "userName": "James",
+          "id": "968a"
+        }
+      ]
     },
     {
       "title": "Eco-Friendly Water Bottle",
@@ -69,7 +235,7 @@
       "colors": [
         {
           "color": "#000000",
-          "inStock": 200
+          "inStock": 198
         },
         {
           "color": "#FFFFFF",
@@ -80,7 +246,39 @@
           "inStock": 100
         }
       ],
-      "id": "9703"
+      "id": "9703",
+      "reviews": [
+        {
+          "rating": 5,
+          "comment": "Review 1 for product id 9703",
+          "productId": "9703",
+          "id": "71e2"
+        },
+        {
+          "rating": 3,
+          "comment": "Review 2 for product id 9703",
+          "productId": "9703",
+          "id": "c17d"
+        },
+        {
+          "rating": 4,
+          "comment": "Review 3 for product id 9703",
+          "productId": "9703",
+          "id": "0c7b"
+        },
+        {
+          "rating": 2,
+          "comment": "Review 4 for product id 9703",
+          "productId": "9703",
+          "id": "2831"
+        },
+        {
+          "rating": 4,
+          "comment": "Review 5 for product id 9703",
+          "productId": "9703",
+          "id": "5f91"
+        }
+      ]
     },
     {
       "title": "Premium Yoga Mat",
@@ -94,14 +292,46 @@
       "colors": [
         {
           "color": "#412835",
-          "inStock": 150
+          "inStock": 148
         },
         {
           "color": "#FFE0DC",
           "inStock": 150
         }
       ],
-      "id": "b56e"
+      "id": "b56e",
+      "reviews": [
+        {
+          "rating": 4,
+          "comment": "Review 1 for product id b56e",
+          "productId": "b56e",
+          "id": "321d"
+        },
+        {
+          "rating": 5,
+          "comment": "Review 2 for product id b56e",
+          "productId": "b56e",
+          "id": "d0be"
+        },
+        {
+          "rating": 3,
+          "comment": "Review 3 for product id b56e",
+          "productId": "b56e",
+          "id": "0e94"
+        },
+        {
+          "rating": 4,
+          "comment": "Review 4 for product id b56e",
+          "productId": "b56e",
+          "id": "995a"
+        },
+        {
+          "rating": 5,
+          "comment": "Review 5 for product id b56e",
+          "productId": "b56e",
+          "id": "31f4"
+        }
+      ]
     },
     {
       "title": "Adjustable Dumbbells",
@@ -115,14 +345,46 @@
       "colors": [
         {
           "color": "#000000",
-          "inStock": 50
+          "inStock": 49
         },
         {
           "color": "#FF0000",
           "inStock": 50
         }
       ],
-      "id": "5a47"
+      "id": "5a47",
+      "reviews": [
+        {
+          "rating": 2,
+          "comment": "Review 1 for product id 5a47",
+          "productId": "5a47",
+          "id": "427c"
+        },
+        {
+          "rating": 5,
+          "comment": "Review 2 for product id 5a47",
+          "productId": "5a47",
+          "id": "098e"
+        },
+        {
+          "rating": 4,
+          "comment": "Review 3 for product id 5a47",
+          "productId": "5a47",
+          "id": "561e"
+        },
+        {
+          "rating": 3,
+          "comment": "Review 4 for product id 5a47",
+          "productId": "5a47",
+          "id": "9bd2"
+        },
+        {
+          "rating": 5,
+          "comment": "Review 5 for product id 5a47",
+          "productId": "5a47",
+          "id": "8b0b"
+        }
+      ]
     },
     {
       "title": "SoundCore Liberty 4 Pro",
@@ -136,7 +398,7 @@
       "colors": [
         {
           "color": "#FFFFFF",
-          "inStock": 100
+          "inStock": 99
         },
         {
           "color": "#000000",
@@ -147,7 +409,39 @@
           "inStock": 100
         }
       ],
-      "id": "3c06"
+      "id": "3c06",
+      "reviews": [
+        {
+          "rating": 4,
+          "comment": "Review 1 for product id 3c06",
+          "productId": "3c06",
+          "id": "cf85"
+        },
+        {
+          "rating": 4,
+          "comment": "Review 2 for product id 3c06",
+          "productId": "3c06",
+          "id": "45f7"
+        },
+        {
+          "rating": 3,
+          "comment": "Review 3 for product id 3c06",
+          "productId": "3c06",
+          "id": "a753"
+        },
+        {
+          "rating": 5,
+          "comment": "Review 4 for product id 3c06",
+          "productId": "3c06",
+          "id": "fb34"
+        },
+        {
+          "rating": 2,
+          "comment": "Review 5 for product id 3c06",
+          "productId": "3c06",
+          "id": "27df"
+        }
+      ]
     },
     {
       "title": "Smart Fitness Tracker",

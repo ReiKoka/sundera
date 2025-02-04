@@ -1,13 +1,18 @@
 "use strict";
 
 import { Notyf } from "notyf";
-import { getCart } from "../cart/cartState";
+import { clearCart, getCart } from "../cart/cartState";
 import {
   calculateShipping,
   calculateSubtotal,
   calculateTotal,
+  updateCartItemsCount,
+  updateDomOnCartClearance,
 } from "../utils/helpers";
 import { createOrder } from "../../services/createOrder";
+import { getProductById } from "../../services/getProductById";
+import { createOrEditProduct } from "../../services/createOrEditProduct";
+import { renderCart } from "../cart/renderCart";
 
 export const checkoutFormHandler = () => {
   const form = document.querySelector("form.checkout-form");
@@ -16,18 +21,15 @@ export const checkoutFormHandler = () => {
   const shipping = calculateShipping(cart);
   const total = calculateTotal(cart);
 
-  console.log(subtotal, shipping, total);
-
   const notyf = new Notyf({
     position: { x: "center", y: "top" },
   });
 
-  form.addEventListener("submit", (e) => {
+  form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
     const formData = new FormData(form);
     const data = Object.fromEntries(formData.entries());
-    console.log(cart);
     const products = cart.map((item) => {
       return {
         title: item.product.title,
@@ -38,10 +40,44 @@ export const checkoutFormHandler = () => {
     });
 
     const newOrder = { ...data, products, subtotal, shipping, total };
-    console.log(newOrder);
     createOrder(newOrder);
     notyf.success(`New order created `);
+
+    const updatedProducts = new Map();
+
+    for (const item of cart) {
+      const { product, color, quantity } = item;
+      console.log(product.id);
+      console.log(
+        `Updating stock for Product ID: ${product.id}, Color: ${color}, Quantity: ${quantity}`
+      );
+
+      if (!updatedProducts.has(product.id)) {
+        const latestProduct = await getProductById(product.id);
+        updatedProducts.set(product.id, {
+          ...latestProduct,
+          colors: [...latestProduct.colors],
+        });
+      }
+
+      const updatedProduct = updatedProducts.get(product.id);
+
+      updatedProduct.colors = updatedProduct.colors.map((c) =>
+        c.color === color
+          ? { ...c, inStock: Math.max(0, c.inStock - quantity) }
+          : c
+      );
+
+      updatedProducts.set(product.id, updatedProduct);
+    }
+
+    for (const updatedProduct of updatedProducts.values()) {
+      await createOrEditProduct(updatedProduct, updatedProduct.id);
+    }
+
     modal.style.display = "none";
-    window.location.href = "/orders";
+    clearCart();
+    updateDomOnCartClearance(renderCart);
+    updateCartItemsCount();
   });
 };

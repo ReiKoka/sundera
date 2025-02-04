@@ -15,7 +15,7 @@ import { initCheckoutModal } from "../modals/initCheckoutModal";
 
 export const renderCart = () => {
   const allCartItems = getCart();
-  console.log(allCartItems);
+
   const notyf = new Notyf({
     position: { x: "center", y: "top" },
   });
