@@ -9,6 +9,7 @@ import { getProductsWithParams } from "../../services/getProductsWithParams";
 import { searchProduct } from "../products/searchProduct";
 import { renderProducts } from "../products/renderProducts";
 import { renderFilters } from "../products/renderFilters";
+import { getOrders } from "../../services/getOrders";
 
 // Update CartItems Count - DOM
 export const updateCartItemsCount = () => {
@@ -72,6 +73,12 @@ export const getCartItemsNumber = () => {
   return getCart()
     .map((item) => item.quantity)
     .reduce((acc, curr) => acc + curr, 0);
+};
+
+export const initOrders = async () => {
+  const orders = await getOrders();
+  console.log(orders);
+  return orders;
 };
 
 // Format currency to $x.yy
@@ -271,5 +278,7 @@ export const searchByDescription = (products, searchTerm) => {
 
 export const rgbToHex = (rgbString) => {
   const rgbValues = rgbString.match(/\d+/g).map(Number);
-  return `#${rgbValues.map(val => val.toString(16).padStart(2, "0")).join("")}`;
+  return `#${rgbValues
+    .map((val) => val.toString(16).padStart(2, "0"))
+    .join("")}`;
 };

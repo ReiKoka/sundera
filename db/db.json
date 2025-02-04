@@ -1,7 +1,7 @@
 {
   "orders": [
     {
-      "id": "1b49",
+      "id": "2984",
       "firstName": "Rei",
       "lastName": "Koka",
       "address": "Rruga Pjeter Budi",
@@ -13,138 +13,20 @@
       "products": [
         {
           "title": "Rambler® 30 oz Stackable Cup",
-          "quantity": 6,
-          "color": "#94e105",
-          "totalPrice": 90
-        }
-      ],
-      "subtotal": 90,
-      "shipping": 4.5,
-      "total": 94.5
-    },
-    {
-      "id": "7a1b",
-      "firstName": "Rei",
-      "lastName": "Koka",
-      "address": "Rruga Pjeter Budi",
-      "apartment": "P19 Ap 4/2",
-      "city": "Tirane",
-      "postcode": "1057",
-      "email": "reikoka1@outlook.com",
-      "phoneNumber": "0688161541",
-      "products": [
-        {
-          "title": "Rambler® 30 oz Stackable Cup",
-          "quantity": 50,
-          "color": "#000000",
-          "totalPrice": 750
-        }
-      ],
-      "subtotal": 750,
-      "shipping": 0,
-      "total": 750
-    },
-    {
-      "id": "8345",
-      "firstName": "Rei",
-      "lastName": "Koka",
-      "address": "Rruga Pjeter Budi",
-      "apartment": "P19 Ap 4/2",
-      "city": "Tirane",
-      "postcode": "1057",
-      "email": "reikoka1@outlook.com",
-      "phoneNumber": "0688161541",
-      "products": [
-        {
-          "title": "Rambler® 30 oz Stackable Cup",
-          "quantity": 2,
+          "quantity": 10,
           "color": "#38219B",
-          "totalPrice": 30
-        },
-        {
-          "title": "Eco-Friendly Water Bottle",
-          "quantity": 1,
-          "color": "#000000",
-          "totalPrice": 20
-        },
-        {
-          "title": "Premium Yoga Mat",
-          "quantity": 1,
-          "color": "#412835",
-          "totalPrice": 30
-        },
-        {
-          "title": "Adjustable Dumbbells",
-          "quantity": 1,
-          "color": "#000000",
           "totalPrice": 150
         },
         {
-          "title": "SoundCore Liberty 4 Pro",
-          "quantity": 1,
-          "color": "#FFFFFF",
+          "title": "Eco-Friendly Water Bottle",
+          "quantity": 10,
+          "color": "#000000",
           "totalPrice": 200
         }
       ],
-      "subtotal": 430,
+      "subtotal": 350,
       "shipping": 0,
-      "total": 430
-    },
-    {
-      "id": "9006",
-      "firstName": "Rei",
-      "lastName": "Koka",
-      "address": "Rruga Pjeter Budi",
-      "apartment": "P19 Ap 4/2",
-      "city": "Tirane",
-      "postcode": "1057",
-      "email": "reikoka1@outlook.com",
-      "phoneNumber": "0688161541",
-      "products": [
-        {
-          "title": "Rambler® 30 oz Stackable Cup",
-          "quantity": 1,
-          "color": "#38219B",
-          "totalPrice": 15
-        },
-        {
-          "title": "Eco-Friendly Water Bottle",
-          "quantity": 1,
-          "color": "#000000",
-          "totalPrice": 20
-        },
-        {
-          "title": "Premium Yoga Mat",
-          "quantity": 1,
-          "color": "#412835",
-          "totalPrice": 30
-        }
-      ],
-      "subtotal": 65,
-      "shipping": 6.5,
-      "total": 71.5
-    },
-    {
-      "id": "c36f",
-      "firstName": "Rei",
-      "lastName": "Koka",
-      "address": "Rruga Pjeter Budi",
-      "apartment": "P19 Ap 4/2",
-      "city": "Tirane",
-      "postcode": "1057",
-      "email": "reikoka1@outlook.com",
-      "phoneNumber": "0688161541",
-      "products": [
-        {
-          "title": "Rambler® 30 oz Stackable Cup",
-          "quantity": 12,
-          "color": "#000000",
-          "totalPrice": 180
-        }
-      ],
-      "subtotal": 180,
-      "shipping": 0,
-      "total": 180
+      "total": 350
     }
   ],
   "products": [
@@ -160,7 +42,7 @@
       "colors": [
         {
           "color": "#38219B",
-          "inStock": 977
+          "inStock": 967
         },
         {
           "color": "#000000",
@@ -177,6 +59,10 @@
         {
           "color": "#a2a0a0",
           "inStock": 280
+        },
+        {
+          "color": "#740606",
+          "inStock": 10
         }
       ],
       "id": "83ab",
@@ -235,7 +121,7 @@
       "colors": [
         {
           "color": "#000000",
-          "inStock": 198
+          "inStock": 188
         },
         {
           "color": "#FFFFFF",
