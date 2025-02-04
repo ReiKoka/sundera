@@ -5,13 +5,16 @@ export const renderInput = (
   type,
   customLabel,
   className,
-  value = "",  
+  required = true,
+  value = "",
   minValue = 1
 ) => {
   const input = `
     <div class="field">
-      <input type="${type}" id="${field}" name="${field}" class="${className}" required 
-        placeholder value="${value}" ${minValue !== undefined ? `min="${minValue}"` : ""} />
+      <input type="${type}" id="${field}" name="${field}" class="${className}" required=${required} 
+        placeholder value="${value}" ${
+    minValue !== undefined ? `min="${minValue}"` : ""
+  } />
       <label for="${field}" class="label">${customLabel || field}</label>
     </div>
   `;

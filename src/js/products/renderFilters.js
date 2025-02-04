@@ -1,6 +1,7 @@
 import { getProducts } from "../../services/getProducts";
 import { renderProducts } from "./renderProducts";
 import { capitalizeFirstLetter, updateURLAndFetch } from "../utils/helpers";
+import { renderSelect } from "../renderSelect";
 
 export const renderFilters = (products) => {
   const productsMain = document.querySelector(".featured-products");
@@ -16,19 +17,14 @@ export const renderFilters = (products) => {
   utilitiesContainer.innerHTML = `
     <form class="filters-form" id="filters-form">
       <div class="select-container">
-        <select
-          title="form-select"
-          id="categories"
-          class="form-select"
-        >
-          <option value="all">All Categories</option>
-          ${uniqueCategories?.map(
-            (category) =>
-              `<option value="${category}">${capitalizeFirstLetter(
-                category
-              )}</option>`
-          )}
-        </select>
+        ${renderSelect(
+          "form-select",
+          "categories",
+          "form-select",
+          uniqueCategories,
+          "all",
+          "All Categories"
+        )}
         <div class="icon arrow-icon">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-6">
             <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
