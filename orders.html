@@ -3,28 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" href="/logo.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap"
       rel="stylesheet"
     />
-    <link rel="icon" href="/logo.svg" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/@romua1d/star-rating-js@latest/build/index.min.css"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css"
     />
     <link rel="stylesheet" href="src/styles/base.css" />
-    <link rel="stylesheet" href="src/styles/cart.css" />
-    <link rel="stylesheet" href="src/styles/spinner.css" />
-    <link rel="stylesheet" href="src/styles/modal.css" />
-
     <script
       src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"
       defer
     ></script>
-    <script type="module" src="/src/js/cart/cart.js"></script>
-    <title>Cart</title>
+    <script type="module" src="src/js/orders.js"></script>
+    <title>Orders</title>
   </head>
 
   <body>
@@ -35,13 +36,13 @@
 
       <nav class="nav">
         <ul>
+          <li class="nav-item"><a href="index.html">Home</a></li>
+          <li class="nav-item"><a href="about.html">About</a></li>
+          <li class="nav-item"><a href="products.html">Products</a></li>
+          <li class="nav-item"><a href="cart.html">Cart</a></li>
           <li class="nav-item">
-            <a href="/index.html">Home</a>
+            <a href="orders.html" class="active">Orders</a>
           </li>
-          <li class="nav-item"><a href="/about.html">About</a></li>
-          <li class="nav-item"><a href="/products.html">Products</a></li>
-          <li class="nav-item"><a href="#" class="active">Cart</a></li>
-          <li class="nav-item"><a href="orders.html">Orders</a></li>
         </ul>
       </nav>
 
@@ -77,7 +78,7 @@
             />
           </svg>
         </button>
-        <a href="#" type="button" id="cart">
+        <a href="cart.html" type="button" id="cart">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -97,13 +98,6 @@
       </div>
     </header>
 
-    <main class="main">
-      <div class="loader-container">
-        <div class="loader"></div>
-      </div>
-      <div class="cart">
-        <h1 class="cart-title">Shopping Cart</h1>
-      </div>
-    </main>
+    <main class="main"></main>
   </body>
 </html>
