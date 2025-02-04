@@ -16,13 +16,11 @@ export const initEditProductModal = (product) => {
     const selectedButton = document.querySelector(
       ".colors-buttons .btn.focused"
     );
+
     const selectedColor = rgbToHex(selectedButton.style.backgroundColor);
-
-    const selectedColorObj = product.colors.find(
-      (c) => c.color === selectedColor
-    ) || { color: "", inStock: 0 };
-
-    console.log(selectedColorObj);
+    const selectedColorObj = product.colors.find((c) => {
+      return c.color.toLocaleLowerCase() === selectedColor.toLocaleLowerCase();
+    }) || { color: "", inStock: 0 };
 
     modal.innerHTML = renderModal(
       "Edit Product",
@@ -33,12 +31,20 @@ export const initEditProductModal = (product) => {
           </svg>
         </button>
         <form method="post" class="form edit-product-form">
-          ${renderInput("title", "text", "Title", "input", product?.title)}
+          ${renderInput(
+            "title",
+            "text",
+            "Title",
+            "input",
+            true,
+            product?.title
+          )}
           ${renderInput(
             "company",
             "text",
             "Company",
             "input",
+            true,
             product?.company
           )}
           ${renderInput(
@@ -46,17 +52,34 @@ export const initEditProductModal = (product) => {
             "text",
             "Description",
             "input",
+            true,
             product?.description
           )}
-          ${renderInput("price", "number", "Price", "input", product?.price, 1)}
+          ${renderInput(
+            "price",
+            "number",
+            "Price",
+            "input",
+            true,
+            product?.price,
+            1
+          )}
           ${renderInput(
             "category",
             "text",
             "Category",
             "input",
+            true,
             product?.category
           )}
-          ${renderInput("image", "text", "Image URL", "input", product?.image)}
+          ${renderInput(
+            "image",
+            "text",
+            "Image URL",
+            "input",
+            true,
+            product?.image
+          )}
           ${renderCheckbox("featured", "Featured", product?.featured)}
           <div class="color-quantity-parent">
             ${renderInput(
@@ -64,8 +87,8 @@ export const initEditProductModal = (product) => {
               "number",
               "Quantity",
               "input",
-              selectedColorObj.inStock,
-              0
+              true,
+              selectedColorObj.inStock
             )}
             ${renderColorPicker(
               "color",
