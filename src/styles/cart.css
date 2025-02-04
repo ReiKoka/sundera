@@ -325,7 +325,6 @@
   background-color: hsl(var(--primary));
   color: hsl(var(--primary-foreground));
   border: 1px solid hsl(var(--primary));
-  text-decoration: none;
 }
 
 .cart .filled-cart .checkout-summary .checkout-buttons .btn.primary-btn:hover {

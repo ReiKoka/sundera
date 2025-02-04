@@ -1,5 +1,28 @@
 {
-  "orders": [],
+  "orders": [
+    {
+      "id": "1b49",
+      "firstName": "Rei",
+      "lastName": "Koka",
+      "address": "Rruga Pjeter Budi",
+      "apartment": "P19 Ap 4/2",
+      "city": "Tirane",
+      "postcode": "1057",
+      "email": "reikoka1@outlook.com",
+      "phoneNumber": "0688161541",
+      "products": [
+        {
+          "title": "Rambler® 30 oz Stackable Cup",
+          "quantity": 6,
+          "color": "#94e105",
+          "totalPrice": 90
+        }
+      ],
+      "subtotal": 90,
+      "shipping": 4.5,
+      "total": 94.5
+    }
+  ],
   "products": [
     {
       "title": "Rambler® 30 oz Stackable Cup",
