@@ -10,6 +10,7 @@ import { searchProduct } from "../products/searchProduct";
 import { renderProducts } from "../products/renderProducts";
 import { renderFilters } from "../products/renderFilters";
 import { getOrders } from "../../services/getOrders";
+import { renderOrders } from "../orders/renderOrders";
 
 // Update CartItems Count - DOM
 export const updateCartItemsCount = () => {
@@ -77,8 +78,7 @@ export const getCartItemsNumber = () => {
 
 export const initOrders = async () => {
   const orders = await getOrders();
-  console.log(orders);
-  return orders;
+  renderOrders(orders);
 };
 
 // Format currency to $x.yy

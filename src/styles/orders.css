@@ -1,0 +1,6 @@
+.orders-container h1 {
+  width: 100%;
+  color: hsl(var(--foreground));
+  margin-top: -5px;
+}
+
