@@ -21,7 +21,7 @@ export const renderReviews = (product) => {
     </div>
 
     <div class="comments-container">
-      ${product.reviews.map((review) => renderSingleReview(review)).join("")}
+      ${product.reviews.length ? product.reviews.map((review) => renderSingleReview(review)).join("") : `<p class="missing-reviews">This product does not have any reviews!</p>`}
     </div>
   </div
   `;

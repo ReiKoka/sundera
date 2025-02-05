@@ -1,206 +1,5 @@
 {
-  "orders": [
-    {
-      "id": "c205",
-      "firstName": "Rei",
-      "lastName": "Koka",
-      "country": "Albania",
-      "address": "Rruga Pjeter Budi",
-      "apartment": "P19 Ap 4/2",
-      "city": "Tirane",
-      "postcode": "1057",
-      "email": "reikoka1@outlook.com",
-      "phoneNumber": "0688161541",
-      "products": [
-        {
-          "id": "83ab",
-          "title": "Rambler® 30 oz Stackable Cup",
-          "quantity": 5,
-          "color": "#38219B",
-          "pricePerOne": 15,
-          "totalPrice": 75,
-          "image": "https://www.yeti.com/on/demandware.static/-/Sites-siteCatalog_Yeti_US/default/dw858ffac3/200380-Category-Header-Tumblers-Social-1200x6300.jpg"
-        },
-        {
-          "id": "83ab",
-          "title": "Rambler® 30 oz Stackable Cup",
-          "quantity": 5,
-          "color": "#94e105",
-          "pricePerOne": 15,
-          "totalPrice": 75,
-          "image": "https://www.yeti.com/on/demandware.static/-/Sites-siteCatalog_Yeti_US/default/dw858ffac3/200380-Category-Header-Tumblers-Social-1200x6300.jpg"
-        },
-        {
-          "id": "e123",
-          "title": "Laptop Backpack",
-          "quantity": 3,
-          "color": "#343A40",
-          "pricePerOne": 40,
-          "totalPrice": 120,
-          "image": "https://images.unsplash.com/photo-1667411424594-672f7a3df708?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        }
-      ],
-      "subtotal": 270,
-      "shipping": 0,
-      "total": 270
-    },
-    {
-      "id": "e705",
-      "firstName": "Rei",
-      "lastName": "Koka",
-      "country": "Albania",
-      "address": "Rruga Pjeter Budi",
-      "apartment": "P19 Ap 4/2",
-      "city": "Tirane",
-      "postcode": "1057",
-      "email": "reikoka1@outlook.com",
-      "phoneNumber": "0688161541",
-      "products": [
-        {
-          "id": "83ab",
-          "title": "Rambler® 30 oz Stackable Cup",
-          "quantity": 1,
-          "color": "#38219B",
-          "pricePerOne": 15,
-          "totalPrice": 15,
-          "image": "https://www.yeti.com/on/demandware.static/-/Sites-siteCatalog_Yeti_US/default/dw858ffac3/200380-Category-Header-Tumblers-Social-1200x6300.jpg"
-        }
-      ],
-      "subtotal": 15,
-      "shipping": 3,
-      "total": 18
-    },
-    {
-      "id": "1bae",
-      "firstName": "Rei",
-      "lastName": "Koka",
-      "country": "Albania",
-      "address": "Rruga Pjeter Budi",
-      "apartment": "P19 Ap 4/2",
-      "city": "Tirane",
-      "postcode": "1057",
-      "email": "reikoka1@outlook.com",
-      "phoneNumber": "0688161541",
-      "products": [
-        {
-          "id": "3d72",
-          "title": "test3",
-          "quantity": 2,
-          "color": "#fa4b00",
-          "pricePerOne": 650,
-          "totalPrice": 1300,
-          "image": "https://plus.unsplash.com/premium_photo-1663134149019-284682ece04c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2FtZXJhfGVufDB8fDB8fHww"
-        }
-      ],
-      "subtotal": 1300,
-      "shipping": 0,
-      "total": 1300
-    },
-    {
-      "id": "97d2",
-      "firstName": "Rei",
-      "lastName": "Koka",
-      "country": "Albania",
-      "address": "Rruga Pjeter Budi",
-      "apartment": "P19 Ap 4/2",
-      "city": "Tirane",
-      "postcode": "1057",
-      "email": "reikoka1@outlook.com",
-      "phoneNumber": "0688161541",
-      "products": [
-        {
-          "id": "3d72",
-          "title": "test3",
-          "quantity": 5,
-          "color": "#fa4b00",
-          "pricePerOne": 650,
-          "totalPrice": 3250,
-          "image": "https://plus.unsplash.com/premium_photo-1663134149019-284682ece04c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2FtZXJhfGVufDB8fDB8fHww"
-        }
-      ],
-      "subtotal": 3250,
-      "shipping": 0,
-      "total": 3250
-    },
-    {
-      "id": "3f4a",
-      "firstName": "Rei",
-      "lastName": "Koka",
-      "country": "Albania",
-      "address": "Rruga Pjeter Budi",
-      "apartment": "P19 Ap 4/2",
-      "city": "Tirane",
-      "postcode": "1057",
-      "email": "reikoka1@outlook.com",
-      "phoneNumber": "0688161541",
-      "products": [
-        {
-          "id": "83ab",
-          "title": "Rambler® 30 oz Stackable Cup",
-          "quantity": 1,
-          "color": "#ffffff",
-          "pricePerOne": 15,
-          "totalPrice": 15,
-          "image": "https://www.yeti.com/on/demandware.static/-/Sites-siteCatalog_Yeti_US/default/dw858ffac3/200380-Category-Header-Tumblers-Social-1200x6300.jpg"
-        }
-      ],
-      "subtotal": 15,
-      "shipping": 3,
-      "total": 18
-    },
-    {
-      "id": "7272",
-      "firstName": "Rei",
-      "lastName": "Koka",
-      "country": "Albania",
-      "address": "Rruga Pjeter Budi",
-      "apartment": "P19 Ap 4/2",
-      "city": "Tirane",
-      "postcode": "1057",
-      "email": "reikoka1@outlook.com",
-      "phoneNumber": "0688161541",
-      "products": [
-        {
-          "id": "83ab",
-          "title": "Rambler® 30 oz Stackable Cup",
-          "quantity": 10,
-          "color": "#38219B",
-          "pricePerOne": 15,
-          "totalPrice": 150,
-          "image": "https://www.yeti.com/on/demandware.static/-/Sites-siteCatalog_Yeti_US/default/dw858ffac3/200380-Category-Header-Tumblers-Social-1200x6300.jpg"
-        }
-      ],
-      "subtotal": 150,
-      "shipping": 0,
-      "total": 150
-    },
-    {
-      "id": "117e",
-      "firstName": "Rei",
-      "lastName": "Koka",
-      "country": "Albania",
-      "address": "Rruga Pjeter Budi",
-      "apartment": "P19 Ap 4/2",
-      "city": "Tirane",
-      "postcode": "1057",
-      "email": "reikoka1@outlook.com",
-      "phoneNumber": "0688161541",
-      "products": [
-        {
-          "id": "83ab",
-          "title": "Rambler® 30 oz Stackable Cup",
-          "quantity": 1,
-          "color": "#ffffff",
-          "pricePerOne": 15,
-          "totalPrice": 15,
-          "image": "https://www.yeti.com/on/demandware.static/-/Sites-siteCatalog_Yeti_US/default/dw858ffac3/200380-Category-Header-Tumblers-Social-1200x6300.jpg"
-        }
-      ],
-      "subtotal": 15,
-      "shipping": 3,
-      "total": 18
-    }
-  ],
+  "orders": [],
   "products": [
     {
       "title": "Rambler® 30 oz Stackable Cup",
@@ -210,7 +9,7 @@
       "category": "drinkware",
       "image": "https://www.yeti.com/on/demandware.static/-/Sites-siteCatalog_Yeti_US/default/dw858ffac3/200380-Category-Header-Tumblers-Social-1200x6300.jpg",
       "featured": true,
-      "soldAllTime": 161,
+      "soldAllTime": 171,
       "colors": [
         {
           "color": "#38219B",
@@ -218,7 +17,7 @@
         },
         {
           "color": "#000000",
-          "inStock": 388
+          "inStock": 393
         },
         {
           "color": "#ff0000",
@@ -234,6 +33,10 @@
         },
         {
           "color": "#ffffff",
+          "inStock": 0
+        },
+        {
+          "color": "#001eff",
           "inStock": 0
         }
       ],
@@ -441,7 +244,7 @@
       "id": "f10e"
     },
     {
-      "id": "3d72",
+      "id": "6ca3",
       "title": "test3",
       "company": "test3",
       "description": "test3",
@@ -449,19 +252,28 @@
       "category": "test3",
       "image": "https://plus.unsplash.com/premium_photo-1663134149019-284682ece04c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2FtZXJhfGVufDB8fDB8fHww",
       "featured": false,
-      "soldAllTime": 5,
+      "soldAllTime": 0,
       "colors": [
         {
-          "color": "#fa4b00",
-          "inStock": 15
+          "color": "#610000",
+          "inStock": 20
         }
-      ],
-      "reviews": [
+      ]
+    },
+    {
+      "id": "819f",
+      "title": "test3",
+      "company": "test3",
+      "description": "test3",
+      "price": 650,
+      "category": "test3",
+      "image": "https://plus.unsplash.com/premium_photo-1663134149019-284682ece04c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2FtZXJhfGVufDB8fDB8fHww",
+      "featured": false,
+      "soldAllTime": 0,
+      "colors": [
         {
-          "id": "4082",
-          "rating": 5,
-          "comment": "Excellent product",
-          "productId": "3d72"
+          "color": "#000000",
+          "inStock": 20
         }
       ]
     }
@@ -787,7 +599,8 @@
       "id": "4082",
       "rating": 5,
       "comment": "Excellent product",
-      "productId": "3d72"
+      "productId": null
     }
   ]
 }
+

@@ -515,3 +515,9 @@
   align-items: center;
   gap: 0.5rem;
 }
+
+.missing-reviews {
+  color: hsl(var(--foreground));
+  text-align: center;
+  
+}

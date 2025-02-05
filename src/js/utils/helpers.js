@@ -77,7 +77,13 @@ export const getCartItemsNumber = () => {
 };
 
 export const initOrders = async () => {
+  const loader = document.querySelector(".loader-container");
   const orders = await getOrders();
+
+  if (orders) {
+    loader.classList.add("hide");
+  }
+
   renderOrders(orders);
 };
 

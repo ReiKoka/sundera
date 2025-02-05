@@ -28,6 +28,7 @@ export const addProductColorFormHandler = (product, modal) => {
 
     delete newProduct.reviews;
 
+    console.log(newProduct.colors);
     createOrEditProduct(newProduct, product.id);
     modal.style.display = "none";
     initSingleProduct();
