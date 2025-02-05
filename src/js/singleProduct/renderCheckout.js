@@ -64,7 +64,7 @@ export const renderCheckout = (product) => {
             ${
               product?.colors[0].inStock > 0
                 ? `<span class="stock-display">${product?.colors[0].inStock} available</span>`
-                : `<span class="stock-display out-of-stock">Out of stock</span>`
+                : `<span class="stock-display">Out of stock</span>`
             }
           </div>
         </div>

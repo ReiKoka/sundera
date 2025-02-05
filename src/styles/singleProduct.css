@@ -309,6 +309,14 @@
   font-weight: 300;
 }
 
+.product-container .checkout-container .checkout-p span.out-of-stock {
+  width: fit-content;
+  background-color: hsl(var(--destructive));
+  color: hsl(var(--destructive-foreground));
+  padding: 0.25rem 0.5rem;
+  border-radius: 50px;
+}
+
 .product-container .checkout-container .quantity {
   display: flex;
   flex-direction: column;
@@ -354,14 +362,6 @@
   height: 24px;
   stroke: hsl(var(--foreground));
 }
-
-.product-container
-  .checkout-container
-  .quantity
-  .total-quantity
-  .out-of-stock {
-    
-  }
 
 .checkout-buttons {
   display: flex;

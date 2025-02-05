@@ -77,7 +77,7 @@ export const checkoutFormHandler = () => {
 
       // Increase the soldAllTime count
       updatedProduct.soldAllTime += quantity;
-
+      delete updatedProduct.reviews;
       updatedProducts.set(product.id, updatedProduct);
     }
 

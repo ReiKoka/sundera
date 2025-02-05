@@ -122,6 +122,11 @@ export const setupColorButtons = (buttons, product, onColorSelect) => {
           ? `${selectedColor.inStock} available`
           : "Out of stock"
       }`;
+
+      console.log(selectedColor.inStock);
+      selectedColor.inStock === 0
+        ? stockDisplayElement.classList.add("out-of-stock")
+        : stockDisplayElement.classList.remove("out-of-stock");
     });
   });
 };
@@ -138,6 +143,7 @@ export const addProductHandler = (products, getQuantity, getColor) => {
     addToCartBtns[0].addEventListener("click", () => {
       const inStockEl = document.querySelector(".stock-display");
       const inStock = Number(inStockEl.textContent.split(" ")[0]);
+
       let quantitySelected = getQuantity() || 0;
       const colorSelected = getColor();
       const cart = getCart();
