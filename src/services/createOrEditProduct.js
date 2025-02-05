@@ -16,7 +16,7 @@ export const createOrEditProduct = async (product, productId) => {
     );
 
     if (!response.ok) throw new Error("Failed to add new product");
-
+    
     const data = await response.json();
     console.log(data);
     return data;

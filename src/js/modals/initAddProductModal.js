@@ -15,7 +15,7 @@ export const initAddProductModal = () => {
       "Add new product",
       `
 
-        <form method="post" class="form add-product-form">
+        <form class="form add-product-form">
           ${renderInput("title", "text", "Title", "input")}
           ${renderInput("company", "text", "Company", "input")}
           ${renderInput("description", "text", "Description", "input")}

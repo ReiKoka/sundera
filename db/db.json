@@ -69,6 +69,32 @@
       "subtotal": 15,
       "shipping": 3,
       "total": 18
+    },
+    {
+      "id": "1bae",
+      "firstName": "Rei",
+      "lastName": "Koka",
+      "country": "Albania",
+      "address": "Rruga Pjeter Budi",
+      "apartment": "P19 Ap 4/2",
+      "city": "Tirane",
+      "postcode": "1057",
+      "email": "reikoka1@outlook.com",
+      "phoneNumber": "0688161541",
+      "products": [
+        {
+          "id": "3d72",
+          "title": "test3",
+          "quantity": 2,
+          "color": "#fa4b00",
+          "pricePerOne": 650,
+          "totalPrice": 1300,
+          "image": "https://plus.unsplash.com/premium_photo-1663134149019-284682ece04c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2FtZXJhfGVufDB8fDB8fHww"
+        }
+      ],
+      "subtotal": 1300,
+      "shipping": 0,
+      "total": 1300
     }
   ],
   "products": [
@@ -101,55 +127,9 @@
         {
           "color": "#a2a0a0",
           "inStock": 280
-        },
-        {
-          "color": "#740606",
-          "inStock": 10
         }
       ],
-      "id": "83ab",
-      "reviews": [
-        {
-          "rating": 2,
-          "comment": "Review 1 for product id 83ab",
-          "productId": "83ab",
-          "userId": "1",
-          "userName": "Tomas",
-          "id": "a8df"
-        },
-        {
-          "rating": 4,
-          "comment": "Review 2 for product id 83ab",
-          "productId": "83ab",
-          "userId": "2",
-          "userName": "Emily",
-          "id": "c2a2"
-        },
-        {
-          "rating": 4,
-          "comment": "Review 3 for product id 83ab",
-          "productId": "83ab",
-          "userId": "3",
-          "userName": "Michael",
-          "id": "fee5"
-        },
-        {
-          "rating": 2,
-          "comment": "Review 4 for product id 83ab",
-          "productId": "83ab",
-          "userId": "4",
-          "userName": "Sophia",
-          "id": "eb8d"
-        },
-        {
-          "rating": 5,
-          "comment": "Review 5 for product id 83ab",
-          "productId": "83ab",
-          "userId": "5",
-          "userName": "James",
-          "id": "968a"
-        }
-      ]
+      "id": "83ab"
     },
     {
       "title": "Eco-Friendly Water Bottle",
@@ -174,39 +154,7 @@
           "inStock": 100
         }
       ],
-      "id": "9703",
-      "reviews": [
-        {
-          "rating": 5,
-          "comment": "Review 1 for product id 9703",
-          "productId": "9703",
-          "id": "71e2"
-        },
-        {
-          "rating": 3,
-          "comment": "Review 2 for product id 9703",
-          "productId": "9703",
-          "id": "c17d"
-        },
-        {
-          "rating": 4,
-          "comment": "Review 3 for product id 9703",
-          "productId": "9703",
-          "id": "0c7b"
-        },
-        {
-          "rating": 2,
-          "comment": "Review 4 for product id 9703",
-          "productId": "9703",
-          "id": "2831"
-        },
-        {
-          "rating": 4,
-          "comment": "Review 5 for product id 9703",
-          "productId": "9703",
-          "id": "5f91"
-        }
-      ]
+      "id": "9703"
     },
     {
       "title": "Premium Yoga Mat",
@@ -227,39 +175,7 @@
           "inStock": 150
         }
       ],
-      "id": "b56e",
-      "reviews": [
-        {
-          "rating": 4,
-          "comment": "Review 1 for product id b56e",
-          "productId": "b56e",
-          "id": "321d"
-        },
-        {
-          "rating": 5,
-          "comment": "Review 2 for product id b56e",
-          "productId": "b56e",
-          "id": "d0be"
-        },
-        {
-          "rating": 3,
-          "comment": "Review 3 for product id b56e",
-          "productId": "b56e",
-          "id": "0e94"
-        },
-        {
-          "rating": 4,
-          "comment": "Review 4 for product id b56e",
-          "productId": "b56e",
-          "id": "995a"
-        },
-        {
-          "rating": 5,
-          "comment": "Review 5 for product id b56e",
-          "productId": "b56e",
-          "id": "31f4"
-        }
-      ]
+      "id": "b56e"
     },
     {
       "title": "Adjustable Dumbbells",
@@ -280,39 +196,7 @@
           "inStock": 50
         }
       ],
-      "id": "5a47",
-      "reviews": [
-        {
-          "rating": 2,
-          "comment": "Review 1 for product id 5a47",
-          "productId": "5a47",
-          "id": "427c"
-        },
-        {
-          "rating": 5,
-          "comment": "Review 2 for product id 5a47",
-          "productId": "5a47",
-          "id": "098e"
-        },
-        {
-          "rating": 4,
-          "comment": "Review 3 for product id 5a47",
-          "productId": "5a47",
-          "id": "561e"
-        },
-        {
-          "rating": 3,
-          "comment": "Review 4 for product id 5a47",
-          "productId": "5a47",
-          "id": "9bd2"
-        },
-        {
-          "rating": 5,
-          "comment": "Review 5 for product id 5a47",
-          "productId": "5a47",
-          "id": "8b0b"
-        }
-      ]
+      "id": "5a47"
     },
     {
       "title": "SoundCore Liberty 4 Pro",
@@ -337,39 +221,7 @@
           "inStock": 100
         }
       ],
-      "id": "3c06",
-      "reviews": [
-        {
-          "rating": 4,
-          "comment": "Review 1 for product id 3c06",
-          "productId": "3c06",
-          "id": "cf85"
-        },
-        {
-          "rating": 4,
-          "comment": "Review 2 for product id 3c06",
-          "productId": "3c06",
-          "id": "45f7"
-        },
-        {
-          "rating": 3,
-          "comment": "Review 3 for product id 3c06",
-          "productId": "3c06",
-          "id": "a753"
-        },
-        {
-          "rating": 5,
-          "comment": "Review 4 for product id 3c06",
-          "productId": "3c06",
-          "id": "fb34"
-        },
-        {
-          "rating": 2,
-          "comment": "Review 5 for product id 3c06",
-          "productId": "3c06",
-          "id": "27df"
-        }
-      ]
+      "id": "3c06"
     },
     {
       "title": "Smart Fitness Tracker",
@@ -411,39 +263,7 @@
           "inStock": 200
         }
       ],
-      "id": "e123",
-      "reviews": [
-        {
-          "rating": 3,
-          "comment": "Review 1 for product id e123",
-          "productId": "e123",
-          "id": "c2a0"
-        },
-        {
-          "rating": 5,
-          "comment": "Review 2 for product id e123",
-          "productId": "e123",
-          "id": "2cad"
-        },
-        {
-          "rating": 4,
-          "comment": "Review 3 for product id e123",
-          "productId": "e123",
-          "id": "6378"
-        },
-        {
-          "rating": 2,
-          "comment": "Review 4 for product id e123",
-          "productId": "e123",
-          "id": "d85e"
-        },
-        {
-          "rating": 5,
-          "comment": "Review 5 for product id e123",
-          "productId": "e123",
-          "id": "0fa7"
-        }
-      ]
+      "id": "e123"
     },
     {
       "title": "Leather Messenger Bag",
@@ -489,39 +309,7 @@
           "inStock": 200
         }
       ],
-      "id": "ee30",
-      "reviews": [
-        {
-          "rating": 2,
-          "comment": "Review 1 for product id ee30",
-          "productId": "ee30",
-          "id": "08da"
-        },
-        {
-          "rating": 4,
-          "comment": "Review 2 for product id ee30",
-          "productId": "ee30",
-          "id": "42d5"
-        },
-        {
-          "rating": 5,
-          "comment": "Review 3 for product id ee30",
-          "productId": "ee30",
-          "id": "cda7"
-        },
-        {
-          "rating": 3,
-          "comment": "Review 4 for product id ee30",
-          "productId": "ee30",
-          "id": "5eea"
-        },
-        {
-          "rating": 5,
-          "comment": "Review 5 for product id ee30",
-          "productId": "ee30",
-          "id": "60f5"
-        }
-      ]
+      "id": "ee30"
     },
     {
       "title": "Ceramic Dinner Set",
@@ -542,37 +330,22 @@
           "inStock": 25
         }
       ],
-      "id": "f10e",
-      "reviews": [
+      "id": "f10e"
+    },
+    {
+      "id": "3d72",
+      "title": "test3",
+      "company": "test3",
+      "description": "test3",
+      "price": 650,
+      "category": "test3",
+      "image": "https://plus.unsplash.com/premium_photo-1663134149019-284682ece04c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2FtZXJhfGVufDB8fDB8fHww",
+      "featured": false,
+      "soldAllTime": 0,
+      "colors": [
         {
-          "rating": 4,
-          "comment": "Review 1 for product id f10e",
-          "productId": "f10e",
-          "id": "40a7"
-        },
-        {
-          "rating": 5,
-          "comment": "Review 2 for product id f10e",
-          "productId": "f10e",
-          "id": "4561"
-        },
-        {
-          "rating": 3,
-          "comment": "Review 3 for product id f10e",
-          "productId": "f10e",
-          "id": "52f9"
-        },
-        {
-          "rating": 4,
-          "comment": "Review 4 for product id f10e",
-          "productId": "f10e",
-          "id": "18e4"
-        },
-        {
-          "rating": 5,
-          "comment": "Review 5 for product id f10e",
-          "productId": "f10e",
-          "id": "3a43"
+          "color": "#fa4b00",
+          "inStock": 20
         }
       ]
     }
@@ -887,6 +660,18 @@
       "comment": "Review 5 for product id f10e",
       "productId": "f10e",
       "id": "3a43"
+    },
+    {
+      "id": "c756",
+      "rating": 5,
+      "comment": "Some comment",
+      "productId": "83ab"
+    },
+    {
+      "id": "4082",
+      "rating": 5,
+      "comment": "Excellent product",
+      "productId": "3d72"
     }
   ]
 }

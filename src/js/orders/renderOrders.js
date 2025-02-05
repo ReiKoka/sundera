@@ -1,6 +1,7 @@
 "use strict";
 
 import { renderSingleOrder } from "./renderSingleOrder";
+import { initAddReviewModal } from './../modals/initAddReviewModal';
 
 export const renderOrders = (orders) => {
   const ordersContainer = document.querySelector(".orders-container");
@@ -11,9 +12,12 @@ export const renderOrders = (orders) => {
 
   ordersEl.innerHTML = `
     <div class="all-orders">
-      ${orders.map((order) => renderSingleOrder(order))}
+      ${orders.map((order) => renderSingleOrder(order)).join("")}
     </div>
   `;
 
   ordersContainer.appendChild(ordersEl);
+
+  initAddReviewModal()
+  
 };

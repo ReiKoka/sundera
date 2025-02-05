@@ -31,6 +31,7 @@ export const editProductFormHandler = (product, modal) => {
       ...productData,
       featured,
       soldAllTime,
+      price,
       colors: updatedColors,
     };
 
