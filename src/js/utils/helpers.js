@@ -117,7 +117,11 @@ export const setupColorButtons = (buttons, product, onColorSelect) => {
       const selectedColor = product.colors[i];
       onColorSelect(selectedColor.color);
 
-      stockDisplayElement.textContent = `${selectedColor.inStock} available`;
+      stockDisplayElement.textContent = `${
+        selectedColor.inStock
+          ? `${selectedColor.inStock} available`
+          : "Out of stock"
+      }`;
     });
   });
 };
@@ -125,18 +129,41 @@ export const setupColorButtons = (buttons, product, onColorSelect) => {
 // Add product to cart handler
 export const addProductHandler = (products, getQuantity, getColor) => {
   const addToCartBtns = document.querySelectorAll(".add-to-cart");
+
   const notyf = new Notyf({
     position: { x: "center", y: "top" },
   });
 
   if (addToCartBtns.length === 1) {
     addToCartBtns[0].addEventListener("click", () => {
-      const quantitySelected = getQuantity() || 1;
+      const inStockEl = document.querySelector(".stock-display");
+      const inStock = Number(inStockEl.textContent.split(" ")[0]);
+      let quantitySelected = getQuantity() || 0;
       const colorSelected = getColor();
+      const cart = getCart();
+      const productExists = cart.some(
+        (item) =>
+          item.product.id === products[0].id && item.color === colorSelected
+      );
+
+      if (productExists) {
+        notyf.error(`${products[0].title} is already in your cart.`);
+        return;
+      }
+
+      if (quantitySelected > inStock) {
+        notyf.error(
+          `Cannot add ${products[0].title} to cart. Not enough stock.`
+        );
+        return;
+      }
+      
+
       addToCart(products[0], quantitySelected, colorSelected);
       notyf.success(
         `${quantitySelected} ${products[0].title} added successfully!`
       );
+
       updateCartItemsCount();
     });
 
@@ -159,31 +186,38 @@ export const addProductHandler = (products, getQuantity, getColor) => {
   });
 };
 
-// Update Quantity Buttons
 export const updateQuantityHandler = (updateQuantity, price) => {
   const addOrRemoveButtons = document.querySelectorAll(".quantity-button");
   const quantityDisplay = document.querySelector(".quantity-display");
   const totalValue = document.querySelector(".total-value");
 
-  addOrRemoveButtons.forEach((button) =>
+  addOrRemoveButtons.forEach((button) => {
     button.addEventListener("click", (e) => {
-      let quantity;
+      let currentQuantity = Number(quantityDisplay.textContent);
+      const inStockEl = document.querySelector(".stock-display");
+      const inStock = Number(inStockEl.textContent.split(" ")[0]);
 
       if (e.currentTarget.classList.contains("quantity-add")) {
-        quantity = updateQuantity(1);
+        if (currentQuantity >= inStock) return;
+        const newQuantity = updateQuantity(1, inStock);
+        quantityDisplay.textContent = newQuantity;
       }
 
       if (e.currentTarget.classList.contains("quantity-remove")) {
-        quantity = updateQuantity(-1);
+        if (currentQuantity <= 1) return;
+        const newQuantity = updateQuantity(-1, inStock);
+        quantityDisplay.textContent = newQuantity;
       }
-      quantityDisplay.textContent = quantity;
 
-      const formattedTotalPrice = formatAndSplitPrice(quantity * price);
+      // Update total price
+      const formattedTotalPrice = formatAndSplitPrice(
+        Number(quantityDisplay.textContent) * price
+      );
       const { main: totalMainPrice, fraction: totalFractionalPrice } =
         formattedTotalPrice;
       totalValue.innerHTML = `<span>${totalMainPrice}</span>.<span>${totalFractionalPrice}</span>`;
-    })
-  );
+    });
+  });
 };
 
 // Calculate Subtotal

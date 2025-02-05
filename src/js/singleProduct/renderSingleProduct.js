@@ -21,9 +21,13 @@ export const renderSingleProduct = (product) => {
 
   let selectedQuantity = 1;
 
-  function updateSelectedQuantity(change) {
-    selectedQuantity = Math.max(1, selectedQuantity + change);
-    return selectedQuantity;
+  function updateSelectedQuantity(change, inStock) {
+    const newQuantity = Math.max(
+      1,
+      Math.min(inStock, selectedQuantity + change)
+    );
+    selectedQuantity = newQuantity;
+    return newQuantity;
   }
 
   productContainer.innerHTML = `

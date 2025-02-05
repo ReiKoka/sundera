@@ -355,6 +355,14 @@
   stroke: hsl(var(--foreground));
 }
 
+.product-container
+  .checkout-container
+  .quantity
+  .total-quantity
+  .out-of-stock {
+    
+  }
+
 .checkout-buttons {
   display: flex;
   flex-direction: column;

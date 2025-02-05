@@ -95,6 +95,32 @@
       "subtotal": 1300,
       "shipping": 0,
       "total": 1300
+    },
+    {
+      "id": "97d2",
+      "firstName": "Rei",
+      "lastName": "Koka",
+      "country": "Albania",
+      "address": "Rruga Pjeter Budi",
+      "apartment": "P19 Ap 4/2",
+      "city": "Tirane",
+      "postcode": "1057",
+      "email": "reikoka1@outlook.com",
+      "phoneNumber": "0688161541",
+      "products": [
+        {
+          "id": "3d72",
+          "title": "test3",
+          "quantity": 5,
+          "color": "#fa4b00",
+          "pricePerOne": 650,
+          "totalPrice": 3250,
+          "image": "https://plus.unsplash.com/premium_photo-1663134149019-284682ece04c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2FtZXJhfGVufDB8fDB8fHww"
+        }
+      ],
+      "subtotal": 3250,
+      "shipping": 0,
+      "total": 3250
     }
   ],
   "products": [
@@ -127,6 +153,10 @@
         {
           "color": "#a2a0a0",
           "inStock": 280
+        },
+        {
+          "color": "#ffffff",
+          "inStock": 1
         }
       ],
       "id": "83ab"
@@ -341,11 +371,19 @@
       "category": "test3",
       "image": "https://plus.unsplash.com/premium_photo-1663134149019-284682ece04c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2FtZXJhfGVufDB8fDB8fHww",
       "featured": false,
-      "soldAllTime": 0,
+      "soldAllTime": 5,
       "colors": [
         {
           "color": "#fa4b00",
-          "inStock": 20
+          "inStock": 15
+        }
+      ],
+      "reviews": [
+        {
+          "id": "4082",
+          "rating": 5,
+          "comment": "Excellent product",
+          "productId": "3d72"
         }
       ]
     }

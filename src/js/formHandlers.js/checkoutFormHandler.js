@@ -62,16 +62,21 @@ export const checkoutFormHandler = () => {
         updatedProducts.set(product.id, {
           ...latestProduct,
           colors: [...latestProduct.colors],
+          soldAllTime: latestProduct.soldAllTime || 0, // Ensure it has an initial value
         });
       }
 
       const updatedProduct = updatedProducts.get(product.id);
 
+      // Reduce stock for the specified color
       updatedProduct.colors = updatedProduct.colors.map((c) =>
         c.color === color
           ? { ...c, inStock: Math.max(0, c.inStock - quantity) }
           : c
       );
+
+      // Increase the soldAllTime count
+      updatedProduct.soldAllTime += quantity;
 
       updatedProducts.set(product.id, updatedProduct);
     }
