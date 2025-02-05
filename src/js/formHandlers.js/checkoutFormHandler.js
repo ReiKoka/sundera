@@ -30,12 +30,17 @@ export const checkoutFormHandler = () => {
 
     const formData = new FormData(form);
     const data = Object.fromEntries(formData.entries());
+    console.log(data);
+
     const products = cart.map((item) => {
       return {
+        id: item.product.id,
         title: item.product.title,
         quantity: item.quantity,
         color: item.color,
+        pricePerOne: item.product.price,
         totalPrice: item.product.price * item.quantity,
+        image: item.product.image,
       };
     });
 

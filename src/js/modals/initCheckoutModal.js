@@ -16,7 +16,7 @@ export const initCheckoutModal = async () => {
   const cart = getCart();
 
   const countries = await getCountries();
-  
+
   if (cart.length === 0) return;
   checkoutTriggerButton.addEventListener("click", () => {
     modal.innerHTML = renderModal(
@@ -34,12 +34,7 @@ export const initCheckoutModal = async () => {
             ${renderInput("lastName", "text", "Last Name", "input")}
           </div>
           <div class="select-container">
-            ${renderSelect(
-              "form-select",
-              "countries",
-              "form-select",
-              countries
-            )}
+            ${renderSelect("country", "countries", "form-select", countries)}
           </div>
           ${renderInput("address", "text", "Address", "input")}
           ${renderInput(

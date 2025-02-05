@@ -12,6 +12,7 @@ export const renderSelect = (
 ) => {
   const select = `
     <select
+      name=${title}
       title="${title}"
       id="${id}"
       class="${className}"
