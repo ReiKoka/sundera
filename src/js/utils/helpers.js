@@ -146,18 +146,12 @@ export const addProductHandler = (products, getQuantity, getColor) => {
           item.product.id === products[0].id && item.color === colorSelected
       );
 
-      if (productExists) {
-        notyf.error(`${products[0].title} is already in your cart.`);
-        return;
-      }
-
-      if (quantitySelected > inStock) {
+      if ((quantitySelected === inStock) & productExists) {
         notyf.error(
           `Cannot add ${products[0].title} to cart. Not enough stock.`
         );
         return;
       }
-      
 
       addToCart(products[0], quantitySelected, colorSelected);
       notyf.success(
