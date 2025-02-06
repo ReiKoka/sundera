@@ -6,7 +6,7 @@ export const renderColorPicker = (
   customLabel,
   inputClassName,
   labelClassName,
-  value
+  value = "#000000"
 ) => {
   const input = `
     <div class="field color-field">

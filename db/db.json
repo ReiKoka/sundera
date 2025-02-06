@@ -285,19 +285,27 @@
       "title": "LED Desk Lamp",
       "company": "BrightHome",
       "description": "Energy-efficient LED desk lamp with adjustable brightness and color settings.",
-      "featured": false,
+      "price": 50,
       "category": "home",
       "image": "https://images.unsplash.com/photo-1517991104123-1d56a6e81ed9?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "price": 25,
+      "featured": true,
       "soldAllTime": 290,
       "colors": [
         {
           "color": "#E0E0E0",
-          "inStock": 199
+          "inStock": 300
         },
         {
           "color": "#FFFFFF",
           "inStock": 200
+        },
+        {
+          "color": "#800013",
+          "inStock": 40
+        },
+        {
+          "color": "#4c00ff",
+          "inStock": 50
         }
       ],
       "id": "ee30"
@@ -322,40 +330,6 @@
         }
       ],
       "id": "f10e"
-    },
-    {
-      "id": "6ca3",
-      "title": "test3",
-      "company": "test3",
-      "description": "test3",
-      "price": 650,
-      "category": "test3",
-      "image": "https://plus.unsplash.com/premium_photo-1663134149019-284682ece04c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2FtZXJhfGVufDB8fDB8fHww",
-      "featured": false,
-      "soldAllTime": 0,
-      "colors": [
-        {
-          "color": "#610000",
-          "inStock": 20
-        }
-      ]
-    },
-    {
-      "id": "819f",
-      "title": "test3",
-      "company": "test3",
-      "description": "test3",
-      "price": 650,
-      "category": "test3",
-      "image": "https://plus.unsplash.com/premium_photo-1663134149019-284682ece04c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2FtZXJhfGVufDB8fDB8fHww",
-      "featured": false,
-      "soldAllTime": 0,
-      "colors": [
-        {
-          "color": "#000000",
-          "inStock": 20
-        }
-      ]
     }
   ],
   "reviews": [

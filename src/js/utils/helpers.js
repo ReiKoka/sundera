@@ -115,11 +115,12 @@ export const setupColorButtons = (buttons, product, onColorSelect) => {
   const quantityControlsArea = document.querySelector(
     ".quantity .quantity-controls"
   );
-  const primaryAddButton = document.querySelector('.checkout-container .primary-button')
+  const primaryAddButton = document.querySelector(
+    ".checkout-container .primary-button"
+  );
 
   buttons.forEach((button, i) => {
     button.style.backgroundColor = product.colors[i].color;
-
 
     button.addEventListener("click", () => {
       buttons.forEach((btn) => btn.classList.remove("focused"));
@@ -134,8 +135,6 @@ export const setupColorButtons = (buttons, product, onColorSelect) => {
           : "Out of stock"
       }`;
 
-      console.log(selectedColor.inStock);
-
       if (selectedColor.inStock === 0) {
         stockDisplayElement.classList.add("out-of-stock");
         quantityControlsArea.style.display = "none";
@@ -144,7 +143,6 @@ export const setupColorButtons = (buttons, product, onColorSelect) => {
         stockDisplayElement.classList.remove("out-of-stock");
         quantityControlsArea.style.display = "flex";
         primaryAddButton.disabled = false;
-        
       }
     });
   });

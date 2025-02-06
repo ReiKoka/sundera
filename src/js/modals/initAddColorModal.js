@@ -26,7 +26,7 @@ export const initAddColorModal = (product) => {
                "color",
                "Select Color",
                "color-picker-input",
-               "color-picker-label"
+               "color-picker-label",
              )}
            </div>
            ${renderInput("inStock", "number", "Quantity", "input", 1)}

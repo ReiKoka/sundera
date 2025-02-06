@@ -427,16 +427,6 @@
   filter: saturate(0.8);
 }
 
-.product-container .checkout-container .primary-button:disabled {
-  cursor: not-allowed;
-  background-color: hsl(var(--muted-foreground));
-  border: 1px solid hsl(var(--muted-foreground));
-}
-
-.product-container .checkout-container .primary-button:disabled:hover {
-  transform: translateY(0);
-}
-
 .product-container .reviews-container {
   grid-column: span 2;
   border: 1px solid hsl(var(--muted));
@@ -529,5 +519,4 @@
 .missing-reviews {
   color: hsl(var(--foreground));
   text-align: center;
-  
 }

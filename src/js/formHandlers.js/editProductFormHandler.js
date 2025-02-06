@@ -20,7 +20,14 @@ export const editProductFormHandler = (product, modal) => {
     const featured = productData.featured === "on";
     const price = Number(productData.price);
     const inStock = Number(productData.inStock);
+
     const updatedColors = product.colors.map((c) =>
+      c.color.toLocaleLowerCase() === productData.color.toLocaleLowerCase()
+        ? { ...c, inStock }
+        : c
+    );
+
+    product.colors.map((c) =>
       c.color === productData.color ? { ...c, inStock } : c
     );
 
@@ -35,7 +42,6 @@ export const editProductFormHandler = (product, modal) => {
       colors: updatedColors,
     };
 
-    console.log(updatedProduct);
     createOrEditProduct(updatedProduct, product.id);
     notyf.success("Product updated");
     modal.style.display = "none";
