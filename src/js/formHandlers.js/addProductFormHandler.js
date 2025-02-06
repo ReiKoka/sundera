@@ -10,7 +10,7 @@ export const addProductFormHandler = (modal) => {
     position: { x: "center", y: "top" },
   });
 
-  form.addEventListener("submit", (e) => {
+  form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
     if (!form) return;
@@ -35,9 +35,14 @@ export const addProductFormHandler = (modal) => {
       colors,
     };
 
-    createOrEditProduct(newProduct);
-    notyf.success("New product added successfully");
-    modal.style.display = "none";
-    initProducts();
+    try {
+      await createOrEditProduct(newProduct);
+      notyf.success("New product added successfully");
+      modal.style.display = "none";
+      await initProducts();
+    } catch (error) {
+      console.error("Error creating product:", error);
+      notyf.error("Failed to add product");
+    }
   });
 };

@@ -62,7 +62,7 @@ export const checkoutFormHandler = () => {
         updatedProducts.set(product.id, {
           ...latestProduct,
           colors: [...latestProduct.colors],
-          soldAllTime: latestProduct.soldAllTime || 0, // Ensure it has an initial value
+          soldAllTime: latestProduct.soldAllTime || 0, 
         });
       }
 

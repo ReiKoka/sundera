@@ -10,7 +10,7 @@ export const editProductFormHandler = (product, modal) => {
     position: { x: "center", y: "top" },
   });
 
-  form.addEventListener("submit", (e) => {
+  form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
     const formData = new FormData(form);
@@ -42,9 +42,14 @@ export const editProductFormHandler = (product, modal) => {
       colors: updatedColors,
     };
 
-    createOrEditProduct(updatedProduct, product.id);
-    notyf.success("Product updated");
-    modal.style.display = "none";
-    initSingleProduct();
+    try {
+      await createOrEditProduct(updatedProduct, product.id);
+      notyf.success("Product updated");
+      modal.style.display = "none";
+      await initSingleProduct();
+    } catch (error) {
+      console.error("Error editing product:", error);
+      notyf.error("Failed to edit product");
+    }
   });
 };

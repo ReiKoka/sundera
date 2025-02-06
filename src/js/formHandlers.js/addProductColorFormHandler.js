@@ -1,11 +1,15 @@
 "use strict";
+import { Notyf } from "notyf";
 import { initSingleProduct } from "../utils/helpers";
 import { createOrEditProduct } from "./../../services/createOrEditProduct";
 
 export const addProductColorFormHandler = (product, modal) => {
   const form = document.querySelector(".form.add-color-form");
+  const notyf = new Notyf({
+    position: { x: "center", y: "top" },
+  });
 
-  form.addEventListener("submit", (e) => {
+  form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
     if (!form) return;
@@ -28,9 +32,14 @@ export const addProductColorFormHandler = (product, modal) => {
 
     delete newProduct.reviews;
 
-    console.log(newProduct.colors);
-    createOrEditProduct(newProduct, product.id);
-    modal.style.display = "none";
-    initSingleProduct();
+    try {
+      await createOrEditProduct(newProduct, product.id);
+      notyf.success("New color added successfully");
+      modal.style.display = "none";
+      await initSingleProduct();
+    } catch (error) {
+      console.error("Error adding new color:", error);
+      notyf.error("Failed to add color");
+    }
   });
 };

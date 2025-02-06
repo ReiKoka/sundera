@@ -239,10 +239,10 @@
       "title": "Laptop Backpack",
       "company": "UrbanCarry",
       "description": "Durable backpack with multiple compartments, perfect for work or travel.",
-      "featured": false,
+      "price": 40,
       "category": "bags",
       "image": "https://images.unsplash.com/photo-1667411424594-672f7a3df708?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "price": 40,
+      "featured": true,
       "soldAllTime": 520,
       "colors": [
         {
@@ -252,6 +252,10 @@
         {
           "color": "#6C757D",
           "inStock": 200
+        },
+        {
+          "color": "#003d75",
+          "inStock": 300
         }
       ],
       "id": "e123"
@@ -330,6 +334,23 @@
         }
       ],
       "id": "f10e"
+    },
+    {
+      "id": "9764",
+      "title": "test3",
+      "company": "test3",
+      "description": "test3",
+      "price": 650,
+      "category": "test3",
+      "image": "https://plus.unsplash.com/premium_photo-1663134149019-284682ece04c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2FtZXJhfGVufDB8fDB8fHww",
+      "featured": false,
+      "soldAllTime": 0,
+      "colors": [
+        {
+          "color": "#000000",
+          "inStock": 20
+        }
+      ]
     }
   ],
   "reviews": [
