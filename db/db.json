@@ -1,5 +1,85 @@
 {
-  "orders": [],
+  "orders": [
+    {
+      "id": "590d",
+      "firstName": "Rei",
+      "lastName": "Koka",
+      "country": "Albania",
+      "address": "Rruga Pjeter Budi",
+      "apartment": "P19 Ap 4/2",
+      "city": "Tirane",
+      "postcode": "1057",
+      "email": "reikoka1@outlook.com",
+      "phoneNumber": "0688161541",
+      "products": [
+        {
+          "id": "83ab",
+          "title": "Rambler® 30 oz Stackable Cup",
+          "quantity": 20,
+          "color": "#a2a0a0",
+          "pricePerOne": 15,
+          "totalPrice": 300,
+          "image": "https://www.yeti.com/on/demandware.static/-/Sites-siteCatalog_Yeti_US/default/dw858ffac3/200380-Category-Header-Tumblers-Social-1200x6300.jpg"
+        },
+        {
+          "id": "83ab",
+          "title": "Rambler® 30 oz Stackable Cup",
+          "quantity": 10,
+          "color": "#38219B",
+          "pricePerOne": 15,
+          "totalPrice": 150,
+          "image": "https://www.yeti.com/on/demandware.static/-/Sites-siteCatalog_Yeti_US/default/dw858ffac3/200380-Category-Header-Tumblers-Social-1200x6300.jpg"
+        },
+        {
+          "id": "3c06",
+          "title": "SoundCore Liberty 4 Pro",
+          "quantity": 1,
+          "color": "#FFFFFF",
+          "pricePerOne": 200,
+          "totalPrice": 200,
+          "image": "https://cdn.shopify.com/s/files/1/0501/7678/6607/files/Mask_group_20.png?v=1727702170"
+        },
+        {
+          "id": "38da",
+          "title": "Smart Fitness Tracker",
+          "quantity": 1,
+          "color": "#007BFF",
+          "pricePerOne": 50,
+          "totalPrice": 50,
+          "image": "https://images.unsplash.com/photo-1576243345690-4e4b79b63288?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        }
+      ],
+      "subtotal": 700,
+      "shipping": 0,
+      "total": 700
+    },
+    {
+      "id": "521a",
+      "firstName": "Rei",
+      "lastName": "Koka",
+      "country": "Albania",
+      "address": "Rruga Pjeter Budi",
+      "apartment": "P19 Ap 4/2",
+      "city": "Tirane",
+      "postcode": "1057",
+      "email": "reikoka1@outlook.com",
+      "phoneNumber": "0688161541",
+      "products": [
+        {
+          "id": "83ab",
+          "title": "Rambler® 30 oz Stackable Cup",
+          "quantity": 11,
+          "color": "#38219B",
+          "pricePerOne": 15,
+          "totalPrice": 165,
+          "image": "https://www.yeti.com/on/demandware.static/-/Sites-siteCatalog_Yeti_US/default/dw858ffac3/200380-Category-Header-Tumblers-Social-1200x6300.jpg"
+        }
+      ],
+      "subtotal": 165,
+      "shipping": 0,
+      "total": 165
+    }
+  ],
   "products": [
     {
       "title": "Rambler® 30 oz Stackable Cup",
@@ -9,11 +89,11 @@
       "category": "drinkware",
       "image": "https://www.yeti.com/on/demandware.static/-/Sites-siteCatalog_Yeti_US/default/dw858ffac3/200380-Category-Header-Tumblers-Social-1200x6300.jpg",
       "featured": true,
-      "soldAllTime": 171,
+      "soldAllTime": 182,
       "colors": [
         {
           "color": "#38219B",
-          "inStock": 951
+          "inStock": 940
         },
         {
           "color": "#000000",
@@ -117,11 +197,11 @@
       "category": "electronics",
       "image": "https://cdn.shopify.com/s/files/1/0501/7678/6607/files/Mask_group_20.png?v=1727702170",
       "price": 200,
-      "soldAllTime": 170,
+      "soldAllTime": 171,
       "colors": [
         {
           "color": "#FFFFFF",
-          "inStock": 99
+          "inStock": 98
         },
         {
           "color": "#000000",
@@ -142,11 +222,11 @@
       "category": "electronics",
       "image": "https://images.unsplash.com/photo-1576243345690-4e4b79b63288?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "price": 50,
-      "soldAllTime": 600,
+      "soldAllTime": 601,
       "colors": [
         {
           "color": "#007BFF",
-          "inStock": 200
+          "inStock": 199
         },
         {
           "color": "#FFC107",
@@ -603,4 +683,3 @@
     }
   ]
 }
-

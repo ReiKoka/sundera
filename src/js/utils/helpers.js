@@ -112,9 +112,14 @@ export const calculateAverage = (ratingsArr) => {
 // Setup Color Buttons
 export const setupColorButtons = (buttons, product, onColorSelect) => {
   const stockDisplayElement = document.querySelector(".stock-display");
+  const quantityControlsArea = document.querySelector(
+    ".quantity .quantity-controls"
+  );
+  const primaryAddButton = document.querySelector('.checkout-container .primary-button')
 
   buttons.forEach((button, i) => {
     button.style.backgroundColor = product.colors[i].color;
+
 
     button.addEventListener("click", () => {
       buttons.forEach((btn) => btn.classList.remove("focused"));
@@ -130,9 +135,17 @@ export const setupColorButtons = (buttons, product, onColorSelect) => {
       }`;
 
       console.log(selectedColor.inStock);
-      selectedColor.inStock === 0
-        ? stockDisplayElement.classList.add("out-of-stock")
-        : stockDisplayElement.classList.remove("out-of-stock");
+
+      if (selectedColor.inStock === 0) {
+        stockDisplayElement.classList.add("out-of-stock");
+        quantityControlsArea.style.display = "none";
+        primaryAddButton.disabled = true;
+      } else {
+        stockDisplayElement.classList.remove("out-of-stock");
+        quantityControlsArea.style.display = "flex";
+        primaryAddButton.disabled = false;
+        
+      }
     });
   });
 };
