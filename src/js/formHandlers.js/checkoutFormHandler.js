@@ -6,13 +6,13 @@ import {
   calculateShipping,
   calculateSubtotal,
   calculateTotal,
-  updateCartItemsCount,
-  updateDomOnCartClearance,
-} from "../utils/helpers";
+} from "../utils/helpersFunctions";
 import { createOrder } from "../../services/createOrder";
 import { getProductById } from "../../services/getProductById";
 import { createOrEditProduct } from "../../services/createOrEditProduct";
 import { renderCart } from "../cart/renderCart";
+import { updateCartItemsCount } from "../utils/helperCart";
+import { updateDomOnCartClearance } from "../utils/helperDom";
 
 export const checkoutFormHandler = () => {
   const form = document.querySelector("form.checkout-form");
@@ -62,7 +62,7 @@ export const checkoutFormHandler = () => {
         updatedProducts.set(product.id, {
           ...latestProduct,
           colors: [...latestProduct.colors],
-          soldAllTime: latestProduct.soldAllTime || 0, 
+          soldAllTime: latestProduct.soldAllTime || 0,
         });
       }
 

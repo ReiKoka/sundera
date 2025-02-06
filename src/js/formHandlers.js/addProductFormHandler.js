@@ -2,7 +2,8 @@
 
 import { Notyf } from "notyf";
 import { createOrEditProduct } from "../../services/createOrEditProduct";
-import { initProducts } from "../utils/helpers";
+import { initProducts } from "../utils/helperProducts";
+
 
 export const addProductFormHandler = (modal) => {
   const form = document.querySelector(".form.add-product-form");

@@ -4,9 +4,9 @@ import { editProductFormHandler } from "../formHandlers.js/editProductFormHandle
 import { renderCheckbox } from "../renderCheckbox";
 import { renderColorPicker } from "../renderColorPicker";
 import { renderInput } from "../renderInput";
+import { convertRgbToHex } from "../utils/helpersFunctions";
 import { closeModalHandler } from "./closeModalHandler";
 import { renderModal } from "./renderModal";
-import { rgbToHex } from "../utils/helpers";
 
 export const initEditProductModal = (product) => {
   const editTriggerButton = document.querySelector(".btn.edit-product");
@@ -17,7 +17,7 @@ export const initEditProductModal = (product) => {
       ".colors-buttons .btn.focused"
     );
 
-    const selectedColor = rgbToHex(selectedButton.style.backgroundColor);
+    const selectedColor = convertRgbToHex(selectedButton.style.backgroundColor);
     const selectedColorObj = product.colors.find((c) => {
       return c.color.toLocaleLowerCase() === selectedColor.toLocaleLowerCase();
     }) || { color: "", inStock: 0 };

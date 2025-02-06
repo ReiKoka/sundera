@@ -6,12 +6,14 @@ import {
   calculateSubtotal,
   calculateTotal,
   formatAndSplitPrice,
-  updateCartItemsCount,
-  updateDomOnCartClearance,
-  updatePricesInDOM,
-} from "../utils/helpers";
+} from "../utils/helpersFunctions";
 import { renderSingleCartItem } from "./renderSingleCartItem";
 import { initCheckoutModal } from "../modals/initCheckoutModal";
+import { updateCartItemsCount } from "../utils/helperCart";
+import {
+  updateDomOnCartClearance,
+  updatePricesInDOM,
+} from "../utils/helperDom";
 
 export const renderCart = () => {
   const allCartItems = getCart();

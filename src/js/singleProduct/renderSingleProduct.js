@@ -1,10 +1,6 @@
 "use strict";
 
-import {
-  addProductHandler,
-  setupColorButtons,
-  updateQuantityHandler,
-} from "../utils/helpers.js";
+import { updateQuantityHandler } from "../utils/helpersFunctions.js";
 import { renderStars } from "../renderStars.js";
 import { renderDetails } from "./renderDetails.js";
 import { renderCheckout } from "./renderCheckout.js";
@@ -14,6 +10,8 @@ import { renderButtons } from "./renderButtons.js";
 import { initAddColorModal } from "../modals/initAddColorModal.js";
 import { initDeleteProduct } from "../modals/initDeleteProduct.js";
 import { initEditProductModal } from "../modals/initEditProductModal.js";
+import { addProductHandler } from "../utils/helperProducts.js";
+import { setupColorButtons } from "../utils/helperDom.js";
 
 export const renderSingleProduct = (product) => {
   const productContainer = document.querySelector(".product-container");

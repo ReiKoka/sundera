@@ -2,7 +2,7 @@
 
 import { Notyf } from "notyf";
 import { createOrEditProduct } from "../../services/createOrEditProduct";
-import { initSingleProduct } from "../utils/helpers";
+import { initSingleProduct } from "../utils/helperProducts";
 
 export const editProductFormHandler = (product, modal) => {
   const form = document.querySelector(".form.edit-product-form");

@@ -1,6 +1,6 @@
 import { getProducts } from "../../services/getProducts";
 import { renderProducts } from "./renderProducts";
-import { capitalizeFirstLetter, updateURLAndFetch } from "../utils/helpers";
+import { capitalizeFirstLetter, updateURLAndFetch } from "../utils/helpersFunctions";
 import { renderSelect } from "../renderSelect";
 
 export const renderFilters = (products) => {

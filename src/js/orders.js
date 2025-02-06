@@ -1,6 +1,6 @@
 "use strict";
 import { switchTheme } from "./switchTheme";
-import { initOrders } from "./utils/helpers";
+import { initOrders } from "./utils/helperOrders";
 
 switchTheme();
 

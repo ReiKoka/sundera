@@ -1,6 +1,6 @@
 "use strict";
 
-import { formatAndSplitPrice } from "../utils/helpers";
+import { formatAndSplitPrice } from "../utils/helpersFunctions";
 
 export const renderCheckout = (product) => {
   let quantityNumber = 1;

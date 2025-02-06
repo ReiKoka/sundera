@@ -1,6 +1,6 @@
 "use strict";
 
-import { calculateAverage, formatCurrency } from "../utils/helpers";
+import { calculateAverage, formatCurrency } from "../utils/helpersFunctions";
 
 export const renderDetails = (product) => {
   const formattedPrice = formatCurrency(product?.price);

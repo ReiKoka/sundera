@@ -1,7 +1,9 @@
 "use strict";
 
 import { switchTheme } from "../switchTheme";
-import { initSingleProduct, updateCartItemsCount } from "../utils/helpers";
+import { updateCartItemsCount } from "../utils/helperCart";
+import { initSingleProduct } from "../utils/helperProducts";
+
 
 switchTheme();
 

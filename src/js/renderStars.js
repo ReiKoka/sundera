@@ -1,7 +1,7 @@
 "use strict";
 
 import StarRating from "@romua1d/star-rating-js";
-import { calculateAverage } from "./utils/helpers";
+import { calculateAverage } from "./utils/helpersFunctions";
 
 export const renderStars = (container, productOrReview) => {
   const starRating = container.querySelector(".star-rating-container");

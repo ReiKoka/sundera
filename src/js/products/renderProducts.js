@@ -1,12 +1,12 @@
 "use strict";
 
-import {
-  addProductHandler,
-  formatCurrency,
-  getProductIdAndPassToUrl,
-} from "../utils/helpers";
+import { formatCurrency } from "../utils/helpersFunctions";
 import { renderStars } from "../renderStars";
 import { initAddProductModal } from "../modals/initAddProductModal";
+import {
+  addProductHandler,
+  getProductIdAndPassToUrl,
+} from "../utils/helperProducts";
 
 export const renderProducts = (products) => {
   const productsContainer = document.querySelector(

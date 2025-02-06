@@ -1,6 +1,6 @@
 "use strict";
 
-import { capitalizeFirstLetter } from "./utils/helpers";
+import { capitalizeFirstLetter } from "./utils/helpersFunctions";
 
 export const renderSelect = (
   title,

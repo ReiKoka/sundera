@@ -1,7 +1,7 @@
 "use strict";
 
 import { renderSingleReview } from "./renderSingleReview";
-import { calculateAverage } from "../utils/helpers";
+import { calculateAverage } from "../utils/helpersFunctions";
 
 export const renderReviews = (product) => {
   const ratingsArr = product?.reviews?.map((review) => review.rating);

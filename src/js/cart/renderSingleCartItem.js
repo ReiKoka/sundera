@@ -1,4 +1,4 @@
-import { formatAndSplitPrice } from "../utils/helpers";
+import { formatAndSplitPrice } from "../utils/helpersFunctions";
 
 export const renderSingleCartItem = (cartItem) => {
   const formattedTotalPerProductPrice = formatAndSplitPrice(
@@ -10,12 +10,6 @@ export const renderSingleCartItem = (cartItem) => {
     formattedTotalPerProductPrice;
   const { main: secondaryPrice, fraction: secondaryFractionalPrice } =
     formattedPerItemPrice;
-
-  /* Might Add Later*/
-
-  // <div class="cart-item-select">
-  //   <input type="checkbox" class="cart-item-checkbox" data-product-id="${cartItem.product.id}" />
-  // </div>
 
   const html = `
     <div class='cart-item' data-product-id="${cartItem.product.id}" data-product-color="${cartItem.color}">

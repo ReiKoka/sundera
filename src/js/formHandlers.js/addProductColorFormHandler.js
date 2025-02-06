@@ -1,7 +1,8 @@
 "use strict";
 import { Notyf } from "notyf";
-import { initSingleProduct } from "../utils/helpers";
+
 import { createOrEditProduct } from "./../../services/createOrEditProduct";
+import { initSingleProduct } from "../utils/helperProducts";
 
 export const addProductColorFormHandler = (product, modal) => {
   const form = document.querySelector(".form.add-color-form");
