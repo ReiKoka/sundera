@@ -113,6 +113,94 @@
       "subtotal": 350,
       "shipping": 0,
       "total": 350
+    },
+    {
+      "id": "ab54",
+      "firstName": "Rei",
+      "lastName": "Koka",
+      "country": "Albania",
+      "address": "Rruga Pjeter Budi",
+      "apartment": "P19 Ap 4/2",
+      "city": "Tirane",
+      "postcode": "1057",
+      "email": "reikoka1@outlook.com",
+      "phoneNumber": "0688161541",
+      "products": [
+        {
+          "id": "83ab",
+          "title": "Rambler® 30 oz Stackable Cup",
+          "quantity": 1,
+          "color": "#38219B",
+          "pricePerOne": 15,
+          "totalPrice": 15,
+          "image": "https://www.yeti.com/on/demandware.static/-/Sites-siteCatalog_Yeti_US/default/dw858ffac3/200380-Category-Header-Tumblers-Social-1200x6300.jpg"
+        },
+        {
+          "id": "ee30",
+          "title": "LED Desk Lamp",
+          "quantity": 1,
+          "color": "#E0E0E0",
+          "pricePerOne": 50,
+          "totalPrice": 50,
+          "image": "https://images.unsplash.com/photo-1517991104123-1d56a6e81ed9?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        },
+        {
+          "id": "f549",
+          "title": "Leather Messenger Bag",
+          "quantity": 1,
+          "color": "#8B4513",
+          "pricePerOne": 100,
+          "totalPrice": 100,
+          "image": "https://images.unsplash.com/photo-1473188588951-666fce8e7c68?q=80&w=1874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        },
+        {
+          "id": "38da",
+          "title": "Smart Fitness Tracker",
+          "quantity": 1,
+          "color": "#007BFF",
+          "pricePerOne": 50,
+          "totalPrice": 50,
+          "image": "https://images.unsplash.com/photo-1576243345690-4e4b79b63288?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        },
+        {
+          "id": "5a47",
+          "title": "Adjustable Dumbbells",
+          "quantity": 1,
+          "color": "#000000",
+          "pricePerOne": 150,
+          "totalPrice": 150,
+          "image": "https://cdn.shopify.com/s/files/1/0574/1215/7598/t/16/assets/acf.Adjustable-Dumbbells---Detail-Shots---60-Edit.jpg?v=1696537028"
+        }
+      ],
+      "subtotal": 365,
+      "shipping": 0,
+      "total": 365
+    },
+    {
+      "id": "b372",
+      "firstName": "Rei",
+      "lastName": "Koka",
+      "country": "Albania",
+      "address": "Rruga Pjeter Budi",
+      "apartment": "P19 Ap 4/2",
+      "city": "Tirane",
+      "postcode": "1057",
+      "email": "reikoka1@outlook.com",
+      "phoneNumber": "0688161541",
+      "products": [
+        {
+          "id": "f10e",
+          "title": "Ceramic Dinner Set",
+          "quantity": 10,
+          "color": "#F0F8FF",
+          "pricePerOne": 60,
+          "totalPrice": 600,
+          "image": "https://images.unsplash.com/photo-1525973779373-015bdf68e579?q=80&w=1973&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        }
+      ],
+      "subtotal": 600,
+      "shipping": 0,
+      "total": 600
     }
   ],
   "products": [
@@ -124,11 +212,11 @@
       "category": "drinkware",
       "image": "https://www.yeti.com/on/demandware.static/-/Sites-siteCatalog_Yeti_US/default/dw858ffac3/200380-Category-Header-Tumblers-Social-1200x6300.jpg",
       "featured": true,
-      "soldAllTime": 182,
+      "soldAllTime": 183,
       "colors": [
         {
           "color": "#38219B",
-          "inStock": 950
+          "inStock": 949
         },
         {
           "color": "#000000",
@@ -211,11 +299,11 @@
       "category": "fitness",
       "image": "https://cdn.shopify.com/s/files/1/0574/1215/7598/t/16/assets/acf.Adjustable-Dumbbells---Detail-Shots---60-Edit.jpg?v=1696537028",
       "price": 150,
-      "soldAllTime": 85,
+      "soldAllTime": 86,
       "colors": [
         {
           "color": "#000000",
-          "inStock": 49
+          "inStock": 48
         },
         {
           "color": "#FF0000",
@@ -257,11 +345,11 @@
       "category": "electronics",
       "image": "https://images.unsplash.com/photo-1576243345690-4e4b79b63288?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "price": 50,
-      "soldAllTime": 601,
+      "soldAllTime": 602,
       "colors": [
         {
           "color": "#007BFF",
-          "inStock": 199
+          "inStock": 198
         },
         {
           "color": "#FFC107",
@@ -303,11 +391,11 @@
       "category": "bags",
       "image": "https://images.unsplash.com/photo-1473188588951-666fce8e7c68?q=80&w=1874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "price": 100,
-      "soldAllTime": 95,
+      "soldAllTime": 96,
       "colors": [
         {
           "color": "#8B4513",
-          "inStock": 75
+          "inStock": 74
         },
         {
           "color": "#A0522D",
@@ -328,11 +416,11 @@
       "category": "home",
       "image": "https://images.unsplash.com/photo-1517991104123-1d56a6e81ed9?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "featured": true,
-      "soldAllTime": 290,
+      "soldAllTime": 291,
       "colors": [
         {
           "color": "#E0E0E0",
-          "inStock": 300
+          "inStock": 299
         },
         {
           "color": "#FFFFFF",
@@ -357,11 +445,11 @@
       "category": "home",
       "image": "https://images.unsplash.com/photo-1525973779373-015bdf68e579?q=80&w=1973&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "price": 60,
-      "soldAllTime": 35,
+      "soldAllTime": 45,
       "colors": [
         {
           "color": "#F0F8FF",
-          "inStock": 45
+          "inStock": 35
         },
         {
           "color": "#FAEBD7",

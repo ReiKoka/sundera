@@ -1,6 +1,6 @@
 "use strict";
 
-import { formatCurrency } from "../utils/helpers";
+import { formatCurrency } from "../utils/helpersFunctions";
 import { renderSingleOrderProduct } from "./renderSingleOrderProduct";
 
 export const renderSingleOrder = (order) => {
